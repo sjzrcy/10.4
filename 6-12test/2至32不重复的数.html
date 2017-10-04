@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+    </head>
+    <body>
+    </body>
+    <!-- <script type="text/javascript">
+    function fn (n) {
+        var aaa = parseInt(Math.random()*(32-2+1) + 2)
+        var arr = [];
+        arr.push(aaa)
+        
+        console.log(arr)
+    };
+    fn();
+    </script> -->
+    <script type="text/javascript">
+        //返回一个随机整数
+        function getRandom( min , max ){
+         var rand = Math.round( Math.random() * (max - min) + min ); return rand; 
+        }; 
+         //重复性验证 
+        function isRepeat(arr,n){ 
+        if (arr.indexOf(n) > -1) 
+            { return true; };
+        return false; 
+          };
+        function fn(n){
+            var arr = [],max = 32,min = 2; 
+            //是否是数字的验证
+            var isNum = !isNaN(Number(n)); 
+            //是否合法验证 
+            var randOk = (n >= 1 && n <= (max - min + 1)) ? true :false; 
+            if (isNum && randOk) {
+            for (var i = 0; i < n; i++) {
+                var rand = getRandom(min,max);
+                if (isRepeat(arr,rand)) {
+                 i-- ; }else{ 
+                  arr.push(rand); 
+                }
+            }
+             } return arr; 
+         };
+          console.log(fn(31))
+    </script>
+</html>

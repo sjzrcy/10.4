@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>全屏API</title>
+</head>
+<body>
+<p>这是个可以全屏的标签11111这是个可以全屏的标签11111这是个可以全屏的标签11111这是个可以全屏的标签11111这是个可以全屏的标签11111这是个可以全屏的标签11111这是个可以全屏的标签11111这是个可以全屏的标签11111这是个可以全屏的标签11111这是个可以全屏的标签11111这是个可以全屏的标签11111这是个可以全屏的标签11111这是个可以全屏的标签11111这是个可以全屏的标签11111这是个可以全屏的标签11111这是个可以全屏的标签11111这是个可以全屏的标签11111这是个可以全屏的标签11111这是个可以全屏的标签11111这是个可以全屏的标签11111这是个可以全屏的标签11111这是个可以全屏的标签11111这是个可以全屏的标签11111这是个可以全屏的标签11111这是个可以全屏的标签11111这是个可以全屏的标签11111这是个可以全屏的标签11111这是个可以全屏的标签11111这是个可以全屏的标签11111这是个可以全屏的标签11111</p>
+</body>
+</html>
+<script>
+    var elem = document.querySelector('p');
+
+    elem.addEventListener('click',function () {
+        if(elem.webkitRequestFullScreen){
+            elem.webkitRequestFullScreen();
+        }else if(elem.mozRequestFullScreen){
+            elem.mozRequestFullScreen();
+        }else{
+            elem.requestFullScreen();
+        }
+    })
+</script>

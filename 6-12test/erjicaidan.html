@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <!-- <div>
+            <div id="list" v-for="item in items" >{{item}}</div>
+            <div>1</div>
+        </div> -->
+        <div id="list" >
+            
+            <div v-for="item in yy1">
+                <div  style="font-size:30px;">
+                    {{item}}
+                </div>
+            </div>
+            1111111
+            <div>
+                <div  style="font-size:30px;">
+                    <!-- {{items}} -->
+                    <div style="color:red" v-for="item in yy3">
+                        {{item}}
+                    </div>
+                </div>
+            </div>
+            2222
+            <div id="content"></div>
+        </div>
+    </body>
+    <script type="text/javascript" src="js/vue.min.js"></script>
+    <script type="text/javascript" src="jquery.min.js"></script>
+    <script type="text/javascript">
+        var listArr = [];
+        var yy1 = [];
+        var yy2 = [];
+        var yy3 = [];
+        var ccc = [
+            ["首页1",
+                ["信息管理1","案件登记1","现场调查1"]
+            ],
+            ["首页2",
+                ["信息管理2","案件登记2","现场调查2"]
+            ],
+            ["首页3",
+                ["信息管理3","案件登记3","现场调查3"]
+            ],
+            ["首页4",
+                ["信息管理4","案件登记4","现场调查4"]
+            ],
+        ];
+        var sz = ["信息管理4","案件登记4","现场调查4"];
+        var listBox = new Vue({
+                el: '#list',
+                data:{
+                    items:yy1,
+                    itemss:yy2,
+                    itemsss:yy3,
+                },
+                created:function(){
+                    for (var i = 0; i <ccc.length; i++) {
+                       var j =  ccc[i];
+                       yy1.push(j[0]);
+                       yy2.push(j[1]);
+                    }; 
+                    console.log(yy2)
+                    for (var i = 0; i <yy2.length; i++) {
+                        for (var j = 0; j <yy2[i].length; j++) {
+                            console.log(yy2[i][j])
+                            yy3.push(yy2[i][j])
+                        }
+                    }
+                }
+            })
+    </script>
+</html>

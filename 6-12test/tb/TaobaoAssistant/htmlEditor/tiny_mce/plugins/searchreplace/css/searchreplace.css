@@ -1,0 +1,6 @@
+.panel_wrapper {height:100px;}
+.panel_wrapper div.current {height:100px;}
+
+/* IE */
+* html .panel_wrapper {height:115px;}
+* html .panel_wrapper div.current {height:115px;}

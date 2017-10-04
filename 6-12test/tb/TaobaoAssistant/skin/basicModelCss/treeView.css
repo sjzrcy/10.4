@@ -1,0 +1,37 @@
+QTreeWidget{
+	/*
+	border:1px solid #CCC;*/
+	show-decoration-selected: 1;
+	border: 0px;
+}
+QTreeView::item {
+	/*border: 1px solid #EEE;*/
+	color:#333333;
+	height:24px;
+	/*border-top-color: transparent;
+	border-bottom-color: transparent;*/
+}
+QTreeView::item:hover{
+	background: #D4D4D4;
+	border: 0px solid #B6CCE1;
+	color:#333333;
+}
+QTreeView::item:selected {
+	background: #D4D4D4;
+	border: 0px solid #bfcde4;
+	color:#333333;
+}
+QTreeView::branch:closed:has-children{
+	border-image: none;
+	image: url(images/basicModelImages/treeView/branch-closed.png);
+}
+QTreeView::branch:open:has-children {
+	border-image: none;
+	image: url(images/basicModelImages/treeView/branch-open.png);
+}
+
+QTreeView#TreeBoxView::item
+{
+	height:12px;
+}
+

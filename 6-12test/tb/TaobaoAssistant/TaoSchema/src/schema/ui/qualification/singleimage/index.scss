@@ -1,0 +1,41 @@
+.single-image{
+	position: relative;
+	height: 28px;
+	width: calc(100% - 28px);
+	margin-left: 28px;
+	background-color: #f6f6f6;
+
+
+	span{
+		display: inline-block;
+		color: #666666;
+		height: 28px;
+		line-height: 28px;
+	}
+
+	.plus-icon{
+		margin-left: 2px;
+		cursor: pointer;
+	}
+
+	.upload{
+		margin-left: 2px;
+		cursor: pointer;
+	}
+
+	.normal-text{
+		margin-left: 2px;
+	}
+
+	.check{
+		margin-left: 208px;
+		color: #71ACD4;
+		cursor: pointer;
+	}
+
+	.remove{
+		margin-left: 6px;
+		color: #71ACD4;
+		cursor: pointer;
+	}
+}

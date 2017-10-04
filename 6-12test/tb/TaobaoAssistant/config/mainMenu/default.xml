@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <element name="网站入口" target="" type="menu">
+    <elements>
+      <element name="淘宝首页" target="https://www.taobao.com" type="website"/>
+      <element name="我的淘宝" target="http://i.taobao.com/my_taobao.htm?ad_id=&amp;am_id=&amp;cm_id=&amp;pm_id=/" type="website"/>
+      <element name="出售中的宝贝" target="http://sell.taobao.com/auction/goods/goods_on_sale.htm" type="website"/>
+      <element name="已卖出的宝贝" target="http://trade.taobao.com/trade/itemlist/list_sold_items.htm" type="website"/>
+      <element name="卖家中心" target="http://ishop.taobao.com/shopManageIndex.htm" type="website"/>
+      <element name="店铺装修" target="http://store.taobao.com/page/design.htm" type="website"/>
+      <element name="卖家服务" target="https://fuwu.taobao.com" type="website"/>
+      <element name="下载助理" target="http://zhuli.taobao.com" type="website"/>
+    </elements>
+  </element>
+  <element name="工具" target="" type="menu">
+    <elements>
+      <element name="修复数据库" target="handleRepairDataBaseTriggered" type="method"/>
+      <element name="升级助理" target="handleUpdateTBATriggered" type="method"/>
+      <element name="使用5.5老版本模板" target="handleImportExpressTemplateTriggered" type="method"/>
+      <element name="查看日志" target="handleViewLogTriggered" type="method"/>
+    </elements>
+  </element>
+  <element name="设置" target="" type="menu">
+    <elements>
+      <element name="设置中心" target="handleConfigurationCenterTriggered" type="method"/>
+      <element name="恢复默认设置" target="handleRestoreTriggered" type="method"/>
+    </elements>
+  </element>
+  <element name="帮助" target="" type="menu">
+    <elements>
+      <element name="帮助文档" target="http://www.taobao.com/go/chn/taobaozhuli/help.php?spm=0.0.0.0.DINi2k" type="website"/>
+      <element name="问题反馈" target="http://bangpai.taobao.com/group/602059.htm" type="website"/>
+    </elements>
+  </element>
+  <element name="关于淘宝助理" target="handleAboutTBATriggered" type="method"/>
+  <element name="注销" target="handleSwitchUserTriggered" type="method"/>
+  <element name="退出" target="handleQuitTriggered" type="method"/>
+</root>

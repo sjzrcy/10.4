@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<upgrade dataSourceName="ITEM" databaseVersion="38.00">
+	<sql>
+    <![CDATA[	
+ALTER TABLE ITEM ADD locality_life BLOB SUB_TYPE 1 SEGMENT SIZE 16384 CHARACTER SET UTF8
+DEFAULT ''
+COLLATE UTF8;
+ALTER TABLE ITEM ADD o2o_bind_service SMALLINT;
+	]]>
+	</sql>
+</upgrade>

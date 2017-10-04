@@ -1,0 +1,27 @@
+QMenu::item:!enabled{
+	color:#999999;
+}
+
+QMenu::item
+{
+	padding-left: 24px;
+	padding-right: 24px;
+	height: 25px;
+}
+
+QMenu::item:hover
+{
+	background: #D4D4D4;
+	border: 0px solid #B6CCE1;
+	color:#333333;
+	padding-left: 24px;
+	padding-right: 24px;
+}
+
+QMenu::item:selected {
+	background: #D4D4D4;
+	border: 0px solid #bfcde4;
+	color:#333333;
+	padding-left: 24px;
+	padding-right: 24px;
+}

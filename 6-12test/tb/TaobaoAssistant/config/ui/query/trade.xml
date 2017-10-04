@@ -1,0 +1,1471 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<sqlNodes>
+	
+	<sqlNode actionIdentity="com::taobao::assistant::trade::action::delivery" identity="trade" text="待发货" tooltip="">
+		<sqlCriterias>
+			<sqlCriteria dataSourceName="trade" text="全部"  identity="deliveryTrade">
+				<querySql>								
+				<![CDATA[
+select  
+trade.seller_flag,  
+trade.item_title,
+trade.tid,
+trade.buyer_nick,
+trade.multi_buyer_nick,
+tradeex.company_name,
+tradeex.company_code,
+tradeex.out_sid,
+trade.total_fee,
+trade.post_fee,
+trade.payment,
+trade.num,
+trade.status,
+trade.refund_status,
+trade.cod_status,
+buyer_rate,
+trade.company_sp_trade,
+trade.consignee_address_detail,
+trade.consignee_town,
+trade.consignee_area,
+trade.consignee_city,
+trade.consignee_province,
+trade.shipping_address_detail,
+trade.shipping_town,
+trade.shipping_area,
+trade.shipping_city,
+trade.shipping_province,
+trade.short_address,
+trade.shipping_branch_name,
+trade.shipping_branch_code,
+trade.consignee_branch_name,
+trade.consignee_branch_code,
+trade.package_center_code,
+trade.package_center_name,
+trade.send_name,
+trade.send_phone,
+trade.short_address_fornormal,
+trade.print_config,
+tradeex.is_express_print,
+tradeex.is_invoice_print,
+tradeex.express_print_time,
+tradeex.invoice_print_time,
+trade.created, 
+trade.seller_memo,
+trade.buyer_message,
+trade.consign_time,
+trade.receiver_name,
+trade.receiver_state,
+trade.receiver_city,
+trade.receiver_district,
+trade.receiver_address,
+trade.receiver_zip,
+trade.receiver_mobile,
+trade.receiver_phone,
+trade.shipping_type,
+trade.pay_time, 
+trade.trade_type,
+trade.buyer_alipay_no,
+trade.alipay_no,
+trade.tid as primaryKey
+
+			FROM TRADE left outer join tradeex on trade.tid=tradeex.tid	where status=3			
+				]]>
+				</querySql>
+				<countSql>
+				<![CDATA[
+				select   count(1) from trade left outer join tradeex on trade.tid=tradeex.tid where status=3		
+				]]>
+				</countSql>
+				<primaryKeySql>
+				<![CDATA[
+				select   tid from trade where status=3		
+				]]>
+				</primaryKeySql>
+				<tables>trade,tradeex</tables>
+			</sqlCriteria>
+			<sqlCriteria dataSourceName="trade" text="货到付款" identity="deliveryTrade">
+				<querySql>
+				<![CDATA[
+select  
+trade.seller_flag,  
+trade.item_title,
+trade.tid,
+trade.buyer_nick,
+trade.multi_buyer_nick,
+tradeex.company_name,
+tradeex.company_code,
+tradeex.out_sid,
+trade.total_fee,
+trade.post_fee,
+trade.payment,
+trade.num,
+trade.status,
+trade.refund_status,
+trade.cod_status,
+buyer_rate,
+company_sp_trade,
+consignee_address_detail,
+consignee_town,
+consignee_area,
+consignee_city,
+consignee_province,
+shipping_address_detail,
+shipping_town,
+shipping_area,
+shipping_city,
+shipping_province,
+short_address,
+shipping_branch_name,
+shipping_branch_code,
+consignee_branch_name,
+consignee_branch_code,
+package_center_code,
+package_center_name,
+send_name,
+send_phone,
+short_address_fornormal,
+print_config,
+tradeex.is_express_print,
+tradeex.is_invoice_print,
+tradeex.express_print_time,
+tradeex.invoice_print_time,
+trade.created, 
+trade.seller_memo,
+trade.buyer_message,
+trade.consign_time,
+trade.receiver_name,
+trade.receiver_state,
+trade.receiver_city,
+trade.receiver_district,
+trade.receiver_address,
+trade.receiver_zip,
+trade.receiver_mobile,
+trade.receiver_phone,
+trade.shipping_type,
+trade.pay_time, 
+trade.trade_type,
+trade.buyer_alipay_no,
+trade.alipay_no,
+trade.tid as primaryKey
+
+
+ 
+ FROM TRADE left outer join tradeex on trade.tid=tradeex.tid where status=3 and Trade_Type=8
+				]]>
+				</querySql>
+				<countSql>
+				<![CDATA[
+				select   count(1) from trade left outer join tradeex on trade.tid=tradeex.tid where status=3	and Trade_Type=8						
+				]]>
+				</countSql>
+				<primaryKeySql>
+				<![CDATA[
+				select   tid from trade where status=3		and Trade_Type=8	 
+				]]>
+				</primaryKeySql>
+				<tables>trade,tradeex</tables>
+			</sqlCriteria>
+			<sqlCriteria dataSourceName="trade" text="普通订单" identity="deliveryTrade">
+				<querySql>
+				<![CDATA[
+select  
+trade.seller_flag,  
+trade.item_title,
+trade.multi_buyer_nick,
+trade.tid,
+trade.buyer_nick,
+tradeex.company_name,
+tradeex.company_code,
+tradeex.out_sid,
+trade.total_fee,
+trade.post_fee,
+trade.payment,
+trade.num,
+trade.status,
+trade.refund_status,
+trade.cod_status,
+buyer_rate,
+company_sp_trade,
+consignee_address_detail,
+consignee_town,
+consignee_area,
+consignee_city,
+consignee_province,
+shipping_address_detail,
+shipping_town,
+shipping_area,
+shipping_city,
+shipping_province,
+short_address,
+shipping_branch_name,
+shipping_branch_code,
+consignee_branch_name,
+consignee_branch_code,
+package_center_code,
+package_center_name,
+send_name,
+send_phone,
+short_address_fornormal,
+print_config,
+tradeex.is_express_print,
+tradeex.is_invoice_print,
+tradeex.express_print_time,
+tradeex.invoice_print_time,
+trade.created, 
+trade.seller_memo,
+trade.buyer_message,
+trade.consign_time,
+trade.receiver_name,
+trade.receiver_state,
+trade.receiver_city,
+trade.receiver_district,
+trade.receiver_address,
+trade.receiver_zip,
+trade.receiver_mobile,
+trade.receiver_phone,
+trade.shipping_type,
+trade.pay_time, 
+trade.trade_type,
+trade.buyer_alipay_no,
+trade.alipay_no,
+trade.tid as primaryKey
+
+
+ 
+ FROM TRADE left outer join tradeex on trade.tid=tradeex.tid where status=3 and Trade_Type!=8  and ( Shipping_Type!=5)
+				]]>
+				</querySql>
+				<countSql>
+				<![CDATA[
+				select   count(1) from trade left outer join tradeex on trade.tid=tradeex.tid  where status=3	and Trade_Type!=8	 and ( Shipping_Type!=5)		
+				]]>
+				</countSql>
+				<primaryKeySql>
+				<![CDATA[
+				select   tid from trade where status=3		and Trade_Type!=8	 and ( Shipping_Type!=5)	
+				]]>
+				</primaryKeySql>
+				<tables>trade,tradeex</tables>
+			</sqlCriteria>
+			<sqlCriteria dataSourceName="trade" text="虚拟订单" identity="deliveryTrade">
+				<querySql>
+				<![CDATA[
+select  
+trade.seller_flag,  
+trade.item_title,
+trade.tid,
+trade.buyer_nick,
+trade.multi_buyer_nick,
+tradeex.company_name,
+tradeex.company_code,
+tradeex.out_sid,
+trade.total_fee,
+trade.post_fee,
+trade.payment,
+trade.num,
+trade.status,
+trade.refund_status,
+trade.cod_status,
+buyer_rate,
+company_sp_trade,
+consignee_address_detail,
+consignee_town,
+consignee_area,
+consignee_city,
+consignee_province,
+shipping_address_detail,
+shipping_town,
+shipping_area,
+shipping_city,
+shipping_province,
+short_address,
+shipping_branch_name,
+shipping_branch_code,
+consignee_branch_name,
+consignee_branch_code,
+package_center_code,
+package_center_name,
+send_name,
+send_phone,
+short_address_fornormal,
+print_config,
+tradeex.is_express_print,
+tradeex.is_invoice_print,
+tradeex.express_print_time,
+tradeex.invoice_print_time,
+trade.created, 
+trade.seller_memo,
+trade.buyer_message,
+trade.consign_time,
+trade.receiver_name,
+trade.receiver_state,
+trade.receiver_city,
+trade.receiver_district,
+trade.receiver_address,
+trade.receiver_zip,
+trade.receiver_mobile,
+trade.receiver_phone,
+trade.shipping_type,
+trade.pay_time, 
+trade.trade_type,
+trade.buyer_alipay_no,
+trade.alipay_no,
+trade.tid as primaryKey
+
+
+ 
+ FROM TRADE left outer join tradeex on trade.tid=tradeex.tid where status=3 and Trade_Type!=8 and Shipping_Type=5
+				]]>
+				</querySql>
+				<countSql>
+				<![CDATA[
+				select   count(1) from trade left outer join tradeex on trade.tid=tradeex.tid  where status=3	and Trade_Type!=8	 and Shipping_Type=5					
+				]]>
+				</countSql>
+				<primaryKeySql>
+				<![CDATA[
+				select   tid from trade where status=3		and Trade_Type!=8	 and Shipping_Type=5					
+				]]>
+				</primaryKeySql>
+				<tables>trade,tradeex</tables>
+			</sqlCriteria>
+		</sqlCriterias>
+		<sqlNodes>
+			<sqlNode actionIdentity="com::taobao::assistant::trade::action::delivery.memo" identity="trade" text="无留言/备注" tooltip="">
+				<sqlCriterias>
+					<sqlCriteria dataSourceName="trade" text="全部" actionIdentity="com::taobao::assistant::trade::action::delivery.memo" identity="deliveryTrade">
+						<querySql>
+						<![CDATA[
+select  
+trade.seller_flag,  
+trade.item_title,
+trade.tid,
+trade.buyer_nick,
+trade.multi_buyer_nick,
+tradeex.company_name,
+tradeex.company_code,
+tradeex.out_sid,
+trade.total_fee,
+trade.post_fee,
+trade.payment,
+trade.num,
+trade.status,
+trade.refund_status,
+trade.cod_status,
+buyer_rate,
+trade.company_sp_trade,
+trade.consignee_address_detail,
+trade.consignee_town,
+trade.consignee_area,
+trade.consignee_city,
+trade.consignee_province,
+trade.shipping_address_detail,
+trade.shipping_town,
+trade.shipping_area,
+trade.shipping_city,
+trade.shipping_province,
+trade.short_address,
+trade.shipping_branch_name,
+trade.shipping_branch_code,
+trade.consignee_branch_name,
+trade.consignee_branch_code,
+trade.package_center_code,
+trade.package_center_name,
+trade.send_name,
+trade.send_phone,
+trade.short_address_fornormal,
+trade.print_config,
+tradeex.is_express_print,
+tradeex.is_invoice_print,
+tradeex.express_print_time,
+tradeex.invoice_print_time,
+trade.created, 
+trade.seller_memo,
+trade.buyer_message,
+trade.consign_time,
+trade.receiver_name,
+trade.receiver_state,
+trade.receiver_city,
+trade.receiver_district,
+trade.receiver_address,
+trade.receiver_zip,
+trade.receiver_mobile,
+trade.receiver_phone,
+trade.shipping_type,
+trade.pay_time, 
+trade.trade_type,
+trade.buyer_alipay_no,
+trade.alipay_no,
+trade.tid as primaryKey
+
+
+ 
+						FROM TRADE left outer join tradeex on trade.tid=tradeex.tid where status=3 and 
+						( buyer_message is NULL OR buyer_message ='') and
+						( seller_memo is NULL OR seller_memo ='')
+						]]>
+						</querySql>
+						<countSql>
+						<![CDATA[
+						select   count(1) from trade left outer join tradeex on trade.tid=tradeex.tid  where status=3 and 
+						( buyer_message is NULL OR buyer_message ='') and
+						( seller_memo is NULL OR seller_memo ='')
+						]]>
+						</countSql>
+						<primaryKeySql>
+				<![CDATA[
+				select   tid from trade where status=3		 and 
+						( buyer_message is NULL OR buyer_message ='') and
+						( seller_memo is NULL OR seller_memo ='')				
+				]]>
+						</primaryKeySql>
+						<tables>trade,tradeex</tables>
+					</sqlCriteria>
+					<sqlCriteria dataSourceName="trade" text="货到付款" actionIdentity="com::taobao::assistant::trade::action::delivery.memo"  identity="deliveryTrade">
+						<querySql>
+						<![CDATA[
+select  
+trade.seller_flag,  
+trade.item_title,
+trade.tid,
+trade.buyer_nick,
+trade.multi_buyer_nick,
+tradeex.company_name,
+tradeex.company_code,
+tradeex.out_sid,
+trade.total_fee,
+trade.post_fee,
+trade.payment,
+trade.num,
+trade.status,
+trade.refund_status,
+trade.cod_status,
+buyer_rate,
+company_sp_trade,
+consignee_address_detail,
+consignee_town,
+consignee_area,
+consignee_city,
+consignee_province,
+shipping_address_detail,
+shipping_town,
+shipping_area,
+shipping_city,
+shipping_province,
+short_address,
+shipping_branch_name,
+shipping_branch_code,
+consignee_branch_name,
+consignee_branch_code,
+package_center_code,
+package_center_name,
+send_name,
+send_phone,
+short_address_fornormal,
+print_config,
+tradeex.is_express_print,
+tradeex.is_invoice_print,
+tradeex.express_print_time,
+tradeex.invoice_print_time,
+trade.created, 
+trade.seller_memo,
+trade.buyer_message,
+trade.consign_time,
+trade.receiver_name,
+trade.receiver_state,
+trade.receiver_city,
+trade.receiver_district,
+trade.receiver_address,
+trade.receiver_zip,
+trade.receiver_mobile,
+trade.receiver_phone,
+trade.shipping_type,
+trade.pay_time, 
+trade.trade_type,
+trade.buyer_alipay_no,
+trade.alipay_no,
+trade.tid as primaryKey
+
+
+ 
+						FROM TRADE left outer join tradeex on trade.tid=tradeex.tid where status=3 and 
+						( buyer_message is NULL OR buyer_message ='') and
+						( seller_memo is NULL OR seller_memo ='') and (Trade_Type=8)
+						
+						]]>
+						</querySql>
+						<countSql>
+						<![CDATA[
+						select   count(1) from trade left outer join tradeex on trade.tid=tradeex.tid where status=3 and 
+						( buyer_message is NULL OR buyer_message ='') and
+						( seller_memo is NULL OR seller_memo ='') and (Trade_Type=8)
+						]]>
+						</countSql>
+						<primaryKeySql>
+				<![CDATA[
+				select   tid from trade where status=3		 and 
+						( buyer_message is NULL OR buyer_message ='') and
+						( seller_memo is NULL OR seller_memo ='') and (Trade_Type=8)			
+				]]>
+						</primaryKeySql>
+						<tables>trade,tradeex</tables>
+					</sqlCriteria>				
+				<sqlCriteria dataSourceName="trade" text="普通订单" identity="deliveryTrade">
+				<querySql>
+				<![CDATA[
+select  
+trade.seller_flag,  
+trade.item_title,
+trade.tid,
+trade.buyer_nick,
+trade.multi_buyer_nick,
+tradeex.company_name,
+tradeex.company_code,
+tradeex.out_sid,
+trade.total_fee,
+trade.post_fee,
+trade.payment,
+trade.num,
+trade.status,
+trade.refund_status,
+trade.cod_status,
+buyer_rate,
+company_sp_trade,
+consignee_address_detail,
+consignee_town,
+consignee_area,
+consignee_city,
+consignee_province,
+shipping_address_detail,
+shipping_town,
+shipping_area,
+shipping_city,
+shipping_province,
+short_address,
+shipping_branch_name,
+shipping_branch_code,
+consignee_branch_name,
+consignee_branch_code,
+package_center_code,
+package_center_name,
+send_name,
+send_phone,
+short_address_fornormal,
+print_config,
+tradeex.is_express_print,
+tradeex.is_invoice_print,
+tradeex.express_print_time,
+tradeex.invoice_print_time,
+trade.created, 
+trade.seller_memo,
+trade.buyer_message,
+trade.consign_time,
+trade.receiver_name,
+trade.receiver_state,
+trade.receiver_city,
+trade.receiver_district,
+trade.receiver_address,
+trade.receiver_zip,
+trade.receiver_mobile,
+trade.receiver_phone,
+trade.shipping_type,
+trade.pay_time, 
+trade.trade_type,
+trade.buyer_alipay_no,
+trade.alipay_no,
+trade.tid as primaryKey
+
+
+ FROM TRADE left outer join tradeex on trade.tid=tradeex.tid where status=3 and 
+						( buyer_message is NULL OR buyer_message ='') and
+						( seller_memo is NULL OR seller_memo ='') and (Trade_Type!=8) and ( Shipping_Type!=5)
+						]]>
+						</querySql>
+						<countSql>
+						<![CDATA[
+						select   count(1) from trade left outer join tradeex on trade.tid=tradeex.tid where status=3 and 
+						( buyer_message is NULL OR buyer_message ='') and
+						( seller_memo is NULL OR seller_memo ='') and (Trade_Type!=8)  and ( Shipping_Type!=5)
+						]]>
+						</countSql>
+						<primaryKeySql>
+				<![CDATA[
+				select  tid from trade where status=3 and 
+						( buyer_message is NULL OR buyer_message ='') and
+						( seller_memo is NULL OR seller_memo ='') and (Trade_Type!=8)  and ( Shipping_Type!=5)
+						]]>
+						</primaryKeySql>
+				<tables>trade,tradeex</tables>
+			</sqlCriteria>
+			<sqlCriteria dataSourceName="trade" text="虚拟订单" identity="deliveryTrade">
+				<querySql>
+				<![CDATA[
+select  
+trade.seller_flag,  
+trade.item_title,
+trade.tid,
+trade.buyer_nick,
+trade.multi_buyer_nick,
+tradeex.company_name,
+tradeex.company_code,
+tradeex.out_sid,
+trade.total_fee,
+trade.post_fee,
+trade.payment,
+trade.num,
+trade.status,
+trade.refund_status,
+trade.cod_status,
+buyer_rate,
+company_sp_trade,
+consignee_address_detail,
+consignee_town,
+consignee_area,
+consignee_city,
+consignee_province,
+shipping_address_detail,
+shipping_town,
+shipping_area,
+shipping_city,
+shipping_province,
+short_address,
+shipping_branch_name,
+shipping_branch_code,
+consignee_branch_name,
+consignee_branch_code,
+package_center_code,
+package_center_name,
+send_name,
+send_phone,
+short_address_fornormal,
+print_config,
+tradeex.is_express_print,
+tradeex.is_invoice_print,
+tradeex.express_print_time,
+tradeex.invoice_print_time,
+trade.created, 
+trade.seller_memo,
+trade.buyer_message,
+trade.consign_time,
+trade.receiver_name,
+trade.receiver_state,
+trade.receiver_city,
+trade.receiver_district,
+trade.receiver_address,
+trade.receiver_zip,
+trade.receiver_mobile,
+trade.receiver_phone,
+trade.shipping_type,
+trade.pay_time, 
+trade.trade_type,
+trade.buyer_alipay_no,
+trade.alipay_no,
+trade.tid as primaryKey
+
+
+ FROM TRADE left outer join tradeex on trade.tid=tradeex.tid where status=3 and 
+						( buyer_message is NULL OR buyer_message ='') and
+						( seller_memo is NULL OR seller_memo ='') and (Trade_Type!=8) and (Shipping_Type=5)
+						]]>
+						</querySql>
+						<countSql>
+						<![CDATA[
+						select   count(1) from trade left outer join tradeex on trade.tid=tradeex.tid  where status=3 and 
+						( buyer_message is NULL OR buyer_message ='') and
+						( seller_memo is NULL OR seller_memo ='') and (Trade_Type!=8) and (Shipping_Type=5)
+						]]>
+						</countSql>
+						<primaryKeySql>
+				<![CDATA[
+				select  tid from trade where status=3 and 
+						( buyer_message is NULL OR buyer_message ='') and 
+						( buyer_message is NULL OR buyer_message ='') and
+						( seller_memo is NULL OR seller_memo ='') and (Trade_Type!=8) and (Shipping_Type=5)
+						]]>
+						</primaryKeySql>
+				<tables>trade,tradeex</tables>
+			  </sqlCriteria>
+			  </sqlCriterias>
+			</sqlNode>
+			<sqlNode actionIdentity="com::taobao::assistant::trade::action::delivery.memo" identity="trade" text="有留言/备注" tooltip="">
+				<sqlCriterias>
+					<sqlCriteria dataSourceName="trade" text="全部" actionIdentity="com::taobao::assistant::trade::action::delivery.memo" identity="deliveryTrade">
+						<querySql>
+						<![CDATA[
+select  
+trade.seller_flag,  
+trade.item_title,
+trade.tid,
+trade.buyer_nick,
+trade.multi_buyer_nick,
+tradeex.company_name,
+tradeex.company_code,
+tradeex.out_sid,
+trade.total_fee,
+trade.post_fee,
+trade.payment,
+trade.num,
+trade.status,
+trade.refund_status,
+trade.cod_status,
+buyer_rate,
+trade.company_sp_trade,
+trade.consignee_address_detail,
+trade.consignee_town,
+trade.consignee_area,
+trade.consignee_city,
+trade.consignee_province,
+trade.shipping_address_detail,
+trade.shipping_town,
+trade.shipping_area,
+trade.shipping_city,
+trade.shipping_province,
+trade.short_address,
+trade.shipping_branch_name,
+trade.shipping_branch_code,
+trade.consignee_branch_name,
+trade.consignee_branch_code,
+trade.package_center_code,
+trade.package_center_name,
+trade.send_name,
+trade.send_phone,
+trade.short_address_fornormal,
+trade.print_config,
+tradeex.is_express_print,
+tradeex.is_invoice_print,
+tradeex.express_print_time,
+tradeex.invoice_print_time,
+trade.created, 
+trade.seller_memo,
+trade.buyer_message,
+trade.consign_time,
+trade.receiver_name,
+trade.receiver_state,
+trade.receiver_city,
+trade.receiver_district,
+trade.receiver_address,
+trade.receiver_zip,
+trade.receiver_mobile,
+trade.receiver_phone,
+trade.shipping_type,
+trade.pay_time, 
+trade.trade_type,
+trade.buyer_alipay_no,
+trade.alipay_no,
+trade.tid as primaryKey
+
+
+ 						
+						FROM TRADE left outer join tradeex on trade.tid=tradeex.tid	where status=3	 and  
+						( ( buyer_message is not NULL and buyer_message !='') OR  ( seller_memo is not NULL and seller_memo !='') )
+
+						]]>
+						</querySql>
+						<countSql>
+						<![CDATA[
+						select   count(1) from trade left outer join tradeex on trade.tid=tradeex.tid where status=3 and 
+						( ( buyer_message is not NULL and buyer_message !='') OR  ( seller_memo is not NULL and seller_memo !='') )
+						]]>
+						</countSql>
+						<primaryKeySql>
+				<![CDATA[
+				select  tid from trade where status=3 and 
+						( ( buyer_message is not NULL and buyer_message !='') OR  ( seller_memo is not NULL and seller_memo !='') )
+						]]>
+						</primaryKeySql>
+						<tables>trade,tradeex</tables>
+					</sqlCriteria>
+					<sqlCriteria dataSourceName="trade" actionIdentity="com::taobao::assistant::trade::action::delivery.memo"  text="货到付款"  identity="deliveryTrade">
+						<querySql>
+						<![CDATA[
+select  
+trade.seller_flag,  
+trade.item_title,
+trade.tid,
+trade.buyer_nick,
+trade.multi_buyer_nick,
+tradeex.company_name,
+tradeex.company_code,
+tradeex.out_sid,
+trade.total_fee,
+trade.post_fee,
+trade.payment,
+trade.num,
+trade.status,
+trade.refund_status,
+trade.cod_status,
+buyer_rate,
+company_sp_trade,
+consignee_address_detail,
+consignee_town,
+consignee_area,
+consignee_city,
+consignee_province,
+shipping_address_detail,
+shipping_town,
+shipping_area,
+shipping_city,
+shipping_province,
+short_address,
+shipping_branch_name,
+shipping_branch_code,
+consignee_branch_name,
+consignee_branch_code,
+package_center_code,
+package_center_name,
+send_name,
+send_phone,
+short_address_fornormal,
+print_config,
+tradeex.is_express_print,
+tradeex.is_invoice_print,
+tradeex.express_print_time,
+tradeex.invoice_print_time,
+trade.created, 
+trade.seller_memo,
+trade.buyer_message,
+trade.consign_time,
+trade.receiver_name,
+trade.receiver_state,
+trade.receiver_city,
+trade.receiver_district,
+trade.receiver_address,
+trade.receiver_zip,
+trade.receiver_mobile,
+trade.receiver_phone,
+trade.shipping_type,
+trade.pay_time, 
+trade.trade_type,
+trade.buyer_alipay_no,
+trade.alipay_no,
+trade.tid as primaryKey
+
+
+						
+						FROM TRADE left outer join tradeex on trade.tid=tradeex.tid where status=3 and Trade_Type=8 and 
+						( ( buyer_message is not NULL and buyer_message !='') OR  ( seller_memo is not NULL and seller_memo !='') )
+						]]>
+						</querySql>
+						<countSql>
+						<![CDATA[
+						select   count(1) from trade left outer join tradeex on trade.tid=tradeex.tid  where status=3 and Trade_Type=8 and 
+						( ( buyer_message is not NULL and buyer_message !='') OR  ( seller_memo is not NULL and seller_memo !='') )
+						]]>
+						</countSql>
+						<primaryKeySql>
+				<![CDATA[
+				select  tid from trade  where status=3 and Trade_Type=8 and 
+						( ( buyer_message is not NULL and buyer_message !='') OR  ( seller_memo is not NULL and seller_memo !='') )
+						]]>
+						</primaryKeySql>
+						<tables>trade,tradeex</tables>
+					</sqlCriteria>
+					<sqlCriteria dataSourceName="trade" text="普通订单" identity="deliveryTrade">
+				<querySql>
+				<![CDATA[
+select  
+trade.seller_flag,  
+trade.item_title,
+trade.tid,
+trade.buyer_nick,
+trade.multi_buyer_nick,
+tradeex.company_name,
+tradeex.company_code,
+tradeex.out_sid,
+trade.total_fee,
+trade.post_fee,
+trade.payment,
+trade.num,
+trade.status,
+trade.refund_status,
+trade.cod_status,
+buyer_rate,
+company_sp_trade,
+consignee_address_detail,
+consignee_town,
+consignee_area,
+consignee_city,
+consignee_province,
+shipping_address_detail,
+shipping_town,
+shipping_area,
+shipping_city,
+shipping_province,
+short_address,
+shipping_branch_name,
+shipping_branch_code,
+consignee_branch_name,
+consignee_branch_code,
+package_center_code,
+package_center_name,
+send_name,
+send_phone,
+short_address_fornormal,
+print_config,
+tradeex.is_express_print,
+tradeex.is_invoice_print,
+tradeex.express_print_time,
+tradeex.invoice_print_time,
+trade.created, 
+trade.seller_memo,
+trade.buyer_message,
+trade.consign_time,
+trade.receiver_name,
+trade.receiver_state,
+trade.receiver_city,
+trade.receiver_district,
+trade.receiver_address,
+trade.receiver_zip,
+trade.receiver_mobile,
+trade.receiver_phone,
+trade.shipping_type,
+trade.pay_time, 
+trade.trade_type,
+trade.buyer_alipay_no,
+trade.alipay_no,
+trade.tid as primaryKey
+
+ 
+	FROM TRADE left outer join tradeex on trade.tid=tradeex.tid where status=3 and Trade_Type!=8  and ( Shipping_Type!=5) and 
+						( ( buyer_message is not NULL and buyer_message !='') OR  ( seller_memo is not NULL and seller_memo !='') )
+						]]>
+						</querySql>
+						<countSql>
+						<![CDATA[
+						select   count(1) from trade left outer join tradeex on trade.tid=tradeex.tid where status=3 and Trade_Type!=8  and ( Shipping_Type!=5) and 
+						( ( buyer_message is not NULL and buyer_message !='') OR  ( seller_memo is not NULL and seller_memo !='') )
+						]]>
+						</countSql>
+						<primaryKeySql>
+				<![CDATA[
+				select   tid from trade where status=3 and Trade_Type!=8  and ( Shipping_Type!=5) and 
+						( ( buyer_message is not NULL and buyer_message !='') OR  ( seller_memo is not NULL and seller_memo !='') )
+						]]>
+						</primaryKeySql>
+				<tables>trade,tradeex</tables>
+			</sqlCriteria>
+			<sqlCriteria dataSourceName="trade" text="虚拟订单" identity="deliveryTrade">
+				<querySql>
+				<![CDATA[
+select  
+trade.seller_flag,  
+trade.item_title,
+trade.tid,
+trade.buyer_nick,
+trade.multi_buyer_nick,
+tradeex.company_name,
+tradeex.company_code,
+tradeex.out_sid,
+trade.total_fee,
+trade.post_fee,
+trade.payment,
+trade.num,
+trade.status,
+trade.refund_status,
+trade.cod_status,
+buyer_rate,
+company_sp_trade,
+consignee_address_detail,
+consignee_town,
+consignee_area,
+consignee_city,
+consignee_province,
+shipping_address_detail,
+shipping_town,
+shipping_area,
+shipping_city,
+shipping_province,
+short_address,
+shipping_branch_name,
+shipping_branch_code,
+consignee_branch_name,
+consignee_branch_code,
+package_center_code,
+package_center_name,
+send_name,
+send_phone,
+short_address_fornormal,
+print_config,
+tradeex.is_express_print,
+tradeex.is_invoice_print,
+tradeex.express_print_time,
+tradeex.invoice_print_time,
+trade.created, 
+trade.seller_memo,
+trade.buyer_message,
+trade.consign_time,
+trade.receiver_name,
+trade.receiver_state,
+trade.receiver_city,
+trade.receiver_district,
+trade.receiver_address,
+trade.receiver_zip,
+trade.receiver_mobile,
+trade.receiver_phone,
+trade.shipping_type,
+trade.pay_time, 
+trade.trade_type,
+trade.buyer_alipay_no,
+trade.alipay_no,
+trade.tid as primaryKey
+
+ 
+	FROM TRADE left outer join tradeex on trade.tid=tradeex.tid where status=3 and Trade_Type!=8 and Shipping_Type=5 and 
+						( ( buyer_message is not NULL and buyer_message !='') OR  ( seller_memo is not NULL and seller_memo !='') ) 
+						]]>
+						</querySql>
+						<countSql>
+						<![CDATA[
+						select   count(1) from trade left outer join tradeex on trade.tid=tradeex.tid where status=3 and Trade_Type!=8 and Shipping_Type=5 and 
+						( ( buyer_message is not NULL and buyer_message !='') OR  ( seller_memo is not NULL and seller_memo !='') )
+						]]>
+						</countSql>
+						<primaryKeySql>
+				<![CDATA[
+						select   tid from where status=3 and Trade_Type!=8 and Shipping_Type=5 and 
+						( ( buyer_message is not NULL and buyer_message !='') OR  ( seller_memo is not NULL and seller_memo !='') )
+						]]>
+						</primaryKeySql>
+				<tables>trade,tradeex</tables>
+			</sqlCriteria>
+				</sqlCriterias>
+			</sqlNode>
+		</sqlNodes>		
+	</sqlNode>
+	
+	<sqlNode actionIdentity="com::taobao::assistant::trade::action::waitforpay" identity="trade" text="待付款" tooltip="">
+		<sqlCriterias>
+			<sqlCriteria dataSourceName="trade" text="全部" identity="waitforpay">
+				<querySql>
+				<![CDATA[
+select  
+trade.seller_flag,  
+trade.item_title,
+trade.tid,
+trade.buyer_nick,
+trade.multi_buyer_nick,
+tradeex.company_name,
+tradeex.company_code,
+tradeex.out_sid,
+trade.total_fee,
+trade.post_fee,
+trade.payment,
+trade.num,
+trade.status,
+trade.refund_status,
+trade.cod_status,
+buyer_rate,
+company_sp_trade,
+consignee_address_detail,
+consignee_town,
+consignee_area,
+consignee_city,
+consignee_province,
+shipping_address_detail,
+shipping_town,
+shipping_area,
+shipping_city,
+shipping_province,
+short_address,
+shipping_branch_name,
+shipping_branch_code,
+consignee_branch_name,
+consignee_branch_code,
+package_center_code,
+package_center_name,
+send_name,
+send_phone,
+short_address_fornormal,
+print_config,
+tradeex.is_express_print,
+tradeex.is_invoice_print,
+tradeex.express_print_time,
+tradeex.invoice_print_time,
+trade.created, 
+trade.seller_memo,
+trade.buyer_message,
+trade.consign_time,
+trade.receiver_name,
+trade.receiver_state,
+trade.receiver_city,
+trade.receiver_district,
+trade.receiver_address,
+trade.receiver_zip,
+trade.receiver_mobile,
+trade.receiver_phone,
+trade.shipping_type,
+trade.pay_time, 
+trade.trade_type,
+trade.buyer_alipay_no,
+trade.alipay_no,
+trade.tid as primaryKey
+
+				FROM TRADE left outer join tradeex on trade.tid=tradeex.tid where status=2					
+				]]>
+				</querySql>
+				<countSql>
+				<![CDATA[
+				select   count(1) from trade left outer join tradeex on trade.tid=tradeex.tid where status=2	
+				]]>
+				</countSql>
+				<primaryKeySql>
+				<![CDATA[
+						select   tid from trade where status=2	
+						]]>
+				</primaryKeySql>
+				<tables>trade,tradeex</tables>
+			</sqlCriteria>
+			
+		</sqlCriterias>		
+	</sqlNode>
+	
+	
+	<sqlNode actionIdentity="com::taobao::assistant::trade::action::hasdelivery" identity="trade" text="已发货" tooltip="">
+		<sqlCriterias>
+			<sqlCriteria dataSourceName="trade" text="全部" identity="sendTrade">
+				<querySql>
+				<![CDATA[
+select  
+trade.seller_flag,  
+trade.item_title,
+trade.tid,
+trade.buyer_nick,
+trade.multi_buyer_nick,
+tradeex.company_name,
+tradeex.company_code,
+tradeex.out_sid,
+trade.total_fee,
+trade.post_fee,
+trade.payment,
+trade.num,
+trade.status,
+trade.refund_status,
+trade.cod_status,
+buyer_rate,
+company_sp_trade,
+consignee_address_detail,
+consignee_town,
+consignee_area,
+consignee_city,
+consignee_province,
+shipping_address_detail,
+shipping_town,
+shipping_area,
+shipping_city,
+shipping_province,
+short_address,
+shipping_branch_name,
+shipping_branch_code,
+consignee_branch_name,
+consignee_branch_code,
+package_center_code,
+package_center_name,
+send_name,
+send_phone,
+short_address_fornormal,
+print_config,
+tradeex.is_express_print,
+tradeex.is_invoice_print,
+tradeex.express_print_time,
+tradeex.invoice_print_time,
+trade.created, 
+trade.seller_memo,
+trade.buyer_message,
+trade.consign_time,
+trade.receiver_name,
+trade.receiver_state,
+trade.receiver_city,
+trade.receiver_district,
+trade.receiver_address,
+trade.receiver_zip,
+trade.receiver_mobile,
+trade.receiver_phone,
+trade.shipping_type,
+trade.pay_time, 
+trade.trade_type,
+trade.buyer_alipay_no,
+trade.alipay_no,
+trade.tid as primaryKey
+
+				FROM TRADE left outer join tradeex on trade.tid=tradeex.tid where status=4					
+				]]>
+				</querySql>
+				<countSql>
+				<![CDATA[
+				select   count(1) from trade left outer join tradeex on trade.tid=tradeex.tid where status=4	
+				]]>
+				</countSql>
+				<primaryKeySql>
+				<![CDATA[
+						select   tid from trade where status=4	
+						]]>
+				</primaryKeySql>
+				<tables>trade,tradeex</tables>
+			</sqlCriteria>
+			
+		</sqlCriterias>		
+	</sqlNode>
+	
+	<sqlNode actionIdentity="com::taobao::assistant::trade::action::evaluate" identity="trade" text="待评价" tooltip="" userType="C">
+		<sqlCriterias>
+			<sqlCriteria dataSourceName="trade" text="全部" identity="evaluateTrade">
+				<querySql>
+				<![CDATA[
+select  
+trade.seller_flag,  
+trade.item_title,
+trade.tid,
+trade.buyer_nick,
+trade.multi_buyer_nick,
+tradeex.company_name,
+tradeex.company_code,
+tradeex.out_sid,
+trade.total_fee,
+trade.post_fee,
+trade.payment,
+trade.num,
+trade.status,
+trade.refund_status,
+trade.cod_status,
+buyer_rate,
+company_sp_trade,
+consignee_address_detail,
+consignee_town,
+consignee_area,
+consignee_city,
+consignee_province,
+shipping_address_detail,
+shipping_town,
+shipping_area,
+shipping_city,
+shipping_province,
+short_address,
+shipping_branch_name,
+shipping_branch_code,
+consignee_branch_name,
+consignee_branch_code,
+package_center_code,
+package_center_name,
+send_name,
+send_phone,
+short_address_fornormal,
+print_config,
+tradeex.is_express_print,
+tradeex.is_invoice_print,
+tradeex.express_print_time,
+tradeex.invoice_print_time,
+trade.created, 
+trade.seller_memo,
+trade.buyer_message,
+trade.consign_time,
+trade.receiver_name,
+trade.receiver_state,
+trade.receiver_city,
+trade.receiver_district,
+trade.receiver_address,
+trade.receiver_zip,
+trade.receiver_mobile,
+trade.receiver_phone,
+trade.shipping_type,
+trade.pay_time, 
+trade.trade_type,
+trade.buyer_alipay_no,
+trade.alipay_no,
+trade.tid as primaryKey
+
+
+				
+				FROM TRADE left outer join tradeex on trade.tid=tradeex.tid 
+				where seller_can_rate>0
+				]]>
+				</querySql>
+				<countSql>
+				<![CDATA[
+				select   count(1) from trade left outer join tradeex on trade.tid=tradeex.tid where seller_can_rate>0
+				]]>
+				</countSql>
+				<primaryKeySql>
+				<![CDATA[
+						select   tid from trade where seller_can_rate>0
+						]]>
+				</primaryKeySql>
+				<tables>trade,tradeex</tables>
+			</sqlCriteria>
+		</sqlCriterias>		
+	</sqlNode>
+	
+	<sqlNode actionIdentity="com::taobao::assistant::trade::action::refund" identity="trade" text="退款中" tooltip="">
+		<sqlCriterias>
+			<sqlCriteria dataSourceName="trade" text="全部" identity="refundTrade">
+				<querySql>
+				<![CDATA[
+select  
+trade.seller_flag,  
+trade.item_title,
+trade.tid,
+trade.buyer_nick,
+trade.multi_buyer_nick,
+tradeex.company_name,
+tradeex.company_code,
+tradeex.out_sid,
+trade.total_fee,
+trade.post_fee,
+trade.payment,
+trade.num,
+trade.status,
+trade.refund_status,
+trade.cod_status,
+buyer_rate,
+company_sp_trade,
+consignee_address_detail,
+consignee_town,
+consignee_area,
+consignee_city,
+consignee_province,
+shipping_address_detail,
+shipping_town,
+shipping_area,
+shipping_city,
+shipping_province,
+short_address,
+shipping_branch_name,
+shipping_branch_code,
+consignee_branch_name,
+consignee_branch_code,
+package_center_code,
+package_center_name,
+send_name,
+send_phone,
+short_address_fornormal,
+print_config,
+tradeex.is_express_print,
+tradeex.is_invoice_print,
+tradeex.express_print_time,
+tradeex.invoice_print_time,
+trade.created, 
+trade.seller_memo,
+trade.buyer_message,
+trade.consign_time,
+trade.receiver_name,
+trade.receiver_state,
+trade.receiver_city,
+trade.receiver_district,
+trade.receiver_address,
+trade.receiver_zip,
+trade.receiver_mobile,
+trade.receiver_phone,
+trade.shipping_type,
+trade.pay_time, 
+trade.trade_type,
+trade.buyer_alipay_no,
+trade.alipay_no,
+trade.tid as primaryKey
+
+ 
+				
+				FROM TRADE left outer join tradeex on trade.tid=tradeex.tid where  trade.refund_status between 1 and 4
+				]]>
+				</querySql>
+				<countSql>
+				<![CDATA[
+				select   count(1) from trade left outer join tradeex on trade.tid=tradeex.tid where trade.refund_status between 1 and 4
+				]]>
+				</countSql>
+				<primaryKeySql>
+				<![CDATA[
+						select   tid from trade where trade.refund_status between 1 and 4
+						]]>
+				</primaryKeySql>
+				<tables>trade,tradeex</tables>
+			</sqlCriteria>
+		</sqlCriterias>		
+	</sqlNode>
+	
+	<sqlNode actionIdentity="com::taobao::assistant::trade::action" identity="trade" text="所有订单" tooltip="">
+		<sqlCriterias>
+			<sqlCriteria dataSourceName="trade" text="全部" identity="fullTrade">
+				<querySql>
+				<![CDATA[
+select  
+trade.seller_flag,  
+trade.item_title,
+trade.tid,
+trade.buyer_nick,
+trade.multi_buyer_nick,
+tradeex.company_name,
+tradeex.company_code,
+tradeex.out_sid,
+trade.total_fee,
+trade.post_fee,
+trade.payment,
+trade.num,
+trade.status,
+trade.refund_status,
+trade.cod_status,
+buyer_rate,
+company_sp_trade,
+consignee_address_detail,
+consignee_town,
+consignee_area,
+consignee_city,
+consignee_province,
+shipping_address_detail,
+shipping_town,
+shipping_area,
+shipping_city,
+shipping_province,
+short_address,
+shipping_branch_name,
+shipping_branch_code,
+consignee_branch_name,
+consignee_branch_code,
+package_center_code,
+package_center_name,
+send_name,
+send_phone,
+short_address_fornormal,
+print_config,
+tradeex.is_express_print,
+tradeex.is_invoice_print,
+tradeex.express_print_time,
+tradeex.invoice_print_time,
+trade.created, 
+trade.seller_memo,
+trade.buyer_message,
+trade.consign_time,
+trade.receiver_name,
+trade.receiver_state,
+trade.receiver_city,
+trade.receiver_district,
+trade.receiver_address,
+trade.receiver_zip,
+trade.receiver_mobile,
+trade.receiver_phone,
+trade.shipping_type,
+trade.pay_time, 
+trade.trade_type,
+trade.buyer_alipay_no,
+trade.alipay_no,
+trade.tid as primaryKey
+
+
+				FROM TRADE left outer join tradeex on trade.tid=tradeex.tid
+				]]>
+				</querySql>
+				<countSql>
+				<![CDATA[
+				select   count(1) from trade left outer join tradeex on trade.tid=tradeex.tid 
+				]]>
+				</countSql>
+				<primaryKeySql>
+				<![CDATA[
+						select   tid from trade 
+						]]>
+				</primaryKeySql>
+				<tables>trade,tradeex</tables>
+			</sqlCriteria>
+			
+		</sqlCriterias>				
+	</sqlNode>
+	
+</sqlNodes>

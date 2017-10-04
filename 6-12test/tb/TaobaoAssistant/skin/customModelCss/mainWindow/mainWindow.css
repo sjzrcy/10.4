@@ -1,0 +1,135 @@
+﻿/*主窗口tab页后面的背景*/
+QWidget#mainFrame 
+{	
+	margin-top: 24px;
+	border: 1px solid #565656;
+	border-top: 37px solid qlineargradient(x1: 0, y1: 0, x2: 1, y2: 0,
+				stop: 0.0 #565656, stop: 0.001 #2D8FC8,
+                                stop: 0.002 #2D8FC8, stop: 0.3 #68AED7,
+				stop: 0.4 #63ABD6, stop: 0.998 #2189C5,
+				stop: 0.999 #565656, stop: 1 #565656);
+	margin-left: 0px;
+	margin-right: 0px;
+}
+
+QWidget#zhulihelper 
+{	
+	border: 1px solid #565656;
+	margin-top: 1px;
+	margin-left: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	background-color: #4b9cce;
+}
+
+QWidget#centralWidget
+, QWidget#UploadingPanel
+{
+	border-left: 1px solid #565656;
+	border-right: 1px solid #565656;
+}
+
+QWidget#UploadingPanel
+{
+	border-bottom: 1px solid #565656;
+}
+
+/*主窗口title的样式*/
+QWidget#ui_baseDialog_titlebar_widget
+{
+	background: qlineargradient(x1: 0, y1: 0, x2: 1, y2: 0,
+                                stop: 0.0 #2D8FC8, stop: 0.3 #68AED7,
+				stop: 0.4 #63ABD6, stop: 1 #2189C5);
+
+	border: 1px solid #565656;	
+	height: 24px;
+	border-bottom: 0px;
+}
+
+/*主窗口左侧toolbox的样式*/
+QWidget#leftToolBoxContentWidget 
+{
+	border: 0px;
+	background-color: #F8F8F8;
+}
+
+
+/*主窗口的tabWidget的样式 */
+QTabBar#mainTabBar 
+{
+	color: rgb(255,255,255);
+	background-color: rgba(255,255,255, 0%);
+}
+
+QTabWidget#mainTabWidget::pane { /* The tab widget frame */
+	top: -8px;
+ }
+
+QTabWidget#mainTabWidget::tab-bar 
+{
+	left: 25px;
+	max-height:17px;
+}
+QTabBar#mainTabBar::tab 
+{
+	background-color: rgba(255,255,255, 0%);
+	min-width:80px;
+	min-height: 32px;
+	padding-left: 0px;
+	padding-right: 3px;
+	padding-bottom: 5px;
+	border: 1px solid rgba(255,255,255,0%);
+}
+
+QTabBar#mainTabBar::tab:selected, QTabBar#mainTabBar::tab:hover
+{
+	background-image: url(images/customModelCss/mainWindow/mainTab.png);
+/*	background-repeat: no-repeat;*/
+}
+
+QTabBar#mainTabBar::tab:pressed
+{
+	background-image: url(images/customModelCss/mainWindow/mainTab-Pressed.png);
+}
+
+QTabBar#mainTabBar::tab:hover
+{
+	background-image: url(images/customModelCss/mainWindow/mainTab-Hover.png);
+}
+
+QPushButton#mainIconBtn
+{
+	background: rgba(255,255,255, 0%) url(images/customModelCss/mainWindow/logo.png);
+	background-repeat: no-repeat;
+	background-position: center center;
+	height:22px;
+	width:32px;
+}
+
+QToolButton#defaultMainMenuButton
+{
+	background: rgba(255,255,255, 0%) url(images/customModelCss/mainWindow/configureBtn.png);
+	background-repeat: no-repeat;
+	background-position: center center;
+	height:22px;
+	width:32px;
+}
+
+QToolButton#defaultMainMenuButton:hover
+{
+	background: rgba(255,255,255, 0%) url(images/customModelCss/mainWindow/configureBtn-Hover.png);
+	background-repeat: no-repeat;
+	background-position: center center;
+	height:22px;
+	width:32px;
+}
+
+QToolButton#defaultMainMenuButton::menu-indicator
+{
+	image: "";
+}
+
+QLabel#skinWidgetTitleLabel
+{
+	color: white;
+}

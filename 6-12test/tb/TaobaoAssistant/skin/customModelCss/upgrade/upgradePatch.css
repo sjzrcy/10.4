@@ -1,0 +1,22 @@
+QLabel#taobaoDownloadDlgInfoLabel
+{
+	border: 0px;
+	margin: 0px;
+	background-image: url(images/customModelCss/upgrade/TAB_UPGREADE_INFO.jpg);
+}
+
+QWidget#taobaoDownloadDlgInfoCenterWidget
+{
+	background-color: #F0F0F0;
+	border-top: 1px solid #A0A0A0;
+	border-bottom: 1px solid #A0A0A0;
+	border-left: 1px solid #565656;
+	border-right: 1px solid #565656;
+}
+
+QWidget#taobaoDownloadDlgInfoBottomWidget
+{
+	background-color: #E1E1E1;
+	border-left: 1px solid #565656;
+	border-right: 1px solid #565656;
+}

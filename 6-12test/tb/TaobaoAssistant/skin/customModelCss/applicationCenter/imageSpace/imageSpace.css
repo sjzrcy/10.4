@@ -1,0 +1,178 @@
+QSplitter#imageSpace_mainSplitter
+{
+	margin-top: 0px;
+}
+
+QWidget#imageSpace_leftWidget
+, QWidget#imageSpace_rightWidget
+{
+	margin: 0px;
+}
+
+QLabel#imageSpace_upload_step1_label
+{
+	padding-left:24px;
+	background-image: url(images/basicModelImages/label/step1.png);
+	background-repeat: no;
+	background-position: center left;
+	height: 24px;
+	max-height: 24px;
+	min-height: 24px;
+}
+
+QLabel#imageSpace_upload_step2_label
+{
+	padding-left:24px;
+	background-image: url(images/basicModelImages/label/step2.png);
+	background-repeat: no;
+	background-position: center left;
+}
+
+QLabel#imageSpace_addImage_label:enabled
+{
+	padding-left:18px;
+	background-image: url(images/basicModelImages/label/addItem.png);
+	background-repeat: no;
+	background-position: center left;
+}
+
+QLabel#imageSpace_addImage_label:!enabled
+{
+	padding-left:18px;
+	background-image: url(images/basicModelImages/label/addItem-disable.png);
+	background-repeat: no;
+	background-position: center left;
+}
+
+QLabel#imageSpace_clearImage_label:enabled
+{
+	padding-left:18px;
+	background-image: url(images/basicModelImages/label/clear-all.png);
+	background-repeat: no;
+	background-position: center left;
+}
+
+QLabel#imageSpace_clearImage_label:!enabled
+{
+	padding-left:18px;
+	background-image: url(images/basicModelImages/label/clear-all-disable.png);
+	background-repeat: no;
+	background-position: center left;
+}
+
+QLabel#UI_ImageSpace_Label
+{
+	background-image:url(images/customModelCss/imageSpace/warning.png);
+	background-position: center left;
+	background-repeat: no;
+	padding-left:12px;
+	background-color:#FEFFE6;
+	border: 1px solid #FFCE7F;
+}
+
+QWidget#UI_LocalFileSelectBigButtonWidget
+, QWidget#localImageSelectButtonWidget
+{	
+	background-color: white;
+	border-top: 1px solid #86A6C8;
+}
+
+QWidget#localImageSelectButtonWidget
+{
+	border-bottom: 1px solid #E0E0E0;
+}
+
+QWidget#UI_LocalFileSelectWidget
+{
+ 	border-bottom: 10px solid #E0E0E0;
+ 	background: white;
+}
+
+QPushButton#UI_uploadingButton
+{
+	background-image:url(images/customModelCss/imageSpace/uploadLocalImageButton.png);
+	border:none;
+}
+
+QWidget#ImageSelectTabBottomWidget
+{
+	margin-top: -5px;
+	border-top: 1px solid #E0E0E0;
+}
+
+QPushButton#imageSpace_selectAllButton
+{
+	border: none;
+	background-image:url(images/customModelCss/imageSpace/imageSpace-SelectAll.png);
+	background-repeat:no-repeat;
+}
+
+QPushButton#imageSpace_selectAllButton:hover
+{
+	border: none;
+	background-image:url(images/customModelCss/imageSpace/imageSpace-SelectAll-Hover.png);
+	background-repeat:no-repeat; 	
+}
+
+QPushButton#imageSpace_selectAllButton:pressed
+{
+	border: none;
+	background-image:url(images/customModelCss/imageSpace/imageSpace-SelectAll-Press.png);
+	background-repeat:no-repeat; 	
+}
+
+QPushButton#imageSpace_selectNoneButton
+{
+	border: none;
+	background-image:url(images/customModelCss/imageSpace/imageSpace-Selectnone.png);
+	background-repeat:no-repeat;
+}
+
+QPushButton#imageSpace_selectNoneButton:hover
+{
+	border: none;
+	background-image:url(images/customModelCss/imageSpace/imageSpace-Selectnone-Hover.png);
+	background-repeat:no-repeat; 	
+}
+
+QPushButton#imageSpace_selectNoneButton:pressed
+{
+	border: none;
+	background-image:url(images/customModelCss/imageSpace/imageSpace-Selectnone-Press.png);
+	background-repeat:no-repeat; 	
+}
+
+QPushButton#deleteimage_pushButton
+{
+	border: none;
+	background-image:url(images/customModelCss/imageSpace/delete-uploadimage-hover.png);
+	background-repeat:no-repeat;
+}
+
+QPushButton#deleteimage_pushButton:hover
+{
+	border: none;
+	background-image:url(images/customModelCss/imageSpace/delete-uploadimage-press.png);
+	background-repeat:no-repeat;
+}
+
+QPushButton#deleteimage_pushButton:pressed
+{
+	border: none;
+	background-image:url(images/customModelCss/imageSpace/delete-uploadimage-standard.png);
+	background-repeat:no-repeat;
+}
+
+QPushButton#deleteimage_pushButton:disabled
+{
+	border: none;
+	background-image:url(images/customModelCss/imageSpace/imageSpace-delete-image-Disabled.png);
+	background-repeat:no-repeat;
+}
+
+QLineEdit#imagespaceKeywordEdit
+{
+	width: 180px;
+	height: 22px;
+	border-right: 0px;
+}

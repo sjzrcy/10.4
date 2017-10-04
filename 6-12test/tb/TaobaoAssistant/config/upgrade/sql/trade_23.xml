@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<upgrade dataSourceName="TRADE" databaseVersion="23.00">
+	<sql>
+    <![CDATA[	
+ALTER TABLE TRADE
+ADD MULTI_BUYER_NICK VARCHAR(64) CHARACTER SET UTF8  
+COLLATE UTF8 
+	]]>
+	</sql>
+</upgrade>

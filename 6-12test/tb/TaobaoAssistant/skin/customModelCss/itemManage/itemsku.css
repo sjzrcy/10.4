@@ -1,0 +1,83 @@
+QWidget#scrollAreaWidgetContents_
+{
+	background-color: #F8F8F8;
+	color:#1E395B;
+}
+
+QWidget#scrollAreaWidgetContents_2
+{
+	background-color: #F8F8F8;
+	color:#1E395B;
+}
+
+QLabel#labelThumbnails_
+{
+    background-color: #D6E2F2;
+    background-image: url(images/customModelCss/item/sku/sku_lable_thumbnails.png);
+    background-repeat:no-repeat; 
+    background-position:center center;
+}
+
+QLabel#labelList_
+{
+    background-color: #D6E2F2;
+    background-image: url(images/customModelCss/item/sku/sku_lable_list.png);
+    background-repeat:no-repeat; 
+    background-position:center center;
+}
+
+QPushButton#btnMenu_
+{
+	border-top:0px solid;
+	border-bottom:1px solid #8ea5bf;
+	border-left:0px solid;
+	border-right:0px solid;
+	border-radius: 0px;
+	background-image: url(images/customModelCss/item/sku/sku_image_btn_default_hasImage.png);
+	background-position:center center;
+	background-color:#D6E2F2;
+}
+
+QPushButton#skuImageWidgetNoImageBtnMenu
+{
+	border-top:0px solid;
+	border-bottom:1px solid #8ea5bf;
+	border-left:0px solid;
+	border-right:0px solid;
+	border-radius: 0px; 
+	background-image: url(images/customModelCss/item/sku/sku_image_btn_default_noImage.png);
+	background-position:center center;
+}
+
+QPushButton#skuImageWidgetNoImageBtnMenu:hover
+{
+	border-top:0px solid;
+	border-bottom:1px solid #8ea5bf;
+	border-left:0px solid;
+	border-right:0px solid;
+	border-radius: 0px; 
+	background-image: url(images/customModelCss/item/sku/sku_image_btn_select_noImage.png);
+	background-position:center center;
+}
+
+QPushButton#skuImageWidgetHasImageBtnMenu
+{
+	border-top:0px solid;
+	border-bottom:1px solid #8ea5bf;
+	border-left:0px solid;
+	border-right:0px solid;
+	border-radius: 0px; 
+	background-image: url(images/customModelCss/item/sku/sku_image_btn_default_hasImage.png);
+	background-position:center center;
+}
+
+QPushButton#skuImageWidgetHasImageBtnMenu:hover
+{
+	border-top:0px solid;
+	border-bottom:1px solid #8ea5bf;
+	border-left:0px solid;
+	border-right:0px solid;
+	border-radius: 0px; 
+	background-image: url(images/customModelCss/item/sku/sku_image_btn_select_hasImage.png);
+	background-position:center center;
+}

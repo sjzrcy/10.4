@@ -1,0 +1,21 @@
+// 日期时间
+.prop-datetime{
+	input{
+		position: relative;
+		display:inline-block;
+		border:none;
+		outline:none;
+		width: calc(100% - 35px);
+		padding-right: 30px;
+		height: 24px;
+		text-indent: 10px;
+	}
+
+	label{
+		position: absolute;
+		right: 0px;
+		top: 5px;
+		width: 25px; height:16px;
+		background-image: url(../img/date-icon.png);
+	}
+}

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+  <html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+      <title>中心点逐渐放大效果</title>
+      <style type="text/css">
+          *{
+              padding:0;
+              margin:0;
+         }
+         .content {
+             margin: 40px auto;
+             width: 900px;
+             height: 301px;
+             /*border:10px solid #808080;*/
+            /*overflow:hidden;*/
+             z-index:2;
+         }
+         .content img {
+             width: 450px;
+             height: 301px;
+             transition-duration:0.5s;
+             z-index:1;
+         }
+         .content img:hover {
+             transform: scale(1.2);
+             -webkit-transform: scale(1.2); /*Safari 和 Chrome*/
+             /*-webkit-transform: scale(12,.3); /*Safari 和 Chrome*/*/
+             -moz-transform: scale(1.2); /*Firefox*/
+             -ms-transform: scale(1.2); /*IE9*/
+             -o-transform: scale(1.2); /*Opera*/
+         }
+     </style>
+ </head>
+ <body>
+     <div class="content">
+         <img src="img/a8.jpg" class="pic"/>
+         <img src="img/a9.jpg" class="pic"/>
+     </div>
+ </body>
+ </html>

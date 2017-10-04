@@ -1,0 +1,31 @@
+.spuinfo{
+  border: solid 1px #c9c9c9;
+  background-color: #f6f6f6;
+  width: calc(100% - 2px);
+
+  .pair{
+    width: 100%;
+    margin-top: 4px;
+    color: #767676;
+
+    .label{
+      display: inline-block;
+      width: 106px;
+      text-align: right;
+      word-break: break-all;
+      vertical-align: top;
+    }
+
+    .text{
+      display: inline-block;
+      width: 148px;
+      margin-left: 8px;
+      word-break: break-all;
+      vertical-align: top;
+    }
+
+    &:last-child{
+      margin-bottom: 4px;
+    }
+  }
+}

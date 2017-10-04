@@ -1,0 +1,66 @@
+<!doctype html>  
+<html lang="cn">  
+ <head>  
+ <meta http-equiv="content-type" content="text/html;charset=UTF-8"/>  
+  <title>复选框全选、全不选、反选、必选一个</title>  
+   <script type="text/javascript">  
+        //全选  
+        function selectAll() {  
+            var names = document.getElementsByName("bjjb");                             
+            for(var i=0;i<names.length;i++){  
+                    names[i].checked=true;  
+             }        
+        }  
+  
+        //全不选  
+        function selectNone() {  
+            var names = document.getElementsByName("bjjb");                             
+            for(var i=0;i<names.length;i++){  
+                    names[i].checked=false;  
+             }        
+        }  
+          
+         //反选  
+        function selectInvert() {  
+            var names = document.getElementsByName("bjjb");                                 
+            for(var i=0;i<names.length;i++){  
+                    if(names[i].checked){  
+                        names[i].checked=false ;  
+                    }else{  
+                        names[i].checked=true ;  
+                    }  
+                }  
+        }  
+         
+         //必须选择一个  
+        function selectOne() {  
+            var names = document.getElementsByName("bjjb");            
+            var flag = false ;//标记判断是否选中一个                 
+            for(var i=0;i<names.length;i++){  
+                if(names[i].checked){  
+                        flag = true ;  
+                        break ;  
+                 }  
+             }  
+             if(!flag){  
+                alert("请最少选择一项！");  
+                return false ;  
+             }  
+        }  
+  
+   </script>  
+ </head>  
+ <body>  
+    <form id="checkboxform" method="post" action="">  
+        <input type="checkbox" name="bjjb" value="1">交通事故<br>  
+        <input type="checkbox" name="bjjb" value="2">自然灾害<br>  
+        <input type="checkbox" name="bjjb" value="3">恶劣天气<br>  
+        <input type="checkbox" name="bjjb" value="4">严重违法行为<br>  
+        <input type="checkbox" name="bjjb" value="5">路面损毁<br>  
+        <a href="javascript:void(0);"  onclick="selectAll()">全选</a>   
+        <a href="javascript:void(0);" onclick="selectNone()">全不选</a>   
+        <a href="javascript:void(0);" onclick="selectInvert()">反选</a>   
+        <a href="javascript:void(0);" onclick="selectOne()">必须选择一个</a>   
+     </form>  
+ </body>  
+</html>

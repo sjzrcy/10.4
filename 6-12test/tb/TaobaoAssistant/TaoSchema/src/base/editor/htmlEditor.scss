@@ -1,0 +1,264 @@
+#child{
+    width:100px;
+    height:100px;
+    border: 1px solid #f00;
+}
+#parent{
+    width:200px;
+    height:200px;
+    border:1px solid #ccc;
+}
+#toolbar{
+    border:1px solid #ccc;
+    list-style:none;
+    padding:0;
+    margin:0;
+    min-width:200px;
+    display:inline-block;
+}
+#toolbar *{
+    float:left;
+}
+#toolbar .item{
+    width:32px;
+    height:32px;
+    float:left;
+    background-repeat:no-repeat;
+    background-position: center;
+}
+#toolbar .item:active{
+    background-position-x: 60%;
+    background-position-y: 60%;
+}
+#toolbar .item:hover{
+    background-color: #ced6ec;
+}
+#toolbar .splitter{
+    width : 1px;
+    margin : 4px 5px;
+    height : 24px;
+    float:left;
+    background-color : #ccc;
+}
+#paragraphFormatVal{
+    height:24px;
+    margin:4px 0;
+}
+#zoomPercent{
+    float:left;
+}
+#toolbar input{
+    display:inline-block;
+}
+#bold{
+    background-image: url("../img/format-text-bold.png");
+}
+#open{
+    background-image: url("../img/document-open.png");
+}
+#selectAll{
+    background-image: url("../img/edit-select-all.png");
+}
+#undo{
+    background-image: url("../img/edit-undo.png");
+}
+#save{
+    background-image: url("../img/document-save.png");
+}
+#redo{
+    background-image: url("../img/edit-redo.png");
+}
+#copy{
+    background-image: url("../img/edit-copy.png");
+}
+#paste{
+    background-image: url("../img/edit-paste.png");
+}
+#cut{
+    background-image: url("../img/edit-cut.png");
+}
+#insertImage{
+    background-image: url("../img/insert-MyImage.png");
+}
+#insertLocalImage{
+    background-image: url("../img/insert_webimg.png");
+}
+#fontFamily{
+    background-image: url("../img/font_name.png");
+}
+#fontSize{
+    background-image: url("../img/font_size.png");
+}
+#italic{
+    background-image: url("../img/format-text-italic.png");
+}
+#underline{
+    background-image: url("../img/format-text-underline.png");
+}
+#strikeThrough{
+    background-image: url("../img/format-text-strikethrough.png");
+}
+#alignLeft{
+    background-image: url("../img/format-justify-left.png");
+}
+#alignRight{
+    background-image: url("../img/format-justify-right.png");
+}
+#alignCenter{
+    background-image: url("../img/format-justify-center.png");
+}
+#alignJustify{
+    background-image: url("../img/format-justify-fill.png");
+}
+#increaseIndent{
+    background-image: url("../img/format-indent-more.png");
+}
+#decreaseIndent{
+    background-image: url("../img/format-indent-less.png");
+}
+#setOrderedList{
+    background-image: url("../img/numbered-list.png");
+}
+#setUnorderedList{
+    background-image: url("../img/bulleted-list.png");
+}
+#createLink{
+    background-image: url("../img/text-html.png");
+}
+#removeHyperlink{
+    background-image: url("../img/link_break.png");
+}
+#insertTable{
+    background-image: url("../img/table_edit.png");
+}
+#backgroundColor{
+    background-image: url("../img/background.png");
+}
+#textColor{
+    background-image: url("../img/textColor.png");
+}
+#zoomIn{
+    background-image: url("../img/list-add.png");
+}
+#zoomOut{
+    background-image: url("../img/list-remove.png");
+}
+#switchSourceCode{
+    background-image: url("../img/insert-html.png");
+}
+#zoomPercentVal{
+    min-width:40px;
+    width:40px;
+    height:18px;
+    border:2px inset;
+    padding:1px;
+    margin:4px 0;
+}
+.iframeDiv{
+    display:none;
+    position:absolute;
+    left:0;
+    top:0;
+    z-index: 20;
+    opacity : 0;
+}
+.maskIframe{
+    border-style: none;
+    width:100%;
+    height:100%;
+}
+#fontSizeDialog{
+    display:none;
+}
+#createLinkDialog{
+    display:none;
+}
+#createLinkOption1{
+    overflow:hidden;
+}
+#createLinkOption1 div{
+    float:left;
+}
+#createLinkPrompt{
+    margin : 10px 0;
+}
+#createLinkValuePrompt{
+    width:20%;
+}
+#filterPrompt{
+    display : none;
+    color : #f00;
+    margin : 10px 0;
+}
+#createLinkValue{
+    width:80%;
+}
+#createTableDialog{
+    overflow: hidden;
+}
+#createTableDialog input[type=text]{
+    width:70px;
+}
+#createTableLeftPart{
+    float : left;
+}
+#createTableLeftPart div :nth-child(1){
+    margin-bottom : 5px;
+    margin-right : 10px;
+}
+#borderColorPrompt{
+    margin-right : 10px;
+}
+#borderWidthPrompt{
+    margin-right : 10px;
+}
+#createTableRightPart{
+    margin-left : 20px;
+}
+#createTableRightPart *{
+    margin-bottom : 5px;
+}
+#createTableRightPart{
+    float : left;
+}
+#tableBorderChooser{
+    border:2px solid #000;
+    display : inline-block;
+    cursor : pointer;
+    width : 60px;
+    height : 20px;
+    position: relative;
+    padding : 0 5px;
+}
+#borderColorChooser{
+    position: absolute;
+    left : 0;
+    top : 0;
+}
+#borderColorChooser .Image{
+    width:70px;
+}
+#borderColorChooser .Icon{
+    width:60px;
+    margin-right:0;
+}
+#borderColorInfo{
+    width : 60px;
+    margin-right: 0;
+}
+.popupDialog{
+    font-size:14px;
+    user-select: none;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+}
+#fontFamilyDialog{
+    display : none;
+}
+.jPickerDialog{
+    display:none;
+}
+.jPickerContent{
+    width:100%;
+    height:100%;
+}

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<upgrade dataSourceName="ITEM" databaseVersion="35.00">
+	<sql>
+    <![CDATA[	
+ALTER TABLE ITEM ADD CPV_MEMO VARCHAR(6000) CHARACTER SET UTF8; 
+ALTER TABLE ITEM ADD INPUT_CUSTOM_CPV VARCHAR(6000) CHARACTER SET UTF8; 
+	]]>
+	</sql>
+</upgrade>

@@ -1,0 +1,158 @@
+QWidget#itemImageDisplayWidget
+{
+	border: 1px solid #A0A0A0;
+}
+
+QWidget#tradeEditorBottomWidget
+{
+	border-top: 1px solid #A0A0A0;
+}
+QWidget#mainRightWidget
+{
+	margin: 0px;
+}
+
+QWidget#BaseTitleDialog
+{
+	border: 1px solid #565656;
+	border-top: 0px;	
+	background-color: #F7F7F7;
+}
+
+QWidget#com__taobao__assistant__deal__widget__BatchEditTradeCodeWidget
+{
+	border: 1px solid #565656;
+	border-top: 0px;	
+	border-bottom: 0px;
+	background-color: #F7F7F7;
+}
+
+QWidget#PrintExpressDialog
+, QWidget#com__taobao__assistant__deal__widget__PrintDeliveryDialog
+{
+	border: 1px solid #565656;
+	border-top: 0px;	
+	background-color: #F7F7F7;
+}
+
+QWidget#closeableBarWidget
+, QWidget#closeableBarRootWidget
+{
+	border: 0px;
+	border-bottom: 1px solid #BBBBBB;
+}
+
+QWidget#popupTopWidget
+, QDialog#TableInsert
+{
+	background-color:#F8F8F8;
+}
+
+QWidget#popupBottomWidget
+, QDialogButtonBox#batchEditButtonWidget
+, QWidget#tableInsertBottomWidget
+, QWidget#printFormButtonWidget
+{
+	background-color:#E1E1E1;
+	margin-bottom: 0px;
+	padding-bottom: 0px;
+}
+
+QWidget#baseTitleDialogTitle
+{
+	border-left: 0px;
+	border-right: 0px;
+}
+
+QStatusBar#baseDialogStatusBar
+{
+	background-color: #E1E1E1;
+	min-height: 3px;
+	max-height: 3px;
+	border: 1px solid #565656;
+	border-top: 0px;
+}
+
+QWidget[error=true]
+{
+	border: 1px solid red;
+	background-image:url(images/standard/common/error.png);
+	background-repeat:no-repeat;       
+	background-position:center left; 
+
+	padding-left:20px; 
+}
+
+QWidget#itemEditorWidgetBottomWarnWidget
+{
+	background-color: #C5D7EF;
+	border: 0px;
+}
+
+QWidget#itemEditorWidgetBottomErrorWidget
+{
+	background-color: #FFD8D7;
+	border: 0px;
+}
+
+QWidget#itemEditorWidgetBottomWidget
+, QWidget#loginErrorButtomWidget_
+{
+	background-color: #E8E8E8;
+	border: 0px;
+}
+
+QWidget#baseDialogButtomWidget
+, QWidget#SkinTitleProgressDialogCenterWidget
+{
+	background-color: #E1E1E1;
+	border-left: 1px solid #565656;
+	border-right: 1px solid #565656;
+	padding-top: 4px;
+}
+
+QWidget#twiceVeryfyDlgBottomWidget
+{
+	background-color: #E1E1E1;
+}
+
+QWidget#BatchEditWidgetBottomWidget
+, QWidget#myTipbuttomWidget
+, QWidget#uploadItemButtonsBoxWidget
+, QWidget#ItemsCSVButtomWidget
+{
+	background-color: #E1E1E1;
+	padding-left: 12px;
+	padding-right: 12px;
+	padding-top: 8px;
+	padding-bottom: 0px;
+	margin: 0px;
+}
+
+QWidget#TBATooltip
+{
+	border: 1px solid #FF8480;
+	background-color: #FFF2F2;
+}
+
+QComboBox:disabled
+, QLineEdit:disabled
+, QTextEdit:disabled
+, QCheckBox:disabled
+, QRadioButton:disabled
+, QSpinBox:disabled
+, QDoubleSpinBox:disabled
+{
+	background:#DDDDDD;
+	color:#999999;
+}
+
+QScrollArea#itembasicEditScrollArea
+, QWidget#scrollAreaWidgetContents
+, QWidget#itemPropertyGroupBox:disabled
+, QWidget#itemImageTabWidget:disabled
+, showMainVideoWidget:disabled
+, showMainImageWidget:disabled
+{
+	background-color:#F8F8F8;
+}

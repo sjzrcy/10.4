@@ -1,0 +1,64 @@
+QDialog#ui_baseDialog
+{
+/*	background-image: url(images/dialog/frame-gb.png); */
+/*	background-repeat:repeat-x; */
+	border: 1px solid rgb(93,107,122);
+	border-radius: 3px;
+	background:  #EFF5FB;
+	border-top: none;
+}
+
+QWidget#ui_baseDialog_titlebar_widget
+{
+	background-color: qlineargradient(spread:pad, x1:1, y1:0, x2:0, y2:0, stop:1 rgba(23, 28, 145, 255), stop:0 rgba(255, 255, 255, 255));
+	background-repeat:repeat-x;
+	border: none;
+	border-bottom: 1px solid rgb(93,107,122);
+	border-top: 1px solid rgb(93,107,122);
+}
+
+QPushButton#closeWindowBtn_{
+ 		border: none;
+ 		background-image: url(images/dialog/closewindow.png);
+
+}
+ QPushButton#closeWindowBtn_:hover{
+ 	border: none;
+    background-image: url(images/dialog/closewindow_hover.png);
+ }
+
+ QPushButton#closeWindowBtn_:pressed{
+ 	border: none;
+    background-image: url(images/dialog/closewindow_pressed.png);
+ }
+
+ QPushButton#maxWindowBtn_{
+ 		border: none;
+ 		background-image: url(images/dialog/maxwindow.png);
+
+}
+ QPushButton#maxWindowBtn_:hover {
+ 	border: none;
+    background-image: url(images/dialog/maxwindow_hover.png);
+ }
+
+ QPushButton#maxWindowBtn_:pressed {
+ 	border: none;
+    background-image: url(images/dialog/maxwindow_pressed.png);
+ }
+ 
+ /*×îÐ¡»¯*/
+ QPushButton#minWindowBtn_{
+ 		border: none;
+ 		background-image: url(images/dialog/minwindow.png);
+
+}
+ QPushButton#minWindowBtn_:hover {
+ 		border: none;
+    background-image: url(images/dialog/minwindow_hover.png);
+ }
+
+ QPushButton#minWindowBtn_:pressed {
+ 		border: none;
+    background-image: url(images/dialog/minwindow_pressed.png);
+ }

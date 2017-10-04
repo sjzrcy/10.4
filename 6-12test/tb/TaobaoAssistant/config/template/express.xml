@@ -1,0 +1,113 @@
+﻿<?xml version='1.0' encoding='UTF-8'?>
+<template>
+	<group text="发件人信息">
+		<item name="seller_name" text="发件人姓名" x="0.152" y="0.238" type="text" color="red">
+			<font family="宋体" pointSize="11" bold="true" underline="false" italic="false"/>			
+		</item>
+		<item name="seller_zip" text="发件人邮编" x="0.092" y="0.496" type="text" color="red">
+			<font family="宋体" pointSize="11" bold="true" underline="false" italic="false"/>		
+		</item>
+		<item name="seller_phone" text="发件人电话" x="0.322" y="0.228">
+			<font family="宋体" pointSize="11" bold="true" underline="false" italic="false"/>
+		</item>
+		<item name="seller_mobile" text="发件人手机" x="0.323" y="0.357">
+			<font family="宋体" pointSize="11" bold="true" underline="false" italic="false"/>		
+		</item>
+		<item name="seller_consign_time" text="发件人发件日期" x="0.252" y="0.181">
+			<font family="宋体" pointSize="11" bold="true" underline="false" italic="false"/>
+		</item>
+		<item name="seller_unit" text="发件人单位名称" x="0.087" y="0.321">
+			<font family="宋体" pointSize="11" bold="true" underline="false" italic="false"/>		
+		</item>		
+		<item name="seller_note" text="发件人备注" x="0.30" y="0.20">
+			<font family="宋体" pointSize="11" bold="true" underline="false" italic="false"/>
+		</item>
+		<item name="seller_address" text="发件人地址" x="0.086" y="0.386">
+			<font family="宋体" pointSize="11" bold="true" underline="false" italic="false"/>
+		</item>
+	</group>
+	<group text="收件人信息">
+		<item name="receiver_name" text="收件人姓名" x="0.558" y="0.281">
+			<font family="宋体" pointSize="11" bold="true" underline="false" italic="false"/>
+		</item>
+		<item name="receiver_zip" text="收件人邮编" x="0.767" y="0.501">
+			<font family="宋体" pointSize="11" bold="true" underline="false" italic="false"/>		
+		</item>
+		<item name="receiver_phone" text="收件人电话" x="0.755" y="0.215">
+			<font family="宋体" pointSize="11" bold="true" underline="false" italic="false"/>		
+		</item>
+		<item name="receiver_city" text="收件人所在城市" x="0.538" y="0.501">	
+			<font family="宋体" pointSize="11" bold="true" underline="false" italic="false"/>		
+		</item>
+		<item name="receiver_mobile" text="收件人手机" x="0.758" y="0.260">
+			<font family="宋体" pointSize="11" bold="true" underline="false" italic="false"/>
+		</item>
+		<item name="buyer_nick" text="买家昵称" x="0.10" y="0.20">
+			<font family="宋体" pointSize="11" bold="true" underline="false" italic="false"/>		
+		</item>
+		<item name="receiver_unit" text="收件人单位名称" x="0.490" y="0.323">
+			<font family="宋体" pointSize="11" bold="true" underline="false" italic="false"/>		
+		</item>
+		<item name="receiver_address" text="收件人地址" x="0.491" y="0.402">
+			<font family="宋体" pointSize="11" bold="true" underline="false" italic="false"/>
+		</item>
+		<item name="receiver_state" text="省" x="0.491" y="0.402">
+			<font family="宋体" pointSize="40" bold="true" underline="false" italic="false"/>
+		</item>
+		<item name="receiver_city" text="市" x="0.491" y="0.402">
+			<font family="宋体" pointSize="40" bold="true" underline="false" italic="false"/>
+		</item>
+		<item name="receiver_district" text="区/县" x="0.491" y="0.402">
+			<font family="宋体" pointSize="40" bold="true" underline="false" italic="false"/>
+		</item>
+    <item name="shortaddress" text="大头笔" x="0.491" y="0.402">
+      <font family="宋体" pointSize="40" bold="true" underline="false" italic="false"/>
+    </item>   
+	</group>
+	<group text="宝贝信息">
+		<item name="item_info" text="item_info" x="0.08" y="0.40" width="0" height="0" type="compositeText">
+			<font family="宋体" pointSize="11" bold="true" underline="false" italic="false"/>
+			<properties>
+				<property value="宝贝名称" name="c1"/>
+				<property value="宝贝简称" name="c2"/>
+				<property value="商家编码" name="c3"/>
+				<property value="销售属性" name="c4"/>
+				<property value="数量" name="c5"/>
+			</properties>
+		</item>	
+	</group>
+	<group text="订单信息">
+		<item name="order_id" text="订单编号" x="0.10" y="0.20">
+			<font family="宋体" pointSize="11" bold="true" underline="false" italic="false"/>		
+		</item>
+		<item name="seller_memo" text="卖家备注" x="0.10" y="0.20">
+			<font family="宋体" pointSize="11" bold="true" underline="false" italic="false"/>
+		</item>
+		<item name="buyer_memo" text="买家留言" x="0.10" y="0.20">
+			<font family="宋体" pointSize="11" bold="true" underline="false" italic="false"/>
+		</item>
+		<item name="total_price" text="总价" x="0.10" y="0.20">
+			<font family="宋体" pointSize="11" bold="true" underline="false" italic="false"/>
+		</item>
+		<item name="total_itemNumber" text="总数" x="0.10" y="0.20"  format="共%1件">
+			<font family="宋体" pointSize="11" bold="true" underline="false" italic="false"/>
+		</item>
+		<item name="userInfo1" text="自定义信息1" x="0.10" y="0.20">
+			<font family="宋体" pointSize="11" bold="true" underline="false" italic="false"/>
+		</item>
+		<item name="userInfo2" text="自定义信息2" x="0.10" y="0.20">
+			<font family="宋体" pointSize="11" bold="true" underline="false" italic="false"/>
+		</item>
+		<item name="userInfo3" text="自定义信息3" x="0.10" y="0.20">
+			<font family="宋体" pointSize="11" bold="true" underline="false" italic="false"/>
+		</item>
+		<item name="userInfo4" text="自定义信息4" x="0.10" y="0.20">
+			<font family="宋体" pointSize="11" bold="true" underline="false" italic="false"/>
+		</item>
+	</group>
+	<group text="自定义信息">
+		<item name="customText" text="自定义信息" x="0.10" y="0.10" type="text">
+			<font family="宋体" pointSize="11" bold="true" underline="false" italic="false"/>
+		</item>
+	</group>
+</template>

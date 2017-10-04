@@ -1,0 +1,10 @@
+<extension xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="extension.xsd" provider="taobao" company="taobao">
+	<widget title="Html列表" extensionPoint="com::taobao::assistant::item::list" description="Html列表" file="index.html" identity="item.list">
+		<service>multiEntityProvider</service>
+		<resource>index.html</resource>
+		<privilege></privilege>
+		<enablement>
+			
+		</enablement>
+	</widget>
+</extension>

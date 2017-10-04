@@ -1,0 +1,41 @@
+  .dm-syncbar
+        {
+      		height:30px;
+        }
+        .dm-syncbar .dm-module-anchor
+        {     
+            height: 30px;
+            line-height: 30px;
+            overflow: hidden;
+       
+            border-bottom: 2px solid #EC632F;
+            pointer-events: none;
+        }
+        .dm-syncbar .dm-anchor-caption
+        {
+            color: #fff;
+            font-size: 14px;
+            padding: 0 15px;
+            background-color: #EC632F;
+            display: inline-block;
+            line-height: 30px;
+            float: left;
+        }
+        .dm-syncbar .dm-module-del
+        {
+            opacity: .8;
+            filter: alpha(opacity=80);
+            color: #F5B53C;
+            font-size: 21px;
+            line-height: 1;
+            text-decoration: none;
+            margin-left: 12px;
+            position: absolute;
+            text-shadow: 0 1px 0 #fff;
+            cursor: pointer;
+            pointer-events: auto;
+        }
+        .dm-placeholder
+        {
+             border: 1px solid #FFE1B0;           
+        }

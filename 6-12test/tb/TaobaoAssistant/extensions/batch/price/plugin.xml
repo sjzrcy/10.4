@@ -1,0 +1,7 @@
+<extension xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="extension.xsd" provider="taobao" company="taobao">
+	<batch title="批量编辑宝贝价格" extensionPoint="com::taobao::assistant::item::batch" group="扩展项" description="批量编辑宝贝价格" file="index.html" identity="batchPrice">
+		<service>entityProvider</service>
+		<resource>index.html</resource>
+		<privilege/>
+	</batch>
+</extension>

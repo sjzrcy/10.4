@@ -1,0 +1,114 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>安全验证</title>
+    <style>
+    body,
+    p {
+        padding: 0;
+        margin: 0;
+        font: 16px/1.5 SimHei, Tahoma, Helvetica, Arial, '\5b8b\4f53', sans-serif;
+    }
+    
+    body {
+        background-color: #D5D5D5;
+    }
+    
+    .close-window {
+        text-decoration: none;
+        color: #fff;
+        display: inline-block;
+        float: right;
+    }
+    
+    .guide {
+        width: 500px;
+        height: 350px;
+        background: #fff;
+        position: absolute;
+        top: 50%;
+        margin-top: -178px;
+        left: 50%;
+        margin-left: -250px;
+    }
+    
+    .guide > p:first-child {
+        background: #4794C7;
+        color: white;
+        padding: 10px;
+        margin: 0;
+    }
+    
+    .guide div {
+        text-align: center;
+        padding: 20px 30px;
+    }
+    
+    #time-count,
+    .verify {
+        color: #45BA20;
+    }
+    
+    .verify img {
+        width: 18px;
+        height: 18px;
+        line-height: 18px;
+        display: inline-block;
+        vertical-align: middle;
+        margin: 0 5px 5px;
+    }
+    
+    .guide >img {
+        width: 200px;
+        display: block;
+        margin: 0 auto;
+        padding: 20px;
+    }
+    
+    .guide >img +p {
+    	text-align: center;
+    }
+    </style>
+    <script>
+
+    /**
+     * 自执行倒计时函数
+     * {param} Number 倒计时总时间，单位为秒
+     * {param} String 替换内容元素的Id
+     * {param} function 倒计时结束后执行的函数
+     */
+
+    (function timeCounter(last, elId, fn) {
+        var mounts = last,
+            m = 0,
+            s = 0;
+        var timer = setInterval(function() {
+            m = Math.floor(mounts / 60);
+            s = mounts % 60;
+            document.getElementById(elId).innerHTML = m + '分' + s + '秒';
+            mounts--;
+            if (!m && !s) {
+                clearInterval(timer);
+                fn && fn(); //可以删除fn参数和本行使用，window.location = http://taobao.com，跳转页面
+				window.location ='prompt.html#new';
+            }
+        }, 1000);
+    })(599, 'time-count');
+    </script>
+</head>
+
+<body>
+    <div class='guide'>
+        <p>安全验证<a href='#' class="close-window">×</a></p>
+        <div>
+            <p class="verify"><img src="https://assets.alicdn.com/g/tb/durex/3.4.11/main/images/dcoding-18-18.gif">验证消息已发送到你的手机</p>
+            <p>请打开阿里钱盾对消息进行确认</p>
+        </div>
+        <img src="https://assets.alicdn.com/g/tb/durex/3.4.11/main/images/onepass-guide-new.png" />
+        <p>请在<span id="time-count">10分钟</span>内在手机上完成操作</p>
+    </div>
+</body>
+
+</html>

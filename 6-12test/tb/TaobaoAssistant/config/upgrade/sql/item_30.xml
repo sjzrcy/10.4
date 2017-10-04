@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<upgrade dataSourceName="ITEM" databaseVersion="30.00">
+	<sql>
+	<![CDATA[
+	
+ALTER TABLE ITEM 
+ADD FLAG SMALLINT 
+DEFAULT 0 
+NOT NULL ;
+	]]>
+	</sql>
+</upgrade>

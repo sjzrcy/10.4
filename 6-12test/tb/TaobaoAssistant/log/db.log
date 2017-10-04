@@ -1,0 +1,7 @@
+2017-08-22 09:18:32.081 [thread-2444] DEBUG db - SqlDriverLoader.cpp(59) : loadFbClientDll.
+2017-08-22 09:23:41.444 [thread-7248] DEBUG db - SqlDriverLoader.cpp(59) : loadFbClientDll.
+2017-08-22 09:30:26.453 [thread-7248] DEBUG db - sql\ConnectionManager.cpp(25) : ITEM
+2017-08-22 09:30:26.711 [thread-7248] DEBUG db - sql\ConnectionManager.cpp(25) : TRADE
+2017-08-22 09:33:34.075 [thread-9384] DEBUG db - SqlDriverLoader.cpp(59) : loadFbClientDll.
+2017-08-22 09:33:55.028 [thread-9384] DEBUG db - sql\ConnectionManager.cpp(25) : ITEM
+2017-08-22 09:33:55.126 [thread-9384] DEBUG db - sql\ConnectionManager.cpp(25) : trade

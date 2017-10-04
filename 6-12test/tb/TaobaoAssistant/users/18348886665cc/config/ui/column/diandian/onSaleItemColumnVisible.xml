@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<columns>
+    <group title="商品信息">
+        <column title="宝贝名称" readonly="true" visible="true" name="title"/>
+        <column title="商家编码" readonly="false" visible="true" name="outer_id"/>
+        <column title="状态" readonly="false" visible="true" name="sync_status"/>
+        <column title="价格（元）" readonly="false" visible="true" name="price"/>
+        <column title="数量" readonly="false" visible="true" name="num"/>
+        <column title="类目" readonly="false" visible="true" name="cid"/>
+        <column title="原价" readonly="false" visible="true" name="ori_price"/>	
+		<column title="限购数量" readonly="false" visible="true" name="limit_buy"/>
+        <column title="最后修改时间" readonly="false" visible="true" name="modified"/>
+    </group>
+</columns>

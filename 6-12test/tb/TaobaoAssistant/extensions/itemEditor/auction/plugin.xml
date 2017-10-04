@@ -1,0 +1,19 @@
+<extension xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="extension.xsd" provider="taobao" company="taobao">
+	<batch title="拍卖编辑" extensionPoint="com::taobao::assistant::item::editor" group="扩展项" description="拍卖编辑" file="index.html" identity="auctionItemEditor">
+		<service>entityProvider</service>
+		<resource>index.html</resource>
+		<privilege/>
+		<scripts>
+			<function>
+<![CDATA[
+({
+	isAcceptable: function(item)
+	{
+		return item.item_type==2;
+	}
+})
+]]>
+</function>
+		</scripts>
+	</batch>
+</extension>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<upgrade dataSourceName="ITEM" databaseVersion="22">
+	<sql>
+	<![CDATA[
+	
+ALTER TABLE CATEGORYPROPERTY
+ADD FEATURES VARCHAR(1000) CHARACTER SET UTF8 
+NOT NULL 
+COLLATE UTF8 ;
+
+	]]>
+	</sql>
+</upgrade>

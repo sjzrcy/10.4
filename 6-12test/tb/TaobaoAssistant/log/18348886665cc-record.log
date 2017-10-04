@@ -1,0 +1,16 @@
+
+ ## ItemWidgetFactory::createWidget ## 
+, cost: 1316 msecs, [1], all[0]
+
+ ## DealWidgetFactory::createWidget ## 
+, cost: 549 msecs, [2], all[748]
+
+ ## Create WorkbenchWindow ## 
+, cost: 3078 msecs, [3], all[1686]
+
+==END==20170822 09:33:58==END==
+
+
+
+
+ ## firstDoActive: com::taobao::assistant::item::ItemWidgetFactory , cost: 303 msecs, [4], all[9893]

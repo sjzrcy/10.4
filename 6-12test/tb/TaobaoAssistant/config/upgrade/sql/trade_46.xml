@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<upgrade dataSourceName="TRADE" databaseVersion="46.00">
+	<sql>
+    <![CDATA[
+
+ALTER TABLE TRADE
+ADD PRINT_CONFIG VARCHAR(1024) CHARACTER SET UTF8 ;
+
+	]]>
+	</sql>
+</upgrade>

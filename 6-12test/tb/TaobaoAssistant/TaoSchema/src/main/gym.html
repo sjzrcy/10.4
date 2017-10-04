@@ -1,0 +1,47 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>商品信息编辑 - 淘宝助理</title>
+<link rel="stylesheet" href="http://assets.alicdn.com/s/kissy/1.2.0/calendar/assets/base-min.css">
+<link rel="stylesheet" href="../../sdk/zTree/css/zTreeStyle/zTreeStyle.css"/>
+<link rel="stylesheet" href="aio.css"/>
+<!-- sdk -->
+<script type="text/javascript" src="../base/trace.js"></script>
+<script type="text/javascript" src="../../sdk/jquery.js"></script>
+<script type="text/javascript" src="../../sdk/textchange.js"></script>
+<script type="text/javascript" src="../../sdk/underscore.js"></script>
+<script type="text/javascript" src="../../sdk/backbone.js"></script>
+<script type="text/javascript" src="../../sdk/laydate/laydate.dev.js"></script>
+<script type="text/javascript" src="../../sdk/zTree/jquery.ztree.all-3.5.js"></script>
+<script type="text/javascript" src="../../sdk/zTree/jquery.ztree.exhide.js"></script>
+<script type="text/javascript" src="http://assets.alicdn.com/??s/kissy/1.2.0/kissy-min.js"></script>
+<!--<script type="text/javascript" src="../../sdk/require.js" data-main="main"></script>-->
+</head>
+<body>
+<script type="text/javascript">
+$(function(){
+	$(':button').click(function(){
+		var val = $(':file').val();
+		console.error(val);
+		if(typeof val === 'object'){
+			val = JSON.parse(val);
+		}
+
+		$('p').html(val);
+
+
+		var file = $(':file')[0];
+		file.select();
+		var realPath = document.selection.createRange().text;
+		$('span').html(realPath);
+	});
+});
+</script>
+<input id="dialog" type="file" text="选择Folder" webkitdirectory/>
+<input type="button" text="显示"/>
+<p></p>
+<br/>
+<span></span>
+</body>
+</html>

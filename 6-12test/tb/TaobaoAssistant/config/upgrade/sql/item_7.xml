@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<upgrade dataSourceName="ITEM" databaseVersion="6">
+	<sql>
+	<![CDATA[
+	
+ALTER TABLE ITEM
+ADD ITEM_WEIGHT VARCHAR(16) CHARACTER SET UTF8 
+NOT NULL 
+COLLATE UTF8 ;
+
+ALTER TABLE ITEM
+ADD ITEM_SIZE VARCHAR(16) CHARACTER SET UTF8 
+NOT NULL 
+COLLATE UTF8 ;
+	]]>
+	</sql>
+</upgrade>

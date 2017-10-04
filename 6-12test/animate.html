@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="css/animate.css" />
+    </head>
+    <style type="text/css">
+        div{
+            width:100px;height:100px;
+            background-color:red;
+            transition:width 1s,height 1s,background-color 1s;
+            animation:demo 3s infinite ;
+            transform: rotate3d(1,0,1,5deg);
+
+        }
+        div:hover{
+            width:400px;
+            height:400px;
+            background-color: #000;
+        }
+        @keyframes demo{
+            0%{background:red;}
+            10%{background:green;}
+            20%{background:orange;}
+            40%{background:black;}
+            60%{background:blue;}
+            80%{background:white;}
+            100%{background:purple;}
+        }
+    </style>
+    <body>
+        <!-- <div>1111</div> -->
+        <div id="demos">222</div>
+    </body>
+    <script type="text/javascript" src="jquery.min.js"></script>
+    <script type="text/javascript">
+        // $("#demos").addClass('animate hinge')
+    </script>
+</html>

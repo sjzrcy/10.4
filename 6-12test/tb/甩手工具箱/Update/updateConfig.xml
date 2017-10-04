@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <proCode>
+	TOOLBOX
+  </proCode>
+  <curVer>2.81.00</curVer>
+  <lastVer>2.80.00</lastVer>
+  <download>
+    <updatefileListUrl>
+      http://sj.shuaishou.com/UpgradeService.aspx
+    </updatefileListUrl>
+    <updatefileListUrlBak>
+      http://sj.shuaishou.com/UpgradeService.aspx
+    </updatefileListUrlBak>
+    <updatefileUrl>
+      http://sj.shuaishou.com/DownloadFileService.aspx
+    </updatefileUrl>
+    <updatefileUrlBak>
+      http://sj.shuaishou.com/DownloadFileService.aspx
+    </updatefileUrlBak>
+  </download>
+</Config>

@@ -1,0 +1,82 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<template>
+	<group text="列表信息">		
+		<item name="tableItem" text="商品名称" x="0" y="0.40" width="700" height="200" type="tableWidget">
+			<properties>
+				<property value="3" name="rowCount"/>
+				<property value= "8" name="headerCount"/>
+				<property value="商品名称" name="c0"/>
+				<property value="商品简称" name="c1"/>
+				<property value="销售属性" name="c2"/>
+				<property value="商家编码" name="c3"/>
+				<property value="单价(元)" name="c4"/>
+				<property value="数量" name="c5"/>
+				<property value="优惠" name="c6"/>
+				<property value="金额(元)" name="c7"/>
+			</properties>
+		</item>
+	</group>
+	<group text="其他信息">
+		<item name="buyerInfo" text="" x="0" y="0.5" width="20" height="20" type="layoutTextWidget">
+			<properties>
+				<property name="displayPalette" value="tag2"/>
+				<property name="rows" value="2"/>
+				<property name="tags" value="4"/>
+				<property name="tag1" value="buyerName/收件人"/>
+				<property name="tag2" value="buyer_nick/买家昵称"/>
+				<property name="tag3" value="buyerPhone/电话"/>
+				<property name="tag4" value="buyerAddress/地址"/>
+				<property name="tag5" value="buyerMemo/买家留言"/>
+				<property name="row1" value="tag1/tag2/tag3/tag4"/>
+				<property name="row2" value="tag5"/>
+				<property name="displayItemHeight" value="20"/>
+				<property name="displayItemWidth" value="80"/>
+				<property name="editItemHeight" value="60"/>
+				<property name="editItemWidth" value="300"/>
+			</properties>
+		</item>
+		<item name="customInfo" text="" x="0" y="0.5" width="20" height="20" type="layoutTextWidget">
+			<properties>
+				<property name="rows" value="8"/>
+				<property name="tags" value="12"/>
+				<property name="tag1" value="userInfo1/自定义信息1"/>
+				<property name="tag2" value="userInfo2/自定义信息2"/>
+				<property name="tag3" value="userInfo3/自定义信息3"/>
+				<property name="tag4" value="userInfo4/自定义信息4"/>
+				<property name="tag5" value="sellerName/发件人"/>
+				<property name="tag6" value="sellerPhone/电话"/>
+				<property name="tag7" value="sellerAddress/地址"/>
+				<property name="tag8" value="sellerMemo/卖家备注"/>
+				<property name="tag9" value="printTime/打印时间"/>
+				<property name="tag10" value="deliveryTime/发货时间"/>
+				<property name="tag11" value="invoiceTitle/发票抬头"/>
+				<property name="tag12" value="customText/自定义信息"/>
+				<property name="row1" value="tag1"/>
+				<property name="row2" value="tag2"/>
+				<property name="row3" value="tag3"/>
+				<property name="row4" value="tag4"/>
+				<property name="row5" value="tag5/tag6/tag7"/>
+				<property name="row6" value="tag8"/>
+				<property name="row7" value="tag9/tag10/tag11"/>
+				<property name="row8" value="tag12"/>
+				<property name="editable" value="tag12"/>
+				<property name="displayPalette" value="tag1/tag2/tag3/tag4/tag9/tag10/tag11/tag12"/>
+				<property name="displayItemHeight" value="20"/>
+				<property name="displayItemWidth" value="80"/>
+				<property name="editItemHeight" value="60"/>
+				<property name="editItemWidth" value="300"/>
+			</properties>
+		</item>
+		<item name="deliveryName" text="发货单名称" x="0.5" y="0.1" width="20" height="20" type="textWidget">			
+			<properties>
+				<property value="true" name="editable"/>
+			</properties>
+		</item>
+		<item name="logo" text="店标" x="0.10" y="0.10" width="50" height="60" type="imageWidget"></item>
+		<item name="orderNo" text="订单号" x="0.10" y="0.80" width="50" height="60" type="textWidget">
+			<properties>
+				<property value="false" name="editable"/>
+			</properties>		
+		</item>
+	</group>
+</template>

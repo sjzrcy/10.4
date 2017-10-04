@@ -1,0 +1,647 @@
+QPushButton#deleteCheckedTradeWidgetDeleteBtn
+, QPushButton#deleteCheckedTradeWidgetcloseBtn
+, QPushButton#deleteTradeWidgetDeleteBtn
+, QPushButton#deleteTradeWidgetCloseBtn
+, QPushButton#popupWidgetDownloadBtn
+, QPushButton#popupWidgetCloseBtn
+, QPushButton#popupWidgetPreviewBtn
+, QPushButton#popupWidgetSaveBtn
+, QPushButton#popupWidgetPrintBtn
+, QPushButton#popupWidgetDeliveryBtn
+, QPushButton#popupWidgetEvaluateBtn
+, QPushButton#editGuaranteePushButton
+, QPushButton#popupWidgetCloseBtn
+, QPushButton#btnUpload_
+, QPushButton#btnClose_
+, QPushButton#popUpCloseBtn
+, QPushButton#btnOk_
+, QPushButton#btnMobileRequest_
+, QPushButton#popupWidgetBtn
+, QPushButton#pushButton_TradePreview
+{
+	padding: 0px;
+	min-width: 72px;
+	max-width: 72px;
+	background-image: url(images/basicModelImages/button/popUpBtn.png);
+	min-height:22px;
+	max-height:22px;
+	border: 0px;
+}
+
+QPushButton#pushButtonTrade
+{
+	padding: 0px;
+	min-width: 90px;
+	max-width: 90px;
+	background-image: url(images/basicModelImages/button/popUpBtnEx.png);
+	min-height:22px;
+	max-height:22px;
+	border: 0px;
+}
+
+QPushButton#deleteCheckedTradeWidgetDeleteBtn:hover
+, QPushButton#deleteCheckedTradeWidgetcloseBtn:hover
+, QPushButton#deleteTradeWidgetDeleteBtn:hover
+, QPushButton#deleteTradeWidgetCloseBtn:hover
+, QPushButton#popupWidgetDownloadBtn:hover
+, QPushButton#popupWidgetCloseBtn:hover
+, QPushButton#popupWidgetPreviewBtn:hover
+, QPushButton#popupWidgetSaveBtn:hover
+, QPushButton#popupWidgetPrintBtn:hover
+, QPushButton#popupWidgetDeliveryBtn:hover
+, QPushButton#popupWidgetEvaluateBtn:hover
+, QPushButton#editGuaranteePushButton:hover
+, QPushButton#popupWidgetCloseBtn:hover
+, QPushButton#btnUpload_:hover
+, QPushButton#btnClose_:hover
+, QPushButton#popUpCloseBtn:hover
+, QPushButton#btnOk_:hover
+, QPushButton#btnMobileRequest_:hover
+, QPushButton#popupWidgetBtn:hover
+, QPushButton#pushButtonTrade:hover
+, QPushButton#pushButton_TradePreview:hover
+{
+	background-image: url(images/basicModelImages/button/popUpBtn-hover.png);
+}
+
+QPushButton#pushButtonTrade:hover
+{
+	padding: 0px;
+	min-width: 90px;
+	max-width: 90px;
+	background-image: url(images/basicModelImages/button/popUpBtnEx-hover.png);
+	min-height:22px;
+	max-height:22px;
+	border: 0px;
+}
+
+QPushButton#deleteCheckedTradeWidgetDeleteBtn:pressed
+, QPushButton#deleteCheckedTradeWidgetcloseBtn:pressed
+, QPushButton#deleteTradeWidgetDeleteBtn:pressed
+, QPushButton#deleteTradeWidgetCloseBtn:pressed
+, QPushButton#popupWidgetDownloadBtn:pressed
+, QPushButton#popupWidgetCloseBtn:pressed
+, QPushButton#popupWidgetPreviewBtn:pressed
+, QPushButton#popupWidgetSaveBtn:pressed
+, QPushButton#popupWidgetPrintBtn:pressed
+, QPushButton#popupWidgetDeliveryBtn:pressed
+, QPushButton#popupWidgetEvaluateBtn:pressed
+, QPushButton#editGuaranteePushButton:pressed
+, QPushButton#popupWidgetCloseBtn:pressed
+, QPushButton#btnUpload_:pressed
+, QPushButton#btnClose_:pressed
+, QPushButton#popUpCloseBtn:pressed
+, QPushButton#btnOk_:pressed
+, QPushButton#btnMobileRequest_:pressed
+, QPushButton#popupWidgetBtn:pressed
+, QPushButton#pushButtonTrade:pressed
+, QPushButton#pushButton_TradePreview:pressed
+{
+	padding: 0px;
+	min-width: 72px;
+	max-width: 72px;
+	background-image: url(images/basicModelImages/button/popUpBtn-press.png);
+	min-height:22px;
+	max-height:22px;
+	border: 0px;
+}
+
+QPushButton#pushButtonTrade:pressed
+{
+	padding: 0px;
+	min-width: 90px;
+	max-width: 90px;
+	background-image: url(images/basicModelImages/button/popUpBtnEx-press.png);
+	min-height:22px;
+	max-height:22px;
+	border: 0px;
+}
+
+QPushButton#deleteCheckedTradeWidgetDeleteBtn:disabled
+, QPushButton#deleteCheckedTradeWidgetcloseBtn:disabled
+, QPushButton#deleteTradeWidgetDeleteBtn:disabled
+, QPushButton#deleteTradeWidgetCloseBtn:disabled
+, QPushButton#popupWidgetDownloadBtn:disabled
+, QPushButton#popupWidgetCloseBtn:disabled
+, QPushButton#popupWidgetPreviewBtn:disabled
+, QPushButton#popupWidgetSaveBtn:disabled
+, QPushButton#popupWidgetPrintBtn:disabled
+, QPushButton#popupWidgetDeliveryBtn:disabled
+, QPushButton#popupWidgetEvaluateBtn:disabled
+, QPushButton#editGuaranteePushButton:disabled
+, QPushButton#popupWidgetCloseBtn:disabled
+, QPushButton#btnUpload_:disabled
+, QPushButton#btnClose_:disabled
+, QPushButton#popUpCloseBtn:disabled
+, QPushButton#btnOk_:disabled
+, QPushButton#btnMobileRequest_:disabled
+, QPushButton#popupWidgetBtn:disabled
+, QPushButton#pushButtonTrade:disabled
+, QPushButton#pushButton_TradePreview:disabled
+{
+	background-image: url(images/basicModelImages/button/popUpBtn-disabled.png);
+	color: #999999;
+
+}
+
+QPushButton#pushButtonTrade:disabled
+{
+	padding: 0px;
+	min-width: 90px;
+	max-width: 90px;
+	background-image: url(images/basicModelImages/button/popUpBtnEx-disabled.png);
+	min-height:22px;
+	max-height:22px;
+	border: 0px;
+}
+
+
+editFreightTemplatePushButton:disabled
+{
+	border-radius: 2px;
+}
+
+
+QPushButton#saveBtn
+, QPushButton#validateBtn
+, QPushButton#previewBtn
+, QPushButton#downloadBtn
+, QPushButton#closeBtn
+, QPushButton#buttonPreview
+, QPushButton#deliverySave
+, QPushButton#buttonCancel
+, QPushButton#downloadButton
+, QPushButton#deleteBtn
+, QPushButton#deliveryButton
+, QPushButton#previewPrintPushButton
+, QPushButton#batchDeliveryCloseButton
+, QPushButton#printPushButton
+, QPushButton#cancelPushButton
+, QPushButton#uploadBtn
+, QPushButton#confirm_
+, QPushButton#apply_
+, QPushButton#cancel_
+{
+	padding: 0px;
+	min-width: 93px;
+	max-width: 93px;
+	background-image: url(images/basicModelImages/button/mainApplicationBtn.png);
+	min-height:24px;
+	max-height:24px;
+	border: 0px;
+}
+
+QPushButton#saveBtn:hover
+, QPushButton#validateBtn:hover
+, QPushButton#previewBtn:hover
+, QPushButton#downloadBtn:hover
+, QPushButton#closeBtn:hover
+, QPushButton#buttonPreview:hover
+, QPushButton#deliverySave:hover
+, QPushButton#buttonCancel:hover
+, QPushButton#downloadButton:hover
+, QPushButton#deleteBtn:hover
+, QPushButton#deliveryButton:hover
+, QPushButton#previewPrintPushButton:hover
+, QPushButton#batchDeliveryCloseButton:hover
+, QPushButton#printPushButton:hover
+, QPushButton#cancelPushButton:hover
+, QPushButton#uploadBtn:hover
+, QPushButton#confirm_:hover
+, QPushButton#apply_:hover
+, QPushButton#cancel_:hover
+{
+	background-image: url(images/basicModelImages/button/mainApplicationBtn-hover.png);
+}
+
+QPushButton#saveBtn:pressed
+, QPushButton#validateBtn:pressed
+, QPushButton#previewBtn:pressed
+, QPushButton#downloadBtn:pressed
+, QPushButton#closeBtn:pressed
+, QPushButton#buttonPreview:pressed
+, QPushButton#deliverySave:pressed
+, QPushButton#buttonCancel:pressed
+, QPushButton#downloadButton:pressed
+, QPushButton#deleteBtn:pressed
+, QPushButton#deliveryButton:pressed
+, QPushButton#previewPrintPushButton:pressed
+, QPushButton#batchDeliveryCloseButton:pressed
+, QPushButton#printPushButton:pressed
+, QPushButton#cancelPushButton:pressed
+, QPushButton#uploadBtn:pressed
+, QPushButton#confirm_:pressed
+, QPushButton#apply_:pressed
+, QPushButton#cancel_:pressed
+{
+	padding: 0px;
+	min-width: 93px;
+	max-width: 93px;
+	background-image: url(images/basicModelImages/button/mainApplicationBtn-press.png);
+	min-height:24px;
+	max-height:24px;
+	border: 0px;
+}
+
+QPushButton#saveBtn:disabled
+, QPushButton#validateBtn:disabled
+, QPushButton#previewBtn:disabled
+, QPushButton#downloadBtn:disabled
+, QPushButton#closeBtn:disabled
+, QPushButton#buttonPreview:disabled
+, QPushButton#deliverySave:disabled
+, QPushButton#buttonCancel:disabled
+, QPushButton#downloadButton:disabled
+, QPushButton#deleteBtn:disabled
+, QPushButton#deliveryButton:disabled
+, QPushButton#previewPrintPushButton:disabled
+, QPushButton#batchDeliveryCloseButton:disabled
+, QPushButton#printPushButton:disabled
+, QPushButton#cancelPushButton:disabled
+, QPushButton#uploadBtn:disabled
+, QPushButton#confirm_:disabled
+, QPushButton#apply_:disabled
+, QPushButton#cancel_:disabled
+{
+	color: #999999;
+	background-image: url(images/basicModelImages/button/mainApplicationBtn-disabled.png);	
+}
+
+QPushButton#closeWindowBtn_
+, QToolButton#loginCloseBtn
+, QToolButton#close_
+{
+ 	background-image: url(images/basicModelImages/button/closeWindowsBtn.png);
+	background-repeat: no-repeat;
+	background-position: center center;
+	width: 24px;
+	height: 24px;
+	padding-left:0px;
+	padding-right:0px;
+	padding-top:0px;
+	padding-bottom:0px;
+	border: 1px;
+	border-bottom-right-radius: 5px;
+	border-bottom-left-radius: 4px;
+}
+
+
+QPushButton#closeWindowBtn_:hover
+, QToolButton#loginCloseBtn:hover
+, QToolButton#close_:hover
+{
+ 	background-image: url(images/basicModelImages/button/closeWindowsBtn_hover.png);
+	background-repeat: no-repeat;
+	background-position: center center;
+	width: 24px;
+	height: 24px;
+	max-width: 24px;
+	min-width: 24px;
+	border: 1px;
+	padding-left:0px;
+	padding-right:0px;
+	padding-top:0px;
+	padding-bottom:0px;
+	border-bottom-right-radius: 5px;
+	border-bottom-left-radius: 4px;
+}
+
+QPushButton#maxWindowBtn_
+{
+ 	background-image: url(images/basicModelImages/button/maximumWindowsBtn.png);
+	background-repeat: no-repeat;
+	background-position: center center;
+	width: 24px;
+	height: 24px;
+	max-width: 24px;
+	min-width: 24px;
+	border: 1px;
+	padding-left:0px;
+	padding-right:0px;
+	padding-top:0px;
+	padding-bottom:0px;
+	margin: 0px;
+	border-bottom-right-radius: 5px;
+	border-bottom-left-radius: 4px;
+}
+
+QPushButton#maxWindowBtn_:hover
+{
+ 	background-image: url(images/basicModelImages/button/maximumWindowsBtn_hover.png);
+	background-repeat: repeat-x;
+	background-position: center center;
+	width: 24px;
+	height: 24px;
+	max-width: 24px;
+	min-width: 24px;
+	border-radius: 1px;
+	padding-left:0px;
+	padding-right:0px;
+	padding-top:0px;
+	padding-bottom:0px;
+	margin: 0px;
+	border-bottom-right-radius: 5px;
+	border-bottom-left-radius: 4px;
+}
+ 
+ /*最小化*/
+QPushButton#minWindowBtn_
+, QToolButton#minimumBtn
+, QToolButton#minimize_
+{
+ 	background-image: url(images/basicModelImages/button/minimizeWindowsBtn.png);
+	background-repeat: no-repeat;
+	background-position: center center;
+	width: 24px;
+	height: 24px;
+	max-width: 24px;
+	min-width: 24px;
+	border-radius: 1px;
+	padding-left:0px;
+	padding-right:0px;
+	padding-top:0px;
+	padding-bottom:0px;
+	margin: 0px;
+	border-bottom-right-radius: 5px;
+	border-bottom-left-radius: 4px;
+}
+
+QPushButton#minWindowBtn_:hover
+, QToolButton#minimumBtn:hover
+, QToolButton#minimize_:hover
+{
+ 	background-image: url(images/basicModelImages/button/minimizeWindowsBtn_hover.png);
+	background-repeat: no-repeat;
+	background-position: center center;
+	width: 24px;
+	height: 24px;
+	max-width: 24px;
+	min-width: 24px;
+	border-radius: 1px;
+	padding-left:0px;
+	padding-right:0px;
+	padding-top:0px;
+	padding-bottom:0px;
+	margin: 0px;
+	border-bottom-right-radius: 5px;
+	border-bottom-left-radius: 4px;
+}
+
+QPushButton#chooseCategoryPushButton
+, QPushButton#selectLocationPushBtn
+, QPushButton#selectSellerCategoryPushButton
+{
+	background-image: url(images/basicModelImages/button/combinBtn.png);
+	background-repeat: no-repeat;
+	border: 0x;
+	width: 49px;
+	height: 22px;
+	padding-top: 0px;
+}
+
+QToolButton#columnVisibleButton
+{
+	background-image: url(images/basicModelImages/button/columnSettingBtn.png);
+	background-repeat: no-repeat;
+	max-height:23px;
+	min-height:23px;
+	max-width:24px;
+	min-width:24px;
+	border-radius: 1px;
+}
+
+QToolButton#columnVisibleButton:hover
+{
+	background-image: url(images/basicModelImages/button/columnSettingBtnHover.png);
+	background-repeat: no-repeat;
+	max-height:23px;
+	min-height:23px;
+	max-width:24px;
+	min-width:24px;
+	border-radius: 1px;
+}
+
+QToolButton#btnShopSelected
+{
+	background-image: url(images/basicModelImages/button/btnShopSelected.png);
+	background-repeat: no-repeat;
+	max-height:23px;
+	min-height:23px;
+	max-width:24px;
+	min-width:24px;
+	border-radius: 1px;
+}
+
+QToolButton#btnShopSelected:hover
+{
+	background-image: url(images/basicModelImages/button/btnShopSelectedHover.png);
+	background-repeat: no-repeat;
+	max-height:23px;
+	min-height:23px;
+	max-width:24px;
+	min-width:24px;
+	border-radius: 1px;
+}
+
+
+QPushButton#baseTitleDialogBottomButton
+{
+	max-width: 70px;
+	width: 70px;
+	min-width: 70px;
+}
+
+QToolButton#toolbarSearchButton
+{
+	background: #FFFFFF url(images/basicModelImages/button/search.png);
+	background-position: center center;
+	background-repeat: no-repeat;
+	max-width: 22px;
+	max-height: 22px;
+	border: 1px solid #CCCCCC;
+	border-left: 0px;
+}
+
+QToolButton#toolbarSearchButton:hover
+{
+	background: #FFFFFF url(images/basicModelImages/button/search.png);
+	background-repeat: no-repeat;
+	background-position: center center;
+	max-width: 22px;
+	max-height: 22px;
+	border: 1px solid #CCCCCC;
+	border-left: 0px;
+}
+
+QToolButton#taskCancelButton
+{
+	background: #FFFFFF url(images/basicModelImages/tabWidget/closeableTabCloseBtn.png);
+	background-repeat: no-repeat;
+	background-position: center center;
+	border: 0px;
+}
+
+QToolButton#taskCancelButton:hover
+{
+	background: #FFFFFF url(images/basicModelImages/tabWidget/closeableTabCloseBtn-hover.png);
+	background-repeat: no-repeat;
+	background-position: center center;
+	border: 0px;
+}
+
+QPushButton#pushButtonHtmlInsert
+{
+	background: url(images/basicModelImages/button/downloadBtn.png);
+	height: 24px;
+	padding-left: 24px;
+	background-repeat: no-repeat;
+	background-position: left center;
+	border: 1px;
+}
+
+
+QPushButton#pushButtonHtmlDownload
+{
+	background: url(images/basicModelImages/button/insertTemplateBtn.png);
+	height: 24px;
+	padding-left: 24px;
+	background-repeat: no-repeat;
+	background-position: left center;
+	border: 1px;
+}
+
+QPushButton#closeWindowBtn_:pressed
+, QToolButton#loginCloseBtn:pressed
+, QToolButton#close_:pressed
+{
+ 	background-image: url(images/basicModelImages/button/closeWindowsBtn_pressed.png);
+	background-repeat: no-repeat;
+	background-position: center center;
+	width: 24px;
+	height: 24px;
+	max-width: 24px;
+	min-width: 24px;
+	border: 1px;
+	padding-left:0px;
+	padding-right:0px;
+	padding-top:0px;
+	padding-bottom:0px;
+	border-bottom-right-radius: 5px;
+	border-bottom-left-radius: 4px;
+}
+
+QPushButton#minWindowBtn_:pressed
+, QToolButton#minimumBtn:pressed
+{
+ 	background-image: url(images/basicModelImages/button/minimizeWindowsBtn_pressed.png);
+	background-repeat: no-repeat;
+	background-position: center center;
+	width: 24px;
+	height: 24px;
+	max-width: 24px;
+	min-width: 24px;
+	border-radius: 1px;
+	padding-left:0px;
+	padding-right:0px;
+	padding-top:0px;
+	padding-bottom:0px;
+	margin: 0px;
+	border-bottom-right-radius: 5px;
+	border-bottom-left-radius: 4px;
+}
+
+QPushButton#maxWindowBtn_:pressed
+{
+ 	background-image: url(images/basicModelImages/button/maximumWindowsBtn_pressed.png);
+	background-repeat: no-repeat;
+	background-position: center center;
+	width: 24px;
+	height: 24px;
+	max-width: 24px;
+	min-width: 24px;
+	border: 1px;
+	padding-left:0px;
+	padding-right:0px;
+	padding-top:0px;
+	padding-bottom:0px;
+	margin: 0px;
+	border-bottom-right-radius: 5px;
+	border-bottom-left-radius: 4px;
+}
+
+/*帮助按钮*/
+QPushButton#helpWindowBtn_
+{
+ 	background-image: url(images/basicModelImages/button/help_normal.png);
+	background-repeat: no-repeat;
+	background-position: center center;
+	width: 33px;
+	height: 11px;
+	max-width: 33px;
+	min-width: 33px;
+	border-radius: 1px;
+	padding-left:5px;
+	padding-right:5px;
+	padding-top:0px;
+	padding-bottom:0px;
+	margin: 0px;
+
+}
+
+QPushButton#helpWindowBtn_:hover
+, QPushButton#helpWindowBtn_:pressed
+{
+ 	background-image: url(images/basicModelImages/button/help_hover.png);
+	background-repeat: no-repeat;
+	background-position: center center;
+	width: 33px;
+	height: 11px;
+	max-width: 33px;
+	min-width: 33px;
+	border-radius: 1px;
+	padding-left:5px;
+	padding-right:5px;
+	padding-top:0px;
+	padding-bottom:0px;
+	margin: 0px;
+
+}
+
+/*反馈入口*/
+QPushButton#feedbackBtn_
+{
+ 	background-image: url(images/basicModelImages/button/feedback_normal.png);
+	background-repeat: no-repeat;
+	background-position: center center;
+	width: 33px;
+	height: 11px;
+	max-width: 33px;
+	min-width: 33px;
+	border-radius: 1px;
+	padding-left:5px;
+	padding-right:5px;
+	padding-top:0px;
+	padding-bottom:0px;
+	margin: 0px;
+
+}
+
+QPushButton#feedbackBtn_:hover
+, QPushButton#feedbackBtn_:pressed
+{
+ 	background-image: url(images/basicModelImages/button/feedback_hover.png);
+	background-repeat: no-repeat;
+	background-position: center center;
+	width: 33px;
+	height: 11px;
+	max-width: 33px;
+	min-width: 33px;
+	border-radius: 1px;
+	padding-left:5px;
+	padding-right:5px;
+	padding-top:0px;
+	padding-bottom:0px;
+	margin: 0px;
+
+}
+

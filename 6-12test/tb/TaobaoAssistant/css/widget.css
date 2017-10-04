@@ -1,0 +1,64 @@
+
+QTabBar#closeableBar
+{
+	border:none;
+	left:10px;
+}
+
+QTabBar#closeableBar::tab:selected
+{
+	background-image: url(images/tab/ApplicationSecondLevelTab-selected.png);
+	background-position:left center;
+	color:white;
+	margin-left:5px;
+	height:20px;
+	padding-left:5px;
+	padding-right:0px;
+}
+
+QTabBar#closeableBar::tab:!selected,
+QTabBar#closeableBar::tab:!selected:hover
+{
+	background-image: url(images/tab/ApplicationSecondLevelTab-unselected.png);
+	background-position:left center;
+	margin-left:5px;
+	height:20px;
+	padding-left:5px;
+	padding-right:0px;
+}
+
+
+QTabBar#closeableBar::close-button::selected {
+	background-image: url(images/tab/ApplicationTabButton-normal.png);
+	margin-top:3px;
+	margin-right:2px;	
+	margin-left:2px;
+	background-repeat:no-repeat;
+}
+
+QTabBar#closeableBar::close-button::!selected {
+	background-image: url(images/tab/ApplicationTabButton-normal-unselected.png);
+	margin-top:3px;
+	margin-right:2px;
+	margin-left:2px;
+	background-repeat:no-repeat;
+}
+
+QTabBar#closeableBar::close-button:hover {
+	background-image: url(images/tab/ApplicationTabButton-hover.png);
+	margin-top:3px;
+	margin-right:2px;
+	margin-left:2px;
+	background-repeat:no-repeat;
+}
+
+
+QTabBar#closeableBar::close-button:pressed {
+	background-image: url(images/tab/ApplicationTabButton-press.png);
+	margin-top:2px;
+	margin-right:5px;
+	margin-left:2px;
+	background-repeat:no-repeat;
+}
+
+/************************************************************************/

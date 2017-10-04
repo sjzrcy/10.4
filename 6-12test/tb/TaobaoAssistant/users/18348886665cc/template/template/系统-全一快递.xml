@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+ <element width="723" x="0" y="0" backgroundColor="" height="420" type="image" name="systemTemplate" text="系统-全一快递">
+  <properties>
+   <property value="全一快递" name="company"/>
+   <property value="140" name="physicalHeight"/>
+   <property value="241" name="physicalWidth"/>
+   <property value="1" name="scalarRatio"/>
+  </properties>
+  <path path="系统-全一快递.jpg"/>
+  <elements>
+   <element width="88" x="69" y="347" backgroundColor="#000000" height="25" type="text" name="seller_name" text="发件人姓名">
+    <properties>
+     <property value="left" name="align"/>
+     <property value="" name="resizable"/>
+    </properties>
+    <font family="SimSun" pointSize="11" bold="true" underline="false" italic="false"/>
+   </element>
+   <element width="88" x="230" y="300" backgroundColor="#000000" height="25" type="text" name="receiver_phone" text="收件人电话">
+    <properties>
+     <property value="left" name="align"/>
+     <property value="" name="resizable"/>
+    </properties>
+    <font family="SimSun" pointSize="11" bold="true" underline="false" italic="false"/>
+   </element>
+   <element width="88" x="100" y="300" backgroundColor="#000000" height="25" type="text" name="receiver_name" text="收件人姓名">
+    <properties>
+     <property value="left" name="align"/>
+     <property value="" name="resizable"/>
+    </properties>
+    <font family="SimSun" pointSize="11" bold="true" underline="false" italic="false"/>
+   </element>
+   <element width="88" x="266" y="279" backgroundColor="#000000" height="25" type="text" name="receiver_zip" text="收件人邮编">
+    <properties>
+     <property value="left" name="align"/>
+     <property value="" name="resizable"/>
+    </properties>
+    <font family="SimSun" pointSize="11" bold="true" underline="false" italic="false"/>
+   </element>
+   <element width="88" x="102" y="243" backgroundColor="#000000" height="25" type="text" name="receiver_address" text="收件人地址">
+    <properties>
+     <property value="left" name="align"/>
+     <property value="" name="resizable"/>
+    </properties>
+    <font family="SimSun" pointSize="11" bold="true" underline="false" italic="false"/>
+   </element>
+   <element width="120" x="102" y="219" backgroundColor="#000000" height="25" type="text" name="receiver_unit" text="收件人单位名称">
+    <properties>
+     <property value="left" name="align"/>
+     <property value="" name="resizable"/>
+    </properties>
+    <font family="SimSun" pointSize="11" bold="true" underline="false" italic="false"/>
+   </element>
+   <element width="88" x="217" y="188" backgroundColor="#000000" height="25" type="text" name="seller_phone" text="发件人电话">
+    <properties>
+     <property value="left" name="align"/>
+     <property value="" name="resizable"/>
+    </properties>
+    <font family="SimSun" pointSize="11" bold="true" underline="false" italic="false"/>
+   </element>
+   <element width="88" x="92" y="187" backgroundColor="#000000" height="25" type="text" name="seller_name" text="发件人姓名">
+    <properties>
+     <property value="left" name="align"/>
+     <property value="" name="resizable"/>
+    </properties>
+    <font family="SimSun" pointSize="11" bold="true" underline="false" italic="false"/>
+   </element>
+   <element width="88" x="271" y="168" backgroundColor="#000000" height="25" type="text" name="seller_zip" text="发件人邮编">
+    <properties>
+     <property value="left" name="align"/>
+     <property value="" name="resizable"/>
+    </properties>
+    <font family="SimSun" pointSize="11" bold="true" underline="false" italic="false"/>
+   </element>
+   <element width="88" x="101" y="134" backgroundColor="#000000" height="25" type="text" name="seller_address" text="发件人地址">
+    <properties>
+     <property value="left" name="align"/>
+     <property value="" name="resizable"/>
+    </properties>
+    <font family="SimSun" pointSize="11" bold="true" underline="false" italic="false"/>
+   </element>
+   <element width="120" x="110" y="111" backgroundColor="#000000" height="25" type="text" name="seller_unit" text="发件人单位名称">
+    <properties>
+     <property value="left" name="align"/>
+     <property value="" name="resizable"/>
+    </properties>
+    <font family="SimSun" pointSize="11" bold="true" underline="false" italic="false"/>
+   </element>
+   <element width="252" x="4" y="2" backgroundColor="#000000" height="78" type="compositeText" name="item_info" text="宝贝名称/宝贝简称/商家编码/销售属性/数量/">
+    <properties>
+     <property value="left" name="align"/>
+     <property value="0/1/2/3/4/" name="realDisplayOrder"/>
+     <property value="" name="resizable"/>
+    </properties>
+    <font family="宋体" pointSize="11" bold="true" underline="false" italic="false"/>
+   </element>
+   <element width="147" x="338" y="347" backgroundColor="#000000" height="50" type="text" name="seller_memo" text="卖家备注">
+    <properties>
+     <property value="left" name="align"/>
+     <property value="" name="resizable"/>
+    </properties>
+    <font family="SimSun" pointSize="11" bold="true" underline="false" italic="false"/>
+   </element>
+   <element width="150" x="179" y="347" backgroundColor="#000000" height="53" type="text" name="buyer_memo" text="买家留言">
+    <properties>
+     <property value="left" name="align"/>
+     <property value="" name="resizable"/>
+    </properties>
+    <font family="SimSun" pointSize="11" bold="true" underline="false" italic="false"/>
+   </element>
+  </elements>
+ </element>
+</root>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<upgrade dataSourceName="ITEM" databaseVersion="1">
+	<sql>
+	<![CDATA[
+ALTER TABLE SKU 
+ADD PROPERTIES_NAME VARCHAR(1024) CHARACTER SET UTF8 
+DEFAULT ''
+NOT NULL 
+COLLATE UTF8 ;
+	
+	]]>
+	</sql>
+</upgrade>

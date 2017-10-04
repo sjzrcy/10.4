@@ -1,0 +1,28 @@
+
+Sszg.ToolBox:在线确认出现异常，System.Net.WebException: 无法连接到远程服务器 ---> System.Net.Sockets.SocketException: 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。 121.201.37.3:80
+   在 System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   在 System.Net.Sockets.Socket.InternalConnect(EndPoint remoteEP)
+   在 System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Int32 timeout, Exception& exception)
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 System.Net.HttpWebRequest.GetRequestStream(TransportContext& context)
+   在 System.Net.HttpWebRequest.GetRequestStream()
+   在 System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke(String methodName, Object[] parameters)
+   在 Sszg.ApiClient.WebService_Service.UserServices.OnlineConfirm(String loginSequence)
+   在 Sszg.ApiClient.Service.UserService.OnlineConfirm(String loginSequence, String requestPath)
+   在 Sszg.ApiClient.Service.UserService.OnlineConfirm(String loginSequence)
+   在 Sszg.ToolBox.Service.v.a()
+2017年8月16日,星期三 16:54:55
+
+Sszg.ToolBox:获取淘宝图片分类信息登录失效，若重登录甩手掌柜未解决此问题，请登录open.taobao.com检查api配置正确和上线运行
+2017年8月17日,星期四 14:55:10
+
+Sszg.ToolBox:获取淘宝运费模板信息失败，登录失效，若重登录甩手掌柜未解决此问题，请登录open.taobao.com检查api配置正确和上线运行
+2017年8月17日,星期四 14:55:11
+
+Sszg.ToolBox:淘宝接口授权失败，授权码不正确
+   在 Sszg.ToolBox.Service.ToolServer.Taobao.c.a(Int32 A_0)
+   在 Sszg.ToolBox.Service.ToolServer.Taobao.c.a(Object[] A_0)
+   在 Sszg.ToolBox.Common.ExcuteUseProgessBarForm.backgroundWorker1_DoWork(Object sender, DoWorkEventArgs e)
+   在 System.ComponentModel.BackgroundWorker.OnDoWork(DoWorkEventArgs e)
+   在 System.ComponentModel.BackgroundWorker.WorkerThreadStart(Object argument)
+2017年8月21日,星期一 17:20:44

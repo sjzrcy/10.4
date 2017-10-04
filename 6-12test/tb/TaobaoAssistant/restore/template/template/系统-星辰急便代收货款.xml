@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+ <element width="780" x="0" y="0" backgroundColor="" height="450" type="image" name="systemTemplate" text="系统-星辰急便代收货款">
+  <properties>
+   <property value="发网" name="company"/>
+   <property value="150" name="physicalHeight"/>
+   <property value="260" name="physicalWidth"/>
+  </properties>
+  <path path="系统-星辰急便代收货款.jpg"/>
+  <elements>
+   <element width="173" x="52" y="277" backgroundColor="" height="40" type="text" name="buyer_memo" text="买家留言">
+    <font family="宋体" pointSize="11" bold="true" underline="false" italic="false"/>
+   </element>
+   <element width="157" x="225" y="278" backgroundColor="" height="40" type="text" name="seller_memo" text="卖家备注">
+    <font family="宋体" pointSize="11" bold="true" underline="false" italic="false"/>
+   </element>
+   <element width="237" x="53" y="103" backgroundColor="" height="18" type="text" name="seller_unit" text="发件人单位名称">
+    <font family="宋体" pointSize="11" bold="true" underline="false" italic="false"/>
+   </element>
+   <element width="119" x="154" y="58" backgroundColor="" height="19" type="text" name="seller_consign_time" text="发件人发件日期">
+    <font family="Arial" pointSize="11" bold="true" underline="false" italic="false"/>
+   </element>
+   <element width="213" x="52" y="124" backgroundColor="" height="35" type="text" name="seller_address" text="发件人地址">
+    <font family="宋体" pointSize="11" bold="true" underline="false" italic="false"/>
+   </element>
+   <element width="74" x="93" y="77" backgroundColor="" height="26" type="text" name="seller_name" text="发件人姓名">
+    <font family="宋体" pointSize="11" bold="true" underline="false" italic="false"/>
+   </element>
+   <element width="93" x="197" y="115" backgroundColor="" height="23" type="text" name="seller_mobile" text="发件人手机">
+    <font family="Arial" pointSize="11" bold="true" underline="false" italic="false"/>
+   </element>
+   <element width="102" x="197" y="74" backgroundColor="" height="23" type="text" name="seller_phone" text="发件人电话">
+    <font family="Arial" pointSize="11" bold="true" underline="false" italic="false"/>
+   </element>
+   <element width="79" x="219" y="161" backgroundColor="" height="26" type="text" name="seller_zip" text="发件人邮编">
+    <font family="Arial" pointSize="11" bold="true" underline="false" italic="false"/>
+   </element>
+   <element width="114" x="373" y="69" backgroundColor="" height="24" type="text" name="buyer_nick" text="买家昵称">
+    <font family="宋体" pointSize="11" bold="true" underline="false" italic="false"/>
+   </element>
+   <element width="251" x="299" y="104" backgroundColor="" height="18" type="text" name="receiver_unit" text="收件人单位名称">
+    <font family="宋体" pointSize="11" bold="true" underline="false" italic="false"/>
+   </element>
+   <element width="251" x="300" y="130" backgroundColor="" height="34" type="text" name="receiver_address" text="收件人地址">
+    <font family="宋体" pointSize="11" bold="true" underline="false" italic="false"/>
+   </element>
+   <element width="79" x="341" y="91" backgroundColor="" height="23" type="text" name="receiver_name" text="收件人姓名">
+    <font family="宋体" pointSize="11" bold="true" underline="false" italic="false"/>
+   </element>
+   <element width="183" x="329" y="162" backgroundColor="" height="19" type="text" name="receiver_city" text="收件人所在城市">
+    <font family="宋体" pointSize="11" bold="true" underline="false" italic="false"/>
+   </element>
+   <element width="102" x="463" y="84" backgroundColor="" height="19" type="text" name="receiver_mobile" text="收件人手机">
+    <font family="Arial" pointSize="11" bold="true" underline="false" italic="false"/>
+   </element>
+   <element width="104" x="461" y="69" backgroundColor="" height="22" type="text" name="receiver_phone" text="收件人电话">
+    <font family="Arial" pointSize="11" bold="true" underline="false" italic="false"/>
+   </element>
+   <element width="79" x="468" y="161" backgroundColor="" height="19" type="text" name="receiver_zip" text="收件人邮编">
+    <font family="Arial" pointSize="11" bold="true" underline="false" italic="false"/>
+   </element>
+   <element width="111" x="443" y="13" backgroundColor="" height="18" type="text" name="order_id" text="订单编号">
+    <font family="宋体" pointSize="11" bold="true" underline="false" italic="false"/>
+   </element>
+   <element width="320" x="51" y="7" backgroundColor="" height="92" type="compositeText" name="item_info" text="宝贝名称/宝贝简称/商家编码/销售属性/数量/">
+    <properties>
+     <property value="0/1/2/3/4/" name="realDisplayOrder"/>
+    </properties>
+    <font family="宋体" pointSize="11" bold="true" underline="false" italic="false"/>
+   </element>
+  </elements>
+ </element>
+</root>

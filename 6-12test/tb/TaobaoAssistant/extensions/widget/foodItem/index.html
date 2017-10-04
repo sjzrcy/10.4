@@ -1,0 +1,64 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML><HEAD><TITLE></TITLE>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<META name=GENERATOR content="MSHTML 8.00.7601.17785">
+
+<script type="text/javascript">
+
+//<![CDATA[
+
+	function setEntity(object,parameter,feature)
+	{	
+		document.getElementById("titleButton").value=object.title;				
+		document.getElementById("numButton").value=object.num;				
+		document.getElementById("priceButton").value=object.price;	
+
+		document.getElementById("titleText").value=feature.title;				
+		document.getElementById("sizeText").value=feature.size;			
+	}
+	
+	function saveEntity(object,parameter,feature)
+	{	
+		//object.title="xxx";
+		//放置你自己需要的数据
+		
+		
+		feature.size=document.getElementById("sizeText").value;	
+		feature.title=document.getElementById("titleText").value;			
+		
+		entityProvider.saveEntitySlot(object,parameter,feature);
+		
+	}
+	
+	function isDirty()
+	{
+		return false;
+	}
+	
+	function validate()
+	{
+		feedback.showMessage(3,"中文");
+		return false;
+	}
+
+//]]>
+</script>
+			
+</HEAD>
+
+
+<BODY>
+<INPUT value=titleButton type=button id=titleButton name=titleButton>
+<P/>
+<INPUT value=numButton type=button id=numButton name=numButton>
+<P/>
+<INPUT value=priceButton type=button id=priceButton name=priceButton>
+<P/>
+
+<INPUT value= type=Text id=titleText name=titleText>
+<P/>
+<INPUT value= type=Text id=sizeText name=sizeText>
+<P/>
+
+
+</BODY></HTML>

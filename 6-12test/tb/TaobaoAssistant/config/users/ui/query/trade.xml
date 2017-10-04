@@ -1,0 +1,204 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<sqlNodes>
+	<sqlNode actionIdentity="com::taobao::assistant::trade::action" identity="trade" text="所有订单" tooltip="">
+		<sqlCriterias>
+			<sqlCriteria dataSourceName="trade" text="全部">
+				<querySql>
+				<![CDATA[
+				select A.*, B.*, E.* FROM TRADE A left outer join itemex E on E.num_iid = A.num_iid left outer join tradeex B on A.tid=B.tid
+				]]>
+				</querySql>
+				<countSql>
+				<![CDATA[
+				select count(1) FROM TRADE A left outer join itemex E on E.num_iid = A.num_iid left outer join tradeex B on A.tid=B.tid
+				]]>
+				</countSql>
+			</sqlCriteria>
+			<sqlCriteria dataSourceName="trade" text="货到付款">
+				<querySql>
+				<![CDATA[
+				select * from trade	where Trade_Type=8
+				]]>
+				</querySql>
+				<countSql>
+				<![CDATA[
+				select count(1) from trade	where Trade_Type=8						
+				]]>
+				</countSql>
+			</sqlCriteria>
+		</sqlCriterias>				
+	</sqlNode>
+	
+	<sqlNode actionIdentity="com::taobao::assistant::trade::action::delivery" identity="trade" text="待发货" tooltip="">
+		<sqlCriterias>
+			<sqlCriteria dataSourceName="trade" text="全部">
+				<querySql>
+				<![CDATA[
+				select * from trade	where status=3			
+				]]>
+				</querySql>
+				<countSql>
+				<![CDATA[
+				select count(1) from trade
+				]]>
+				</countSql>
+			</sqlCriteria>
+			<sqlCriteria dataSourceName="trade" text="货到付款">
+				<querySql>
+				<![CDATA[
+				select * from trade	where Trade_Type=8
+				]]>
+				</querySql>
+				<countSql>
+				<![CDATA[
+				select count(1) from trade	where status=3	and Trade_Type=8						
+				]]>
+				</countSql>
+			</sqlCriteria>
+		</sqlCriterias>
+		<sqlNodes>
+			<sqlNode actionIdentity="com::taobao::assistant::trade::action::delivery" identity="trade" text="有留言/备注" tooltip="">
+				<sqlCriterias>
+					<sqlCriteria dataSourceName="trade" text="全部">
+						<querySql>
+						<![CDATA[
+						select * from trade	where status=3 and buyer_message is not NULL
+						]]>
+						</querySql>
+						<countSql>
+						<![CDATA[
+						select count(1) from trade 	where status=3 and buyer_message is not NULL
+						]]>
+						</countSql>
+					</sqlCriteria>
+					<sqlCriteria dataSourceName="trade" text="货到付款">
+						<querySql>
+						<![CDATA[
+						select * from trade	where status=3 and Trade_Type=8 and buyer_message is not NULL
+						]]>
+						</querySql>
+						<countSql>
+						<![CDATA[
+						select count(1) from trade	where Trade_Type=8	and buyer_message is not NULL					
+						]]>
+						</countSql>
+					</sqlCriteria>
+				</sqlCriterias>
+			</sqlNode>
+			<sqlNode actionIdentity="com::taobao::assistant::trade::action::delivery" identity="trade" text="无留言/备注" tooltip="">
+				<sqlCriterias>
+					<sqlCriteria dataSourceName="trade" text="全部">
+						<querySql>
+						<![CDATA[
+						select * from trade	where status=3 and buyer_message is  NULL
+						]]>
+						</querySql>
+						<countSql>
+						<![CDATA[
+						select count(1) from trade 	where status=3 and buyer_message is NULL
+						]]>
+						</countSql>
+					</sqlCriteria>
+					<sqlCriteria dataSourceName="trade" text="货到付款">
+						<querySql>
+						<![CDATA[
+						select * from trade	where status=3 and Trade_Type=8 and buyer_message is NULL
+						]]>
+						</querySql>
+						<countSql>
+						<![CDATA[
+						select count(1) from trade	where Trade_Type=8	and buyer_message is NULL					
+						]]>
+						</countSql>
+					</sqlCriteria>
+				</sqlCriterias>
+			</sqlNode>
+		</sqlNodes>		
+	</sqlNode>
+	
+	<sqlNode actionIdentity="com::taobao::assistant::trade::action" identity="trade" text="已发货" tooltip="">
+		<sqlCriterias>
+			<sqlCriteria dataSourceName="trade" text="全部">
+				<querySql>
+				<![CDATA[
+				select * from trade	where status=4					
+				]]>
+				</querySql>
+				<countSql>
+				<![CDATA[
+				select count(1) from trade where status=4	
+				]]>
+				</countSql>
+			</sqlCriteria>
+			<sqlCriteria dataSourceName="trade" text="货到付款">
+				<querySql>
+				<![CDATA[
+				select * from trade	where status=4	and Trade_Type=8
+				]]>
+				</querySql>
+				<countSql>
+				<![CDATA[
+				select count(1) from trade	where status=4	and Trade_Type=8						
+				]]>
+				</countSql>
+			</sqlCriteria>
+		</sqlCriterias>		
+	</sqlNode>
+	
+	<sqlNode actionIdentity="com::taobao::assistant::trade::action::evaluate" identity="trade" text="待评价" tooltip="">
+		<sqlCriterias>
+			<sqlCriteria dataSourceName="trade" text="全部">
+				<querySql>
+				<![CDATA[
+				select * from trade	where status=6					
+				]]>
+				</querySql>
+				<countSql>
+				<![CDATA[
+				select count(1) from trade where status=6	
+				]]>
+				</countSql>
+			</sqlCriteria>
+			<sqlCriteria dataSourceName="trade" text="货到付款">
+				<querySql>
+				<![CDATA[
+				select * from trade	where status=6	and Trade_Type=8
+				]]>
+				</querySql>
+				<countSql>
+				<![CDATA[
+				select count(1) from trade	where status=6	and Trade_Type=8						
+				]]>
+				</countSql>
+			</sqlCriteria>
+		</sqlCriterias>		
+	</sqlNode>
+	
+	<sqlNode actionIdentity="com::taobao::assistant::trade::action" identity="trade" text="已完成" tooltip="">
+		<sqlCriterias>
+			<sqlCriteria dataSourceName="trade" text="全部">
+				<querySql>
+				<![CDATA[
+				select * from trade	where status=7					
+				]]>
+				</querySql>
+				<countSql>
+				<![CDATA[
+				select count(1) from trade where status=7	
+				]]>
+				</countSql>
+			</sqlCriteria>
+			<sqlCriteria dataSourceName="trade" text="货到付款">
+				<querySql>
+				<![CDATA[
+				select * from trade	where status=7	and Trade_Type=8
+				]]>
+				</querySql>
+				<countSql>
+				<![CDATA[
+				select count(1) from trade	where status=7	and Trade_Type=8						
+				]]>
+				</countSql>
+			</sqlCriteria>
+		</sqlCriterias>		
+	</sqlNode></sqlNodes>

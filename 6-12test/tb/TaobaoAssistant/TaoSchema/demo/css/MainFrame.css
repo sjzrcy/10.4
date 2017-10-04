@@ -1,0 +1,56 @@
+#menu_area {
+    height:28px;
+    background:#6cf;
+}
+#main_area {
+    height:500px;
+    background:#cff;
+}
+
+#manager_area{
+    float: left;
+    height:100%;
+    width:20%;
+    background: red;
+}
+
+#view_area{
+    float: left;
+    height:100%;
+    width:80%;
+    background: #5555cc;
+}
+
+#toolbar_area{
+    height:28px;
+    background:blue;
+}
+
+#edit_area{
+    background:green;
+    height:calc(100% - 30px);
+}
+
+#input_area{
+    float: left;
+    width:50%;
+    height: 100%;
+    background:#6cf;
+}
+#splitter{
+    float: left;
+    background: none;
+}
+#preview_area{
+    float: right;
+    width:50%;
+    height: 100%;
+    background:#5555cc;
+}
+
+#input{
+    width:100%;
+    height: 100%;
+    background: #ccffff;
+}
+

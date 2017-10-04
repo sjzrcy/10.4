@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<columns>
+    <group title="商品信息">
+		<column title="宝贝名称" visible="true" name="title" readonly="true"/>
+		<column title="价格" visible="true" name="price"/>
+        <column title="库存" visible="true" name="num"/>
+        <column title="加价幅度" visible="false" name="auction_increment"/>
+        <column title="类目" visible="true" name="cid"/>
+        <column title="发票" visible="false" name="has_invoice"/>
+        <column title="橱窗" visible="true" name="has_showcase"/>
+        <column title="保修" visible="false" name="has_warranty"/>
+        <column title="开始时间" visible="false" name="list_time"/>
+		<column title="商家编码" visible="true" name="outer_id"/>
+        <column title="店铺类目" visible="false" name="seller_cids"/>
+        <column title="新旧" visible="false" name="stuff_status"/>
+        <column title="宝贝状态" visible="false" name="sync_status"/>
+		<column title="更新状态" visible="false" name="upload_status"/>
+		<column title="返点比例" visible="true" name="auction_point"/>
+    </group>
+    <group title="快递信息">
+        <column title="运费模板" visible="true" name="freight_payer"/>
+        <column title="城市" visible="false" name="location_city"/>
+        <column title="省份" visible="false" name="location_state"/>
+    </group>
+</columns>

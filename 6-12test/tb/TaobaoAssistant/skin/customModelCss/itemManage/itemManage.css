@@ -1,0 +1,90 @@
+QWidget#SimpleBatchEditTableWidget
+{
+	margin-left:1px;
+	margin-right:1px;
+	border: 1px solid #BBBBBB;	
+}
+
+QWidget#IncDownloadTradebuttomWidget
+{
+	background-color:#E1E1E1;
+	border-left: 1px  solid #565656;
+	border-right: 1px  solid #565656;
+}
+
+QWidget#itemInfoWidget
+{
+	background-color: #E8E8E8;
+	border-top: 1px solid #BBBBBB;
+	border-bottom: 1px solid #D2E2F6;
+	border-left: 0px;
+}
+
+QTabWidget#itemInfoTabWidget::pane
+{
+	border-top: 1px solid #BBBBBB;
+}
+
+QPushButton#skuImageWidgetHasImageBtnMenu
+{
+	border-top:0px solid;
+	border-bottom:1px solid #8ea5bf;
+	border-left:0px solid;
+	border-right:0px solid;
+	border-radius: 0px;
+	background-image: url(images/customModelCss/item/sku_image_btn_default_hasImage.png);
+	background-position:center center;
+}
+
+QPushButton#skuImageWidgetNoImageBtnMenu
+{
+	border-top:0px solid;
+	border-bottom:1px solid #8ea5bf;
+	border-left:0px solid;
+	border-right:0px solid;
+	border-radius: 0px;
+	background-image: url(images/customModelCss/item/sku_image_btn_default_noImage.png);
+	background-position:center center;
+}
+
+QLineEdit#itemSearchKeyWord
+{
+	border-right: 0px;
+}
+
+QWidget#itemImageFrameWidget
+{
+	border: 1px solid #BBBBBB;
+}
+
+QDialogButtonBox#buttonBox
+{
+	background-color:#E1E1E1;
+}
+
+QWidget#CategoryChooseDiaolg
+{
+	border: 1px solid #565656;
+}
+
+QWidget#batchBottomWidget
+{
+	background-color: #E1E1E1;
+}
+
+QLineEdit#itemWeightLineEdit
+, QLineEdit#itemSizeLineEdit
+{
+	border-right: 0px;
+	margin: 0px;
+}
+
+QLabel#itemWeightUnitLabel
+, QLabel#itemSizeUnitLabel
+{
+	border:1px solid #CCCCCC;
+	border-left: 0px;
+	color:#999999;
+	margin: 0px;
+	background-color:#FFFFFF;
+}

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+    <element  w="210" h="297" name="A4(210mm*297mm)">
+    </element>
+    <element  w="241" h="70" name="二/三联纸(241mm*70mm)">
+    </element>
+    <element  w="241" h="93.1" name="二/三联纸(241mm*93.1mm)">
+    </element>
+    <element  w="241" h="140" name="二/三联纸(241mm*140mm)">
+    </element>
+    <element  w="241" h="139.7" name="二/三联纸(241mm*139.7mm)">
+    </element>
+    <element  w="241" h="280" name="二/三联纸(241mm*280mm)">
+    </element>              
+</root>

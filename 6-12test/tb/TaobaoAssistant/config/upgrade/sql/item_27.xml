@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<upgrade dataSourceName="ITEM" databaseVersion="27.00">
+	<sql>
+    <![CDATA[	
+ALTER TABLE ITEM ADD ORI_PRICE NUMERIC(18,4);
+
+ALTER TABLE ITEM ADD LIMIT_BUY SMALLINT;
+
+ALTER TABLE ITEM ADD SHOP_ID BIGINT;
+	]]>
+	</sql>
+</upgrade>

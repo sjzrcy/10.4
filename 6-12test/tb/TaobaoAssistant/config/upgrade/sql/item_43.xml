@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<upgrade dataSourceName="ITEM" databaseVersion="43.00">
+	<sql>
+    <![CDATA[	
+
+ALTER TABLE ITEM ADD GLOBAL_STOCK_DELIVERY_PLACE SMALLINT;
+ALTER TABLE ITEM ADD GLOBAL_STOCK_TAX_FREE_PROMISE SMALLINT;
+
+	]]>
+	</sql>
+</upgrade>

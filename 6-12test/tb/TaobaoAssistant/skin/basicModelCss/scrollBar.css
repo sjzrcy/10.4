@@ -1,0 +1,87 @@
+﻿ QScrollBar:horizontal{
+     border: 1px solid #E7F1FF;
+     background: #E7F1FF;
+     height: 18px;
+     margin: 0px 17px -1 17px;
+ }
+ QScrollBar::handle:horizontal{
+     background: #D4E7FF;
+     min-width: 20px;
+ 	 border: 1px solid #B4D0F4;
+ }
+
+ QScrollBar::add-line:horizontal{
+     border: 1px solid #B8D3F5;
+     background: #D4E7FF;
+     width: 15px;
+     height:15px;
+     subcontrol-position: right;
+     subcontrol-origin: margin; 
+ }
+
+ QScrollBar::sub-line:horizontal{
+     border: 1px solid #B8D3F5;
+     background: #D4E7FF;
+     width: 15px;
+     height: 15px;
+     subcontrol-position: left;
+     subcontrol-origin: margin;
+ }
+
+ QScrollBar::left-arrow:horizontal, QScrollBar::right-arrow:horizontal,
+ QScrollBar::up-arrow:vertical, QScrollBar::down-arrow:vertical
+ {
+     width: 14px;
+     height: 14px;
+ }
+
+ QScrollBar::left-arrow:horizontal{/*普通-左边的正方形之间的小三角*/
+	background-image: url(images/basicModelImages/scrollBar/left-arrow.png);
+ }
+
+ QScrollBar::right-arrow:horizontal{/*普通-右边的正方形之间的小三角*/
+  	background-image: url(images/basicModelImages/scrollBar/right-arrow.png);
+ }
+
+ QScrollBar::up-arrow:vertical{/*普通-左边的正方形之间的小三角*/
+	background-image: url(images/basicModelImages/scrollBar/up-arrow.png);
+ }
+
+ QScrollBar::down-arrow:vertical{/*普通-右边的正方形之间的小三角*/
+  	background-image: url(images/basicModelImages/scrollBar/down-arrow.png);
+ }
+
+ QScrollBar::add-page:horizontal, QScrollBar::sub-page:horizontal {
+     background: none;
+ }
+
+ QScrollBar:vertical{
+     border: 1px solid #E7F1FF;
+     background: #E7F1FF;
+     width: 18px;
+     margin: 17px 0px 17px 0px;
+ }
+
+ QScrollBar::handle:vertical{
+     background: #D4E7FF;
+     min-height: 20px;
+ 	 border: 1px solid #B4D0F4;
+ }
+
+ QScrollBar::add-line:vertical{
+     border: 1px solid #B8D3F5;
+     background: #D4E7FF;
+     width: 15px;
+	 height: 15px;
+     subcontrol-position: bottom;
+     subcontrol-origin: margin; 
+ }
+
+ QScrollBar::sub-line:vertical{
+     border: 1px solid #B8D3F5;
+     background: #D4E7FF;
+     width: 15px;
+     height: 15px;
+     subcontrol-position: top;
+     subcontrol-origin: margin;
+ }

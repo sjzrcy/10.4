@@ -1,0 +1,17 @@
+<extension xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="extension.xsd" provider="taobao" company="taobao">
+	<widget title="食品专项支持" extensionPoint="com::taobao::assistant::item::edit" description="食品专项支持" file="index.html" identity="food">
+		<service>singleEntityProvider</service>
+		<resource>index.html</resource>
+		<privilege></privilege>
+		<enablement>		
+			<and>
+				<user type="B"></user>
+				<userTag name="global"></userTag>			
+				<or>
+					<property value="10000" name="cid"></property>
+					<property value="20000" name="cid"></property>
+				</or>			
+			</and>
+		</enablement>
+	</widget>
+</extension>

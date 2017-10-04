@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<upgrade dataSourceName="ITEM" databaseVersion="37.00">
+	<sql>
+    <![CDATA[	
+ALTER TABLE ITEM 
+ADD QUALIFICATION BLOB SUB_TYPE 1 SEGMENT SIZE 4096 CHARACTER SET UTF8 
+DEFAULT '' 
+COLLATE UTF8;
+
+ALTER TABLE ITEM 
+ADD ADD_QUALIFICATION SMALLINT
+DEFAULT 1;
+	]]>
+	</sql>
+</upgrade>

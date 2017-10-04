@@ -1,0 +1,10 @@
+QLineEdit[error=true]
+{
+	padding-left:20px; 
+	padding-right:8px;
+}
+
+QLineEdit:focus 
+{
+	color:#333;
+}

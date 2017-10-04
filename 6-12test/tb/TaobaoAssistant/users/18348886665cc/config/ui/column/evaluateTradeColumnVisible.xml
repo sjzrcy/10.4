@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<columns>
+    <group title="买家信息">
+        <column title="买家昵称" readonly="false" visible="true" name="buyer_nick"/>
+        <column title="电话" readonly="false" visible="false" name="receiver_phone"/>
+        <column title="手机" readonly="false" visible="false" name="receiver_mobile"/>
+    </group>
+    <group title="打印信息">
+        <column title="打印发货单时间" readonly="false" visible="false" name="invoice_print_time"/>
+        <column title="发货单打印状态" readonly="false" visible="false" name="is_invoice_print"/>
+        <column title="打印快递单时间" readonly="false" visible="false" name="express_print_time"/>
+        <column title="快递单打印状态" readonly="false" visible="false" name="is_express_print"/>
+    </group>
+    <group title="物流信息">
+        <column title="快递公司" readonly="false" visible="true" name="company_name"/>
+        <column title="快递公司编码" readonly="true" visible="false" name="company_code"/>
+      <column title="指定快递" name="company_sp_trade" visible="true" readonly="false"/>
+        <column title="运单号" readonly="false" visible="true" name="out_sid"/>
+        <column title="街道地址" readonly="false" visible="false" name="receiver_address"/>
+        <column title="发货方式" readonly="false" visible="false" name="shipping_type"/>
+        <column title="收件人" readonly="false" visible="false" name="receiver_name"/>
+        <column title="省份" readonly="false" visible="false" name="receiver_state"/>
+        <column title="城市" readonly="false" visible="false" name="receiver_city"/>
+        <column title="地区" readonly="false" visible="false" name="receiver_district"/>
+        <column title="邮编" readonly="false" visible="false" name="receiver_zip"/>
+        <column title="卖家备注" readonly="false" visible="false" name="seller_memo"/>
+        <column title="买家留言" readonly="false" visible="false" name="buyer_message"/>
+        
+    </group>
+    <group title="状态信息">
+        <column title="退款状态" readonly="false" visible="true" name="refund_status"/>
+        <column title="发货状态" readonly="false" visible="false" name="cod_status"/>
+        <column title="评价状态" readonly="false" visible="true" name="buyer_rate"/>
+        <column title="交易状态" readonly="false" visible="true" name="status"/>
+        <column title="primaryKey" readonly="true" visible="false" name="primaryKey"/>
+    </group>
+    <group title="订单信息">
+        <column title="订单编号" readonly="true" visible="true" name="tid"/>
+        <column title="支付宝交易号" readonly="false" visible="false" name="alipay_no"/>
+        <column title="宝贝名称" readonly="true" visible="true" name="item_title"/>
+        <column title="成交时间" readonly="false" visible="false" name="created"/>
+        <column title="付款时间" readonly="false" visible="false" name="pay_time"/>
+        <column title="发货时间" readonly="false" visible="false" name="consign_time"/>
+        <column title="原价（元）" readonly="false" visible="true" name="total_fee"/>
+        <column title="运费（元）" readonly="false" visible="true" name="post_fee"/>
+        <column title="实收款（元）" readonly="false" visible="true" name="payment"/>
+        <column title="数量" readonly="false" visible="true" name="num"/>
+        <column title="交易类型" readonly="false" visible="false" name="trade_type"/>
+    </group>
+</columns>

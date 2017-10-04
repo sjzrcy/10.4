@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>访问历史记录API</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        html,
+        body {
+            height: 100%;
+            margin: 0;
+            overflow: hidden;
+            padding: 0
+        }
+        aside{
+            width: 200px;
+            height: 100%;
+            float: left;
+            background-color: greenyellow;
+        }
+        aside>ul{
+            width: 100%;
+            height: 100%;
+        }
+        aside>ul>li{
+            width: 100%;
+            height: 50px;
+            margin-bottom:10px;
+            line-height: 50px;
+            cursor: pointer;
+            text-align: center;
+        }
+        div{
+            padding-left:10px;
+            height: 100%;
+            background-color:blueviolet;
+            margin-left: 200px;
+        }
+
+    </style>
+</head>
+<body>
+<aside>
+    <ul></ul>
+</aside>
+<div></div>
+</body>
+</html>
+<script src="data.js"></script>
+<script>
+    var ul = document.querySelector('ul');
+    var lis = ul.children;
+    var div = document.querySelector('div');
+    for(var i in data){
+        var li =document.createElement('li');
+        li.innerHTML = i;
+        li.onclick = addContent;
+        ul.appendChild(li);
+    }
+
+    function addContent() {
+        while(div.hasChildNodes()){
+            div.removeChild(div.lastChild);
+        }
+        console.log(decodeURI(this.innerHTML))
+        console.log(this.innerHTML)
+        div.innerHTML = data[this.innerHTML];
+        if(window.history && history.pushState){
+            history.pushState(this.innerHTML,'title useless','?t='+decodeURI(this.innerHTML));
+        }
+
+    }
+    window.addEventListener('popstate',function (e) {
+        console.log(data[e.state])
+        div.innerHTML = data[e.state];
+    })
+</script>

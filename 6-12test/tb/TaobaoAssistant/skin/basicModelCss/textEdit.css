@@ -1,0 +1,10 @@
+QLineEdit{
+	border:1px solid #ccc;
+	color:#333;/*激活为#333，提示性文字则是#adadad */
+	border-radius: 0px;
+	background-repeat:repeat-x;
+	height:22px;
+}
+QLineEdit:focus {
+	color:#333;
+}

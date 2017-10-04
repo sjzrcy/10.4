@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<columns>
+    <group title="商品信息">
+        <column title="宝贝名称" readonly="true" visible="true" name="title"/>
+        <column title="商家编码" readonly="false" visible="true" name="outer_id"/>
+        <column title="状态" readonly="false" visible="true" name="sync_status"/>
+        <column title="价格（元）" readonly="false" visible="true" name="price"/>
+        <column title="数量" readonly="false" visible="true" name="num"/>
+        <column title="橱窗推荐" readonly="false" visible="false" name="has_showcase"/>
+        <column title="发布时间" readonly="false" visible="false" name="list_time"/>
+        <column title="物流重量（千克）" readonly="false" visible="false" name="item_weight"/>
+        <column title="物流体积（立方米）" readonly="false" visible="false" name="item_size"/>
+        <column title="类目" readonly="false" visible="true" name="cid"/>
+        <column title="有效期" readonly="false" visible="false" name="valid_thru"/>
+        <column title="保修" readonly="false" visible="false" name="has_warranty"/>
+        <column title="发票" readonly="false" visible="false" name="has_invoice"/>
+        <column title="店铺VIP" readonly="false" visible="false" name="has_discount"/>
+        <column title="退换货承诺" readonly="false" visible="false" name="sell_promise"/>
+        <column title="新旧程度" readonly="false" visible="false" name="stuff_status"/>        
+        <column title="店铺分类" readonly="false" visible="true" name="seller_cids"/>
+        <column title="返点比例" readonly="false" visible="false" name="auction_point" userType="B"/>
+        <column title="is_timing" readonly="true" visible="false" name="is_timing"/>		
+        <column title="开始时间" readonly="false" visible="false" name="approve_status"/>
+        <column title="最后修改时间" readonly="false" visible="true" name="modified"/>
+    </group>
+    <group title="快递信息">
+        <column title="运费" readonly="false" visible="true" name="freight_payer"/>
+        <column title="省份" readonly="false" visible="true" name="location_state"/>
+        <column title="城市" readonly="false" visible="true" name="location_city"/>
+        <column title="primaryKey" readonly="true" visible="false" name="primaryKey"/>
+		<column title="postage_id" readonly="true" visible="false" name="postage_id"/>		
+        <column title="num_iid" readonly="true" visible="false" name="num_iid"/>
+    </group>
+</columns>

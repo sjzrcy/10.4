@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<upgrade dataSourceName="ITEM" databaseVersion="3">
+	<sql>
+	<![CDATA[
+	
+alter table item  
+alter column PROPS type VARCHAR(3072) CHARACTER SET ASCII;
+	
+	]]>
+	</sql>
+</upgrade>

@@ -1,0 +1,40 @@
+.prop-measure{
+	padding-left: 10px;
+	width: calc(100% - 116px) !important;
+	padding-bottom: 6px;
+
+	.exp-sample{
+		position: relative;
+		color: #767676;
+		margin: 6px 0px 0px 0px;
+	}
+
+	input{
+		display: inline-block;
+		width: 48px;
+		height: 16px;
+		border: solid 1px #c9c9c9;
+		margin-right: 6px;
+		margin-top: 6px;
+		text-indent: 3px;
+		outline: none;
+	}
+
+	span.operator{
+		display: inline-block;
+		margin-right: 6px;
+		margin-top: 6px;
+	}
+
+	span.unit{
+		display: inline-block;
+		margin-top: 6px;
+	}
+
+	select{
+		display: inline-block;
+		width: 60px;
+		height: 20px;
+		margin-top: 6px;
+	}
+}

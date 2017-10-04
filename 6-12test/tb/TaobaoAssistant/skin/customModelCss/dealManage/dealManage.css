@@ -1,0 +1,167 @@
+﻿/*快递单模板字体选择ComboBox*/
+QComboBox#fontStyleComboBox
+{
+	min-width: 91px;
+	max-width: 91px;
+}
+
+/*快递单模板字体大小*/
+QComboBox#fontSizeComboBox
+{
+	min-width: 39px;
+	max-width: 39px;
+}
+
+/*快递单模板模板选择*/
+QComboBox#ExpressTemplateChooser
+{
+	min-width: 117px;
+}
+
+QWidget#dealManage_actionPanel
+{
+	min-width: 170px;
+}
+
+/*快递单模板字体样式和字体大小之间的间距*/
+QWidget#templateSubToolBarSpacer
+{
+	min-width: 8px;
+	max-width: 8px;
+}
+
+/*快递单模板子工具栏*/
+QToolBar#baseFormWidgetSubToolBar
+{
+	background-color:#EDEDED;
+	background-image: url();
+}
+
+QScrollArea#dealManage_paletteArea
+{
+	background-color: #E8F5FD;
+}
+
+/*快递单模板子工具栏按钮组中的左边按钮的样式*/
+QToolButton#expressTemplateSubToolBarLeftBtn
+{
+	min-width: 23px;
+	max-width: 23px;
+	min-height: 18px;
+	max-height: 18px;
+	border: 1px solid #737574;
+	border-top-left-radius: 4px;
+	border-bottom-left-radius: 4px;
+	background: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #F3F5F4, stop:0.5 #EBEBEB
+								 stop:0.5 #EBEBEB, stop:1 #D1D3D0
+								 );
+}
+
+/*快递单模板子工具栏按钮组中的中间按钮的样式*/
+QToolButton#expressTemplateSubToolBarMiddleBtn
+{
+	min-width: 23px;
+	max-width: 23px;
+	min-height: 18px;
+	max-height: 18px;
+	border: 1px solid #737574;
+	border-left: 0px;
+	border-right: 0px;
+	border-radius: 0px;
+	background: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #F3F5F4, stop:0.5 #EBEBEB
+								 stop:0.5 #EBEBEB, stop:1 #D1D3D0
+								 );
+}
+
+/*快递单模板子工具栏按钮组中的右边按钮的样式*/
+QToolButton#expressTemplateSubToolBarRightBtn
+{
+	min-width: 23px;
+	max-width: 23px;
+	min-height: 18px;
+	max-height: 18px;
+	border: 1px solid #737574;
+	border-top-right-radius: 4px;
+	border-bottom-right-radius: 4px;
+	background: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #F3F5F4, stop:0.5 #EBEBEB
+								 stop:0.5 #EBEBEB, stop:1 #D1D3D0
+								 );
+}
+
+QSlider#graphicsSliderbar
+{
+	max-width: 128px;
+	min-width: 128px;
+}
+
+/*模板预览中的缩放滚动条的样式*/
+QSlider#graphicsSliderbar::groove:horizontal {
+     	height: 4px; /* the groove expands to the size of the slider by default. by giving it a height, it has a fixed size */
+     	background: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #9A9A9A, stop:0.1 #C9C9C9
+								 stop:0.3 #D3D3D3, stop:0.6 #D9D9D9
+								 stop:0.9 #C4C4C4, stop:1 #B6B6B6
+								 );
+
+	border: 1px solid #9A9A9A;
+	border-radius: 2px;
+	width: 124px;
+	max-width: 124px;
+	min-width: 124px;
+ }
+
+ QSlider::handle:horizontal {
+     	background-image: url(images/customModelCss/deal/templateSliderHandle-horizontal.png);
+     	width: 8px;
+ 	margin: -4px;
+ 	margin-left: 0px;
+ }
+
+QPushButton#templateIncreaseBtn
+{
+	padding-left:0px;
+	padding-right:0px;
+	padding-top:0px;
+	padding-bottom:0px;
+	background-image: url(images/customModelCss/deal/scalarIncreaseBtn.png);
+	background-repeat: no-repeat;
+	max-height:14px;
+	max-width: 14px;
+	border-radius: 5px;
+}
+
+QPushButton#templateDecreaseBtn
+{
+	background-image: url(images/customModelCss/deal/scalarDecreaseBtn.png);
+	background-repeat: no-repeat;	
+	border-radius: 5px;
+	margin: 0px;
+	max-height: 14px;
+	max-width: 14px;
+	padding-left:0px;
+	padding-right:0px;
+	padding-top:0px;
+	padding-bottom:0px;
+}
+
+QLineEdit#tradeSearchKeyWord
+{
+	border-right: 0px;
+}
+
+QWidget#tradeEditorBottomWidget
+{
+	border: 0px;
+	background-color:#E8E8E8;
+}
+
+QWidget#tradeEditorProxyWidget
+{
+	background-color:#F8F8F8;
+}
+
+QWidget#TradeInfoBottomWidget
+, QWidget#printTableViewWidget
+{
+	border: 1px solid #BBBBBB;
+}
+

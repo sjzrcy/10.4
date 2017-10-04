@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Fonts>
+  <Font name="normalText" pointSize="9" family="Black"/>
+  <Font name="tableText" pointSize="9" family="Black"/>
+</Fonts>

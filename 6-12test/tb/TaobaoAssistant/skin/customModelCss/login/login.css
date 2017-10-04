@@ -1,0 +1,93 @@
+QWidget#labelWidget
+, QWidget#appSettingsWidget_
+{
+	background-color: #2089C5;
+	border: 1px solid #565656;
+	border-bottom: 0px;
+	border-top-left-radius: 2px;
+	border-top-right-radius: 2px;
+}
+
+QDialog#loginDialog
+, QDialog#AppSettingsDlg
+{
+	border: 1px solid #565656;
+	border-radius: 2px;
+}
+
+QLabel#loginIconLabel
+, QLabel#AppSettingsDlgTitle_
+{
+	border-left: 1px solid #565656;
+	color: white;
+	padding-left:2px;
+}
+QLabel#errorMsgLabel_
+{
+	color: red;
+}
+
+QLabel#loginLabel
+{
+	background-color: #2089C5;
+	background-image: url(images/customModelCss/login/loginLabel.png);
+	background-repeat: no-repeat;
+	background-position: center center;
+	border-left: 1px solid #565656;
+	border-right:1px solid #565656;
+}
+
+QLabel#loginIconLabel
+, QLabel#AppSettingsDlgTitle_
+{
+	background-color: #2089C5;
+	border-top: 1px solid #565656;
+}
+
+
+QPushButton#btnLogin_
+{
+	background-image: url(images/customModelCss/login/loginBtn.png);
+	background-repeat: no-repeat;
+	background-position: center center;
+	min-width:185px;
+	min-height:30px;
+	border-radius: 2px;
+}
+
+QPushButton#btnLogin_:hover
+{
+	background-image: url(images/customModelCss/login/loginBtn-hover.png);
+	background-repeat: no-repeat;
+	background-position: center center;
+	min-width:185px;
+	min-height:30px;
+	border-radius: 2px;
+}
+
+QCheckBox#checkBoxRemeberPwd_::indicator:unchecked
+, QCheckBox#checkBoxAutoLogin_::indicator:unchecked 
+{
+     image: url(images/customModelCss/login/checkbox-uncheck.png);
+}
+
+QCheckBox#checkBoxRemeberPwd_::indicator:checked
+, QCheckBox#checkBoxAutoLogin_::indicator:checked 
+{
+     image: url(images/customModelCss/login/checkbox-checked.png);
+}
+
+QWidget#page_5
+, QWidget#page_6
+{
+	background-color:#F8F8F8;
+	border: 1px solid #565656;
+	border-top: 0px;
+}
+
+
+QWidget#settingView_
+{
+	background-color:#F8F8F8;
+	border: 1px solid #565656;
+}

@@ -1,0 +1,44 @@
+QToolBox::tab {
+     background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                stop: 0 #eeeeee, stop: 0.4 #eeeeee,
+                                stop: 0.5 #eeeeee, stop: 1.0 #eeeeee);
+    border-radius: 0px;
+    color: #436274;
+    border-bottom: 1px solid #cccccc;	
+    /*background-image: url(images/basicModelImages/toolBox/tab-noSelected);*/
+	/*background-repeat: no-repeat;*/
+	/*background-position: center left;*/
+	padding-left: 5px;
+	margin-left: 5px;
+
+ }
+QToolBox::tab:hover {
+     background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                stop: 0 #b6cce1, stop: 0.4 #b6cce1,
+                                stop: 0.5 #b6cce1, stop: 1.0 #b6cce1);
+    border-radius: 0px;
+    color: #436274;
+    border-bottom: 1px solid #cccccc;	
+    /*background-image: url(images/basicModelImages/toolBox/tab-noSelected);*/
+	/*background-repeat: no-repeat;*/
+	/*background-position: center left;*/
+	padding-left: 5px;
+	margin-left: 5px;
+
+ }
+ QToolBox::tab:selected
+ ,QToolBox::appSettingsNavigator_:selected
+  { /* italicize selected tabs */
+ 	font: bold;
+	color:#436274;
+	background-image: url(images/basicModelImages/toolBox/tab-selected2.png);
+	background-repeat: no-repeat;
+	background-position: center left;
+	padding-left: 5px;
+	margin-left: 0px;
+	 }
+
+ QToolBox#navigator_
+ {	
+	background: #eeeeee;
+ }

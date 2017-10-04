@@ -1,0 +1,141 @@
+.custom {
+    border-top: solid 1px #c9c9c9;
+    background-color: #f6f6f6;
+    width: calc(100% - 2px);
+
+    .titleBar {
+        position: relative;
+        width: 100%;
+        height: 28px;
+        background-color: #ffffff;
+        line-height: 28px;
+
+        .edit{
+            float: right;
+            line-height: 32px;
+        }
+    }
+
+    .addLine {
+        width: 100%;
+        height: 25px;
+        line-height: 25px;
+        color: #767676;
+
+        .add{
+            margin-left: 5px;
+            cursor: pointer;
+        }
+
+        .plus-icon{
+            margin-left: 5px;
+            cursor: pointer;
+        }
+    }
+
+    .pair {
+        width: 100%;
+        margin-top: 4px;
+        color: #767676;
+
+        .label {
+            display: inline-block;
+            width: 106px;
+            text-align: right;
+            word-break: break-all;
+            vertical-align: top;
+        }
+
+        .text {
+            display: inline-block;
+            width: 148px;
+            margin-left: 8px;
+            word-break: break-all;
+            vertical-align: top;
+        }
+
+        :last-child {
+            margin-bottom: 4px;
+        }
+    }
+}
+
+
+
+
+.prop-custom-panel {
+    padding: 12px 20px 8px 20px;
+    background-color: #ffffff;
+    max-height: 300px;
+
+    .customprops-tip {
+        color: #767676;
+        padding-bottom: 8px;
+    }
+
+    .customprops-errors {
+        padding-bottom: 8px;
+    }
+
+    .table-wrap {
+        max-height: 225px;
+        overflow: auto;
+    }
+
+    .customprops-options-table {
+        border-spacing: 0;
+
+        tr {
+            th {
+                height: 29px;
+                font-weight: normal;
+                text-align: center;
+                color: #767676;
+                border-top: solid 1px #c9c9c9;
+                border-left: solid 1px #c9c9c9;
+                background-color: #f6f6f6;
+
+                &:last-child {
+                    border-right: solid 1px #c9c9c9;
+                }
+            }
+
+            td {
+                height: 29px;
+                border-top: solid 1px #c9c9c9;
+                border-left: solid 1px #c9c9c9;
+
+                &.name {
+                    width: 150px;
+                }
+
+                &.value {
+                    width: 270px;
+                }
+
+                &:last-child {
+                    border-right: solid 1px #c9c9c9;
+                }
+
+                input[type="text"] {
+                    border: none;
+                    outline: none;
+                    text-indent: 3px;
+                    width: 100%;
+                    height: 18px;
+                    text-align: center;
+                }
+            }
+
+
+            &:last-child {
+                td {
+                    border-bottom: solid 1px #c9c9c9;
+                }
+            }
+        }
+    }
+}
+
+
+

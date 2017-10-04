@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>测试存储</title>
+    <script type="text/javascript" src="js/base/jquery.js"></script>
+    <script type="text/javascript" src="js/base/Channal.js"></script>
+    <script type="text/javascript" src="js/Storage.js"></script>
+    <script type="text/javascript" src="js/storageTestor.js"></script>
+</head>
+<body>
+<div id="open">
+  <select id = "selected_db">
+    <option value="data.db">data.db</option>
+    <option value="dataschema.db">dataschema.db</option>
+    <option value="uiconfig.db">uiconfig.db</option>
+</select>
+    <button id ="btn_open"> open </button>
+    <lable id = "lable_opened"> </lable>
+</div>
+
+
+<div id ="update">
+    <div id = "update_input">
+        <form >
+            输入要插入的数量:<input type="text" id="counts"/>
+        </form>
+        <label>Value:</label>
+        <textarea id="values"></textarea>
+        <button id ="btn_update"> Do</button>
+    </div>
+    <div id = "update_show">
+
+    </div>
+</div>
+    <div id ="allKeys">
+        <button id ="btn_allKeys"> allKeys </button>
+        <lable id = "lable_allKeys"> </lable>
+        <div id = "allKeys_show"></div>
+</div>
+<div id ="get">
+    <label>keys(以逗号分隔):</label>
+    <textarea id="get_keys"></textarea>
+    <button id ="btn_get"> get</button>
+    <div id = "get_show">
+
+    </div>
+</div>
+<div id ="delete">
+    <label>keys(以逗号分隔):</label>
+    <textarea id="delete_keys"></textarea>
+    <button id ="btn_delete"> Do</button>
+    <div id = "delete_show">
+
+    </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<upgrade dataSourceName="ITEM" databaseVersion="21.00">
+	<sql>
+	<![CDATA[
+
+	alter table item add EMPTY_FIELDS BLOB SUB_TYPE 1 SEGMENT SIZE 1024 CHARACTER SET UTF8
+
+	]]>
+	</sql>
+</upgrade>

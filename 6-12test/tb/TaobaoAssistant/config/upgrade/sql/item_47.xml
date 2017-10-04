@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<upgrade dataSourceName="ITEM" databaseVersion="47.00">
+	<sql>
+    <![CDATA[	
+	ALTER TABLE ITEM ADD SPU_CONFIRM SMALLINT
+	]]>
+	</sql>
+</upgrade>

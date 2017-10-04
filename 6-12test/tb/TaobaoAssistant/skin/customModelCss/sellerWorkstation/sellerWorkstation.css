@@ -1,0 +1,34 @@
+QPushButton#itemGuideSearchBtn
+, QPushButton#dealGuideSearchBtn
+{
+	background-color: #3399CC;
+	height: 40px;
+	width: 70px;
+	color: white;
+	border: 0px;
+}
+
+QLineEdit#itemGuideLineEdit
+, QLineEdit#dealGuideLineEdit
+{
+	height: 40px;
+}
+
+QWidget#itemGuidTitleWidget
+, QWidget#dealGuidTitleWidget
+{
+	background-color: #C2D3EC;
+	border-top: 1px solid #BBBBBB;
+	border-left: 1px solid #BBBBBB;
+	border-right: 1px solid #BBBBBB;
+}
+
+QDialog#ItemGuideDlg
+, QDialog#DealGuideDlg
+{
+	background-color: #ffffff;
+	border-left: 1px solid #BBBBBB;
+	border-right: 1px solid #BBBBBB;
+	border-top: 0px;
+	border-bottom: 1px solid #BBBBBB;
+}

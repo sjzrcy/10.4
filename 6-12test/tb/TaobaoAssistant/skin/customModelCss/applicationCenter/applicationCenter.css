@@ -1,0 +1,5 @@
+QTabWidget#ApplicationCenterTabWidget::panel
+{
+	margin: 0px;
+	border-left: 1px solid #565656;
+}

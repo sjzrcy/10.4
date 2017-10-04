@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<upgrade dataSourceName="ITEM" databaseVersion="33.00">
+	<sql>
+	<![CDATA[
+	
+ALTER TABLE ITEM 
+ADD SELL_POINT VARCHAR(384) CHARACTER SET UTF8
+DEFAULT ''
+COLLATE UTF8 ;
+
+	]]>
+	</sql>
+</upgrade>

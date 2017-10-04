@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<upgrade dataSourceName="ITEM" databaseVersion="50.00">
+	<sql>
+	<![CDATA[
+	alter table item add TMALL_EXTEND BLOB SUB_TYPE 1 SEGMENT SIZE 5120 CHARACTER SET UTF8;
+	alter table item add PRODUCT_COMBINE BLOB SUB_TYPE 1 SEGMENT SIZE 5120 CHARACTER SET UTF8;
+	alter table item add tmall_item_prop_combine BLOB SUB_TYPE 1 SEGMENT SIZE 5120 CHARACTER SET UTF8;
+	alter table item add deleted_fields BLOB SUB_TYPE 1 SEGMENT SIZE 1024 CHARACTER SET UTF8;
+	
+	ALTER TABLE SKU ADD PROPERTIES_UTF8 VARCHAR (1024) CHARACTER SET UTF8 COLLATE UTF8;
+	
+	]]>
+	</sql>
+</upgrade>

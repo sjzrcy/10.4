@@ -1,0 +1,116 @@
+
+.prop-dialog-multiselect{
+	.empty-value{
+		cursor: pointer;
+		height: 27px;
+	}
+
+	.value-panel{
+		position: relative;
+		width: 100%;
+
+		.tip-text{
+			position: absolute;
+			width: 80px;
+			height: 27px;
+			top: 0px;
+			left: 10px;
+			line-height: 27px;
+			color: #767676;
+			font-size: 13px;
+			font-family: "宋体";
+		}
+
+		.tip-icon{
+			position: absolute;
+			width: 16px;
+			height: 16px;
+			top: 5px;
+			right: 6px;
+			background-image: url(../img/select-button.png);
+		}
+
+		.selected-text{
+			position: relative;
+			left: 10px;
+			line-height: 18px;
+			font-size: 13px;
+			color: #333333;
+			cursor: arrow;
+		}
+
+		.edit-button{
+			cursor: pointer;
+			color: #4994c7;
+			margin-top: 3px;
+		}
+	}	
+}
+
+.prop-options-panel{
+	background-color: #ffffff;
+	max-height: 300px;
+
+	.search-wrap{
+		position: relative;
+		width: calc(100% - 32px);
+		height: 46px;
+		margin-left: 15px;
+
+		input.search{
+			position: relative;
+			width: 100%;
+			height: 28px;
+			top: 18px;
+			padding: 0 0 0 0;
+			text-indent: 3px;
+			color: #333333;
+			border: solid 1px #c9c9c9;
+		}
+
+		.result-text{
+			position: absolute;
+			right: 3px;
+			top: 20px;
+			line-height: 28px;
+			font-size: 13px;
+			color: #767676;
+		}
+	}
+	
+
+	.options{
+		position: relative;
+		width: 100%;
+
+		.option{
+			position: relative;
+			float: left;
+			width: calc((100% - 33px) / 3);
+			padding-left: 11px;
+			padding-bottom: 4px;
+
+			input[type="checkbox"]{
+				vertical-align: middle;
+			}
+
+			input[type="text"]{
+				width: 110px;
+				border: solid 1px #c9c9c9;
+				text-indent: 3px;
+			}
+
+			.text{
+
+			}
+		}
+	}
+
+	.custom-options{
+		padding-top: 12px;
+	}
+
+	.normal-options{
+		padding-top: 2px;
+	}
+}

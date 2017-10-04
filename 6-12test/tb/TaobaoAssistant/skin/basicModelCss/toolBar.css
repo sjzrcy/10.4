@@ -1,0 +1,10 @@
+QToolBar
+{
+/*	max-height: 36px;
+	min-height: 36px;*/
+	background-image: url(images/basicModelImages/toolbar/toolBar-bg.png);
+	background-repeat: repeat-x;
+	border-bottom: 1px solid #BBBBBB;
+	border-top: 0px;
+	border-bottom: 0px;
+}

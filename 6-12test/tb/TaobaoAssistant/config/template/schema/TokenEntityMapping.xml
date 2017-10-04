@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<fields>
+	<field name = "item_status" entity_name = "approve_status"> 
+		<value>0=1</value>
+		<value>1=2</value>
+	</field>
+	<field name = "sub_stock" entity_name = "sub_stock"> 
+		<value>true=1</value>
+		<value>false=2</value>
+	</field>
+	<field name = "prov" entity_name = "location_state"> 
+	</field>
+	<field name = "city" entity_name = "location_city"> 
+	</field>
+	<field name = "wap_desc" entity_name = "wireless_desc"> 
+	</field>
+	<field name = "item_type" entity_name = "item_type"> 
+		<value>b=1</value>
+		<value>a=2</value>
+	</field>
+	<field name = "stuff_status" entity_name = "stuff_status"> 
+		<value>5=1</value>
+	</field>
+	<field name = "quantity" entity_name = "num"> 
+	</field>
+	<field name = "start_time" entity_name = "list_time"> 
+	</field>
+	<field name = "freight_payer" entity_name = "freight_payer"> 
+		<value>2=1</value>
+		<value>1=2</value>
+	</field>
+</fields>

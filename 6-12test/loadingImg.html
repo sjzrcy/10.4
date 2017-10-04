@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+    </head>
+    <style type="text/css">
+        body {
+          background: #262E31;
+          font-family: "Gill sans", sans-serif;
+          color: #FFC107;
+        }
+
+        h1 {
+          font-weight: normal;
+          margin: 30px 0 80px 0;
+          text-align: center;
+        }
+
+        p {
+          font-weight: normal;
+          font-size: 22px;
+          clear: both;
+          text-align: center;
+        }
+
+        div {
+          width: 30%;
+          margin: 0 1.5%;
+          height: 150px;
+          text-align: center;
+          float: left;
+        }
+
+        progress {
+          -webkit-appearance: none;
+             -moz-appearance: none;
+                  appearance: none;
+          position: relative;
+          width: 100%;
+          height: 18px;
+        }
+
+        @-webkit-keyframes flip {
+          0% {
+            -webkit-transform: perspective(200px) rotateX(0) rotateY(180deg);
+                    transform: perspective(200px) rotateX(0) rotateY(180deg);
+          }
+          50% {
+            -webkit-transform: perspective(200px) rotateX(0) rotateY(0);
+                    transform: perspective(200px) rotateX(0) rotateY(0);
+          }
+          100% {
+            -webkit-transform: perspective(200px) rotateX(180deg) rotateY(0);
+                    transform: perspective(200px) rotateX(180deg) rotateY(0);
+          }
+        }
+
+        @keyframes flip {
+          0% {
+            -webkit-transform: perspective(200px) rotateX(0) rotateY(180deg);
+                    transform: perspective(200px) rotateX(0) rotateY(180deg);
+          }
+          50% {
+            -webkit-transform: perspective(200px) rotateX(0) rotateY(0);
+                    transform: perspective(200px) rotateX(0) rotateY(0);
+          }
+          100% {
+            -webkit-transform: perspective(200px) rotateX(180deg) rotateY(0);
+                    transform: perspective(200px) rotateX(180deg) rotateY(0);
+          }
+        }
+        .p1 progress {
+          width: 48px;
+          height: 48px;
+          -webkit-animation: flip 1.2s infinite ease-in-out;
+                  animation: flip 1.2s infinite ease-in-out;
+        }
+        .p1 progress::-webkit-progress-bar {
+          background: #FFEE58;
+        }
+        .p1 progress::-webkit-progress-value {
+          background: transparent;
+        }
+
+        .p2 progress::-webkit-progress-bar {
+          background-color: #e1e1e1;
+        }
+        .p2 progress::-webkit-progress-value {
+          background: -webkit-linear-gradient(45deg, transparent 33%, rgba(0, 0, 0, 0.1) 33%, rgba(0, 0, 0, 0.1) 66%, transparent 66%);
+          background: linear-gradient(45deg, transparent 33%, rgba(0, 0, 0, 0.1) 33%, rgba(0, 0, 0, 0.1) 66%, transparent 66%);
+          background-color: #ff7584;
+          background-size: 40px 20px;
+        }
+
+        @-webkit-keyframes spin {
+          0% {
+            -webkit-transform: rotate(0deg);
+                    transform: rotate(0deg);
+          }
+          100% {
+            -webkit-transform: rotate(360deg);
+                    transform: rotate(360deg);
+          }
+        }
+
+        @keyframes spin {
+          0% {
+            -webkit-transform: rotate(0deg);
+                    transform: rotate(0deg);
+          }
+          100% {
+            -webkit-transform: rotate(360deg);
+                    transform: rotate(360deg);
+          }
+        }
+        .p3 {
+          margin-top: -25px;
+        }
+        .p3 progress {
+          width: 48px;
+          height: 48px;
+        }
+        .p3 progress::before {
+          content: '';
+          display: block;
+          width: 48px;
+          height: 48px;
+          background: transparent;
+          border: 10px solid rgba(255, 255, 255, 0.1);
+          border-left: 10px solid #ffffff;
+          border-radius: 100%;
+          -webkit-animation: spin 0.6s linear infinite;
+                  animation: spin 0.6s linear infinite;
+        }
+        .p3 progress::-webkit-progress-bar {
+          background: transparent;
+        }
+        .p3 progress::-webkit-progress-value {
+          background: transparent;
+        }
+
+        @-webkit-keyframes hithit {
+          0% {
+            left: 0;
+          }
+          100% {
+            left: 70%;
+          }
+        }
+
+        @keyframes hithit {
+          0% {
+            left: 0;
+          }
+          100% {
+            left: 70%;
+          }
+        }
+        .p4 progress::-webkit-progress-bar {
+          background: #e1e1e1;
+        }
+        .p4 progress::-webkit-progress-value {
+          background: #e1e1e1;
+        }
+        .p4 progress::before {
+          top: 0;
+          left: 0;
+          content: '';
+          position: absolute;
+          height: 18px;
+          width: 30%;
+          background: #009688;
+          -webkit-animation: hithit 1.2s linear infinite alternate;
+                  animation: hithit 1.2s linear infinite alternate;
+        }
+
+        @-webkit-keyframes shift {
+          0% {
+            left: 0%;
+          }
+          100% {
+            left: -9900%;
+          }
+        }
+
+        @keyframes shift {
+          0% {
+            left: 0%;
+          }
+          100% {
+            left: -9900%;
+          }
+        }
+        .p5 {
+          clear: both;
+          margin-top: 16px;
+        }
+        .p5 progress {
+          text-align: left;
+          overflow: hidden;
+        }
+        .p5 progress::-webkit-progress-bar,
+        .p5 progress::-webkit-progress-value {
+          background: white;
+        }
+        .p5 progress::before {
+          content: '';
+          width: 10000%;
+          height: 18px;
+          position: absolute;
+          background: -webkit-linear-gradient(135deg, transparent 33%, #BA68C8 33%, #BA68C8 66%, transparent 66%);
+          background: linear-gradient(-45deg, transparent 33%, #BA68C8 33%, #BA68C8 66%, transparent 66%);
+          background-size: 40px 20px;
+          -webkit-animation: shift 200s linear infinite;
+                  animation: shift 200s linear infinite;
+        }
+
+        @-webkit-keyframes expand {
+          0%,
+          80%,
+          100% {
+            box-shadow: 0 0 #90A4AE;
+            height: 48px;
+          }
+          40% {
+            box-shadow: 0 -22px #90A4AE;
+            height: 58px;
+          }
+        }
+
+        @keyframes expand {
+          0%,
+          80%,
+          100% {
+            box-shadow: 0 0 #90A4AE;
+            height: 48px;
+          }
+          40% {
+            box-shadow: 0 -22px #90A4AE;
+            height: 58px;
+          }
+        }
+        .p6 progress {
+          height: 48px;
+          width: 11px;
+          -webkit-animation: expand 1.2s infinite ease-in-out;
+                  animation: expand 1.2s infinite ease-in-out;
+          -webkit-animation-delay: -0.32s;
+                  animation-delay: -0.32s;
+        }
+        .p6 progress::-webkit-progress-bar {
+          background: transparent;
+        }
+        .p6 progress::before {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 36px;
+          width: 11px;
+          height: 48px;
+          background: #90A4AE;
+          -webkit-animation: expand 1.2s infinite ease-in-out;
+                  animation: expand 1.2s infinite ease-in-out;
+        }
+        .p6 progress::after {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 18px;
+          width: 11px;
+          height: 48px;
+          background: #90A4AE;
+          -webkit-animation: expand 1.2s infinite ease-in-out;
+                  animation: expand 1.2s infinite ease-in-out;
+          -webkit-animation-delay: -0.16s;
+                  animation-delay: -0.16s;
+        }
+        .p6 progress::-webkit-progress-value {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 11px !important;
+          height: 100%;
+          background: #90A4AE;
+        }
+
+    </style>
+    <body>
+        <h1>Stylization HTML5 Progress element</h1>
+
+        <div class="p2">0
+            <progress max="100" value="40"></progress>
+        </div>
+
+        <div class="p3">1
+            <progress max="100" value="70"></progress>
+        </div>
+
+        <div class="p4">2
+            <progress></progress>
+        </div>
+
+        <div class="p5">3
+            <progress></progress>
+        </div>
+
+        <div class="p1">4
+            <progress max="100" value="70"></progress>
+        </div>
+
+        <div class="p6">5
+            <progress></progress>
+        </div>
+
+        <p>
+            You only need to copy css for progress element, without div's code.
+        </p>
+    </body>
+</html>

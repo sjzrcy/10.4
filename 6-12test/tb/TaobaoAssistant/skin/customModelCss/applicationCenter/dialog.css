@@ -1,0 +1,9 @@
+QDialog#ui_baseDialog
+{
+/*	background-image: url(images/dialog/frame-gb.png); */
+/*	background-repeat:repeat-x; */
+	border: 1px solid rgb(93,107,122);
+	border-radius: 3px;
+	background:  #EFF5FB;
+	border-top: none;
+}

@@ -1,0 +1,1531 @@
+﻿$red : #ff3300;
+
+// 全局样式
+.must{
+  color: $red !important;
+}
+
+.has-error{
+  color: $red !important;
+}
+
+.default-text{
+  color: #999999;
+}
+
+a{
+  cursor: pointer;
+  color: #71ACD4;
+  text-decoration: none;
+}
+
+.schema-sub-grey{
+  background-image: url(../img/greybg.png);
+  background-position: 28px 0px;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+
+// schema结构化样式
+.schema{
+  position:relative;
+  width:100%;
+
+  .top{
+    position:relative;
+    top:0; left:0;
+    width:100%;
+    height: 28px;
+
+    .must {
+      position: relative;
+      float: left;
+      top:8px;
+
+      margin-left:20px;
+      width: 8px;
+      height: 16px;
+
+      color: $red;
+      visibility: hidden;
+    }
+
+    .title {
+      position: relative;
+      float: left;
+      top:8px;
+      height: 16px;
+    }
+
+    .reminder-left{
+      position: relative;
+      float: left;
+      top: 8px;
+      height: 16px;
+    }
+
+    .reminder-right {
+      position: relative;
+      float: right;
+      margin-left: 28px;
+      top:10px;
+      margin-right: 4px;
+      height: 18px;
+
+      .text{
+        text-overflow: ellipsis;
+        overflow: hidden;
+      }
+    }
+  }
+
+  .content{
+
+  }
+
+  .bottom{
+    position:relative;
+    top:0; left:0;
+    width:100%;
+
+    .reminder-bottom{
+      position: relative;
+      height: 20px;
+      margin-left: 28px;
+      width: calc(100% - 28px);
+    }
+
+    .reminder-bottom:first-child{
+      margin-top: 4px;
+    }
+  }
+}
+
+// reminder ---------------------
+.prop-reminder{
+  position: relative;
+  width: 100%;
+  height: 28px;
+  line-height: 28px;
+}
+
+.reminder {
+  .icon{
+    position:relative;
+    float:left;
+    width: 16px;
+    height: 100%;
+    top: -2px;
+
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  .text{
+    position:relative;
+    float:left;
+    max-width: calc(100% - 16px);
+    white-space: nowrap;
+  }
+
+  .icon-box{
+    position: relative;
+    width: 16px;
+    height: 16px;
+
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  .normal{
+    background-image: url(../img/tip-weak.png);
+  }
+
+  .normal:hover{
+    background-image: url(../img/tip.png);
+  }
+
+  .normal-text{
+    color: #767676;
+  }
+
+  .warn{
+    background-image: url(../img/warn.png);
+  }
+
+  .warn-text{
+    color: #767676;
+  }
+
+  .guide{
+    background-image: url(../img/guide.png);
+  }
+
+  .guide-text{
+    color: #767676;
+  }
+
+  .error{
+    background-image: url(../img/error.png);
+  }
+
+  .error-text{
+    color: $red;
+  }
+}
+// ---------------------
+
+.layout{
+  position:relative;
+  width: 100%;
+}
+
+.clearfix:after{
+  content:".";
+  display:block;
+  height:0;
+  visibility:hidden;
+  clear:both;
+}
+
+.float-left{
+  position: relative;
+  float: left;
+}
+
+.float-right{
+  position: relative;
+  float: right;
+}
+
+// 单选
+.asselect{
+  position: relative;
+  width: 100%;
+  height: 28px;
+
+  .input-value{
+    position: relative;
+    display: block;
+    float: left;
+    width: calc(100% - 57px);
+    height: 24px;
+    margin-left:28px;
+
+    outline: none;
+    border: solid 1px #c9c9c9;
+    border-right: none;
+    background-color: #f6f6f6;
+
+    color: #333333;   
+    font-size: 12px;
+    text-indent: 3px;
+  }
+
+  .input-value:focus{
+    color: #333333;
+    background-color: #ffffff;
+  }
+
+  .default-text{
+    color: #767676;
+  }
+
+  .unit{
+    position:relative;
+    float: left;
+    height: 26px;
+    line-height: 26px;
+    color: #767676;
+    cursor:pointer;
+    border-top: solid 1px #c9c9c9;
+    border-bottom: solid 1px #c9c9c9;
+    background-color: #f6f6f6;
+  }
+
+  .show-options-button{
+    position:relative;
+    float: left;
+    width: 26px; height: 26px;
+    border: solid 1px #c9c9c9;
+
+    background-image: url(../img/select-button.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+  }
+
+  .readonly{
+    border-color: #e4e4e4;
+    color: #bcbcbc;
+    background-color: #f6f6f6;
+  }
+
+  .query{
+    position:absolute;
+    top: 28px;
+    width: calc(100% - 30px);
+
+    border:solid 1px #c9c9c9;
+    border-top:none;
+
+    padding: 0;
+    margin: 0;
+    margin-left:28px;
+
+    list-style:none;
+    z-index: 999;
+    background-color: #e4e4e4;
+
+    .input-query{
+      position: relative;
+      display: block;
+      float: left;
+      width: calc(100% - 28px);
+      height: 26px;
+
+      margin-top: 8px;
+      text-indent: 3px;
+
+      border:none;
+      outline: none;
+    }
+
+    .input-query-tip{
+      color: #767676;
+    }
+
+    .search-icon{
+      position:relative;
+      float: left;
+
+      background-color: #ffffff;
+      background-image: url(../img/search.png);
+      background-position: center center;
+      background-repeat: no-repeat;
+
+      width: 28px;
+      height: 28px;
+
+      margin-top: 8px;
+    }
+
+    ul {
+      position:relative;
+      max-height: 170px;
+      width: 100%;
+
+      top: 0;
+      border: none;
+
+      padding: 0;
+      margin: 0;
+
+      list-style:none;
+      overflow: auto;
+
+      li{
+        height: 23px;
+        width: 100%;
+        line-height: 23px;
+        background-color: #f6f6f6;
+        cursor: pointer;
+
+        text-overflow: ellipsis;
+        overflow: hidden;
+      }
+
+      li.current{
+        background-color: #d7d7d7;
+      }
+
+      li:hover{
+        background-color: #d7d7d7;
+      }
+    }
+  }
+
+  ul {
+    position:absolute;
+    top: 28px;
+    max-height: 200px;
+    width: calc(100% - 30px);
+
+    border:solid 1px #c9c9c9;
+    border-top:none;
+
+    padding: 0;
+    margin: 0;
+    margin-left:28px;
+
+    list-style:none;
+    overflow: auto;
+
+    z-index: 999;
+
+    li{
+      height: 23px;
+      width: 100%;
+      line-height: 23px;
+      background-color: #f6f6f6;
+      cursor: pointer;
+
+      text-overflow: ellipsis;
+      overflow: hidden;
+    }
+
+    li.current{
+      background-color: #d7d7d7;
+    }
+
+    li:hover{
+      background-color: #d7d7d7;
+    }
+  }
+}
+
+// tooltip提示信息
+.tooltip{
+  position: absolute;
+  width: 340px;
+  word-break: break-all;
+
+  .arrow{
+    position: relative;
+    width: 11px; height: 5px;
+    top:1px;
+    margin-left: auto;
+    margin-right: auto;
+    background-image: url(../img/tooltip-arrow.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+  }
+
+  .content{
+    border:solid 1px #fce2bb;
+    background-color: #fef1dd;
+    padding-top: 4px;
+    padding-left: 3px;
+    padding-bottom: 4px;
+    padding-right: 0;
+    width: 100%;
+
+    a{
+      color: #71acd4;
+      text-decoration: none;
+    }
+  }
+}
+
+// 单行输入
+.asinput{
+  position:relative;
+  margin-left: 28px;
+  width: calc(100% - 28px);
+  height: 28px;
+
+  input{
+    display:inline-block;
+    position: relative;
+
+    width: calc(100% - 3px);
+    height: 24px;
+    border: solid 1px #c9c9c9;
+    outline: none;
+    text-indent: 3px;
+  }
+
+  .unit{
+    position:absolute;
+    top: 0px;
+
+    height: 26px;
+    line-height: 26px;
+
+    color: #767676;
+  }
+
+  .estimate-amount{
+    display: inline-block;
+    position: absolute;
+    left: 100%;
+    width: 120px;
+    line-height: 28px;
+    margin-left: 4px;
+  }
+}
+
+// 多行输入
+.astextarea{
+  position:relative;
+  display:block;
+  margin-left: 28px;
+  height:100px;
+  width: calc(100% - 36px);
+  border: solid 1px #c9c9c9;
+  outline: none;
+  color: #333333;
+  background-color: #ffffff;
+  resize: none;
+}
+
+.astextarea-tip{
+  color: #767676; 
+}
+
+.astextarea-readonly{
+  background-color:#f6f6f6;
+  color: #767676;
+}
+
+// 文本计数器
+.text-counter{
+  position:relative;
+  float:right;
+  top: 10px;
+
+  .current{
+    color: #767676;
+  }
+
+  .error{
+    color: $red; 
+  }
+
+  .seperator{
+
+  }
+
+  .max{
+    color: #767676;
+  }
+}
+
+// 多选
+.asmultiselect{
+  position: relative;
+  margin-left: 28px;
+  background-color: #f6f6f6;
+  width: calc(100% - 34px);
+  padding-left: 6px;
+  padding-top: 6px;
+  padding-bottom: 2px;
+
+  // 横向累加
+  .option{
+    display: inline-block;
+    position: relative;
+    height: 12px;
+    margin-bottom: 10px;
+    margin-right: 28px;
+
+    .checkbox{
+
+    }
+
+    .text{
+      display: inline-block;
+      position: relative;
+      height: 12px;
+      line-height: 12px;
+      color: #333333;
+      top: -2px;
+    }
+  }
+
+  // 一行一个选项
+  .option-v{
+    position: relative;
+    margin-bottom: 6px;
+
+    .checkbox{
+      display: block;
+      position:relative;
+      float: left;
+      top: 0px;
+    }
+
+    .text{
+      display: block;
+      position: relative;
+      float:left;
+      line-height: 12px;
+      word-break: break-all;
+      color: #333333;
+      top: 3px;
+    }
+  }
+}
+
+// 多选
+.asmultiselect-sku{
+  position: relative;
+  margin-left: 28px;
+  background-color: #f6f6f6;
+  width: calc(100% - 34px);
+  padding-left: 6px;
+  padding-top: 6px;
+  padding-bottom: 2px;
+
+  input[type="text"]{
+    text-indent: 3px;
+  }
+
+  // 标准项
+  .options{
+    position: relative;
+    width: 100%;
+
+    .option{
+      display: inline-block;
+      position: relative;
+      height: 12px;
+      margin-bottom: 14px;
+      margin-right: 28px;
+
+      input[type="checkbox"]{
+        vertical-align: middle;
+      }
+
+      .text{
+        display: inline-block;
+        position: relative;
+        height: 12px;
+        line-height: 12px;
+        color: #333333;
+        vertical-align: middle;
+      }
+
+      input.remark{
+        position: relative;
+        height: 16px;
+        width: 48px;
+        border: solid 1px #d7d7d7;
+        outline: none;
+        margin-left: 10px;
+      }
+    }
+  }
+  
+  .custom-options{
+    position: relative;
+    width: 100%;
+    max-height: 170px;
+    border-top: solid 1px #d7d7d7;
+    overflow-y: auto;
+
+    .custom-tip{
+      position: relative;
+      width: 100%;
+      height: 34px;
+      line-height: 34px;
+      text-align: left;
+      text-indent: 4px;
+    }
+
+    .custom-option{
+      display: inline-block;
+      position: relative;
+      width: 172px;
+      height: 24px;
+      margin-bottom: 10px;
+
+      input[type="checkbox"]{
+        vertical-align: middle;
+      }
+
+      input[type="text"]{
+        display: inline-block;
+        position: relative;
+        width: 132px;
+        height: 22px;
+        
+        outline: none;
+        border: solid 1px #d7d7d7;
+        color: #333333;
+      }
+    }
+  }
+}
+
+// 日期时间
+.asdate{
+  position:relative;
+  height: 26px;
+  border: solid 1px #c9c9c9;
+  margin-left: 28px;
+  width: calc(100% - 30px);
+
+  input{
+    position: relative;
+    display:inline-block;
+    border:none;
+    outline:none;
+    width: calc(100% - 35px);
+    padding-right: 30px;
+    height: 24px;
+    text-indent: 3px;
+  }
+
+  label{
+    position: absolute;
+    right: 0px;
+    top: 5px;
+    width: 25px; height:16px;
+    background-image: url(../img/date-icon.png);
+  }
+}
+
+// radio单选
+// 多选
+.asradio{
+  position: relative;
+  margin-left: 28px;
+  background-color: #f6f6f6;
+  width: calc(100% - 34px);
+  padding-left: 6px;
+  padding-top: 6px;
+  padding-bottom: 2px;
+
+  // 横向累加
+  .option{
+    display: inline-block;
+    position: relative;
+    height: 12px;
+    margin-bottom: 10px;
+    margin-right: 28px;
+
+    .checkbox{
+
+    }
+
+    .text{
+      display: inline-block;
+      position: relative;
+      height: 12px;
+      line-height: 12px;
+      color: #333333;
+      top: -2px;
+    }
+  }
+
+  // 一行一个选项
+  .option-v{
+    position: relative;
+    margin-bottom: 6px;
+
+    .radio{
+      display: block;
+      position:relative;
+      float: left;
+      top: 0px;
+    }
+
+    .text{
+      display: block;
+      position: relative;
+      float:left;
+      line-height: 12px;
+      word-break: break-all;
+      color: #333333;
+      top: 3px;
+    }
+  }
+}
+
+// 商品属性
+.prop-box{
+  position:relative;
+  width: calc(100% - 28px);
+  margin-left: 28px;
+  max-height: 362px;
+  height: 362px;
+
+  overflow-x:hidden;
+  overflow-y:auto;
+
+  .props-empty-tip{
+    position: relative;
+    margin:auto;
+    color: #999999;
+    top: 156px;
+    text-align: center;
+  }
+}
+
+.prop{
+  position:relative;
+  width: 100%;
+
+  .prop-item{
+    position: relative;
+    width: calc(100% - 2px);
+    border: solid 1px #c9c9c9;
+    background-color: #f6f6f6;
+
+    .prop-left{
+      position: relative;
+      float: left;
+      width: 106px; 
+      height: 100%;
+      background-color: #f6f6f6;
+      text-align: right;
+      line-height: 27px;
+
+      .prop-reminder{
+        position: relative;
+        float: right;
+        width: 16px;
+        top:4px;
+      }
+
+      .must{
+        position: relative;
+        float: right;
+        color: $red;
+      }
+
+      .prop-title{
+        position: relative;
+        float: right;
+      }
+    }
+
+    .prop-right{
+      position: relative;
+      float: left;
+      width: calc(100% - 106px);
+      background-color: #ffffff;
+    }
+  }
+
+  .bottom{
+    position: relative;
+    width: 100%;
+  }
+}
+
+// top 
+@for $i from 1 to 100 {
+  .prop:nth-child(#{$i}){
+    top: -#{$i - 1}px;
+  }
+}
+
+.prop-input{
+  input{
+    display:inline-block;
+    position: relative;
+
+    border: none;
+    outline: none;
+    height: 26px;
+    width: 100%;
+    text-indent: 10px;
+  }
+
+  .unit{
+    position: absolute;
+    height: 27px;
+    line-height: 28px;
+    color: #767676;
+    top: 0px;
+  }
+}
+
+// 多选
+.prop-multiselect{
+  // 一行一个选项
+  .multiselect-button{
+    position: relative;
+    padding-left: 10px;
+    padding-right: 4px;
+    margin-top: 6px;
+    margin-bottom: 6px;
+    color: #767676;
+    cursor: pointer;
+  }
+
+  .option{
+    position: relative;
+    padding-left: 6px;
+    padding-right: 4px;
+    margin-bottom: 6px;
+
+    .checkbox{
+      display: block;
+      position:relative;
+      float: left;
+      top: 0px;
+    }
+
+    .text{
+      display: block;
+      position: relative;
+      float:left;
+      line-height: 12px;
+      width: calc(100% - 26px);
+      word-break: break-all;
+      color: #333333;
+      top: 3px;
+    }
+
+    input.text{
+      line-height: 15px;
+      top: 0px;
+    }
+  }
+}
+
+// 单选
+.prop-select{
+  position: relative;
+  width: 100%;
+  height: 27px;
+
+  .input-value{
+    position: relative;
+    display: block;
+    float: left;
+    width: calc(100% - 28px);
+    height: 25px;
+
+    border:none;
+    outline: none;
+    color: #333333;
+    background-color: #ffffff;
+    text-indent: 10px;
+  }
+
+  .input-value:focus{
+    color: #333333;
+  }
+
+  .default-text{
+    color: #767676;
+  }
+
+  .unit{
+    position:relative;
+    float: left;
+    height: 28px;
+    line-height: 28px;
+    color: #767676;
+    cursor:pointer;
+  }
+
+  .show-options-button{
+    position:relative;
+    float: left;
+    width: 28px; 
+    height: 28px;
+
+    background-image: url(../img/select-button.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+  }
+
+  .readonly{
+    color: #bcbcbc;
+    background-color: #f6f6f6;
+  }
+
+  .query{
+    position:absolute;
+    top: 28px;
+    width: 100%;
+
+    border:solid 1px #c9c9c9;
+    border-top:none;
+
+    padding: 0;
+    margin: 0;
+
+    list-style:none;
+    z-index: 999;
+    background-color: #e4e4e4;
+
+    .input-query{
+      position: relative;
+      display: block;
+      float: left;
+      width: calc(100% - 28px);
+      height: 26px;
+
+      margin-top: 8px;
+      text-indent: 3px;
+
+      border:none;
+      outline: none;
+    }
+
+    .input-query-tip{
+      color: #767676;
+    }
+
+    .search-icon{
+      position:relative;
+      float: left;
+
+      background-color: #ffffff;
+      background-image: url(../img/search.png);
+      background-position: center center;
+      background-repeat: no-repeat;
+
+      width: 28px;
+      height: 28px;
+
+      margin-top: 8px;
+    }
+
+    ul {
+      position:relative;
+      max-height: 170px;
+      width: 100%;
+
+      top: 0;
+      border: none;
+
+      padding: 0;
+      margin: 0;
+
+      list-style:none;
+      overflow: auto;
+
+      li{
+        height: 23px;
+        width: 100%;
+        line-height: 23px;
+        background-color: #f6f6f6;
+        cursor: pointer;
+        white-space: nowrap;
+      }
+
+      li.current{
+        background-color: #d7d7d7;
+      }
+
+      li:hover{
+        background-color: #d7d7d7;
+      }
+    }
+  }
+
+  ul {
+    position:absolute;
+    top: 28px;
+    max-height: 200px;
+    width: 100%;
+
+    border:solid 1px #c9c9c9;
+    border-top:none;
+
+    padding: 0;
+    margin: 0;
+
+    list-style:none;
+    overflow: auto;
+
+    z-index: 999;
+
+    li{
+      height: 23px;
+      width: 100%;
+      line-height: 23px;
+      background-color: #f6f6f6;
+      cursor: pointer;
+      white-space: nowrap;
+    }
+
+    li.current{
+      background-color: #d7d7d7;
+    }
+
+    li:hover{
+      background-color: #d7d7d7;
+    }
+  }
+}
+
+// ---- SKU ----
+.sku-box{
+  position: relative;
+  width: 100%;
+
+  .sku-body{
+    position: relative;
+    max-width: calc(100% - 428px);
+    min-width: calc(100% - 428px);
+
+    .sku-inputs{
+      position: relative;
+      margin-left: 28px;
+      margin-bottom: 16px;
+      margin-top: 4px;
+      color: #666666;
+
+      input{
+        display: inline-block;
+        position: relative;
+        
+        width: 76px;
+        height: 18px;
+        margin-left: 3px;
+
+        border: solid 1px #d7d7d7;
+        outline: none;
+
+        text-indent: 2px;
+        color: #333333;
+      }
+
+      .empty-item{
+        color: #999999;
+      }
+
+      .inputs-confirm{
+        display: inline-block;
+        width: 58px;
+        height: 19px;
+        line-height: 19px;
+        border: solid 1px #d7d7d7;
+        border-radius: 2px;
+        background-color: #f2f2f2;
+        text-align: center;
+        margin-left: 8px;
+        cursor: pointer;
+      }
+    }
+
+    table{
+      position: relative;
+      width: calc(100% - 28px);
+      margin-left: 28px;
+      border: solid 1px #c9c9c9;
+      border-spacing: 0;
+
+      tr{
+        height: 28px;
+
+        th{
+          background-color: #f6f6f6;
+          text-align: center;
+          font-weight: normal;
+
+          border-right: solid 1px #d7d7d7;
+        }
+
+        th:last-child{
+          border-right: none; 
+        }
+
+        td{
+          text-align: center;
+          border-top: solid 1px #d7d7d7;
+          border-right: solid 1px #d7d7d7;
+
+          input{
+            width: calc(100% - 2px);
+            height: calc(100% - 2px);
+            padding: 0;
+            outline: 0;
+            border:none;
+            text-align: center;
+          }
+        }
+
+        td:last-child{
+          border-right: none;
+        }
+      }
+
+      .tip-row{
+        height: 112px;
+
+        .tip-td{
+          color: #666666;
+          text-align: left;
+          vertical-align: top;
+          padding: 12px 20px 12px 20px;
+        }
+      }
+    }
+  }
+
+  .sku-metas{
+    position: relative;
+    float:left;
+    width: 400px;
+  }
+}
+
+// sku color
+.sku-color{
+  position: relative;
+  margin-left: 28px;
+  padding-bottom: 10px;
+  width: calc(100% - 28px);
+  background-color: #f6f6f6;
+
+  .color-item{
+    position: relative;
+    width: 100%;
+    padding-top: 10px;
+
+    input[type=checkbox]{
+      position: relative;
+      left: 6px;
+      top: 3px;
+      vertical-align: top;
+    }
+
+    input.color-alias{
+      position: relative;
+      width: 100px;
+      height: 24px;
+      border: solid 1px #d7d7d7;
+      outline: none;
+      text-indent: 2px;
+      margin-left: 9px;
+      margin-right: 6px;
+      vertical-align: top;
+    }
+
+    .select-icon{
+      position: absolute;
+      width: 16px;
+      height: 16px;
+      background-image: url(../img/select-button.png);
+
+      top: 16px;
+      left: 260px;
+    }
+
+    input.color-tip{
+      position: relative;
+      width: 130px;
+      height: 24px;
+      border: solid 1px #d7d7d7;
+      outline: none;
+      text-indent: 2px;
+      margin-right: 6px;
+      vertical-align: top;
+    }
+
+    .color-image{
+      display: inline-block;
+      position: relative;
+      width: 76px;
+      height:26px;
+
+      .upload-image{
+        position:relative;
+        height: 26px;
+        line-height: 26px;
+        width: 74px;
+        border: solid 1px #c9c9c9;
+        border-radius: 2px;
+        color: #333333;
+        background-color: #f2f2f2;
+        text-align: center;
+        cursor: pointer;
+      }
+
+      .preview-image{
+        position:relative;
+        width: 74px;
+        height: 26px;
+
+        .image{
+          display: inline-block;
+          position: relative;
+          width: 28px;
+          height: 28px;
+          margin-right: 4px;
+          
+          cursor:pointer;
+          vertical-align: top;
+
+          background-size: cover;
+          background-position: center;
+        }
+
+        .remove-image{
+          display: inline-block;
+          position: relative;
+          height: 28px;
+          line-height: 30px;
+          color: #666666;
+          cursor: pointer;
+          vertical-align: top;
+          left: 5px;
+        }
+      }
+    }
+
+    .color-error-tip{
+      position: relative;
+      width: calc(100% - 28px);
+      margin-left: 28px;
+      height: 16px;
+      margin-top:6px;
+
+      .error-icon{
+        display: inline-block;
+        position: relative;
+        width: 16px;
+        height: 16px;
+        margin-right: 3px;
+
+        background-image: url(../img/error.png);
+        vertical-align: middle;
+      }
+
+      .error-text{
+        display: inline-block;
+        position: relative;
+        height: 14px;
+        color: $red;
+      }
+    }
+  }
+}
+
+.color-options-panel{
+  position: absolute;
+  width: 323px;
+
+  .color-arrow{
+    position: relative;
+    width: 11px;
+    height: 5px;
+    left: 45px;
+    top: 1px;
+
+    background-image: url(../img/color-arrow.png);
+    background-repeat: no-repeat;
+    background-position: center;
+
+    z-index: 10;
+  }
+
+  .color-options{
+    position: relative;
+    width: 293px;
+    padding: 11px 14px 11px 14px;
+    border: solid 1px #c9c9c9;
+    background-color: #ffffff;
+    z-index: 9;
+
+    .color-option{
+      display: inline-block;
+      position: relative;
+      width: calc(100%/3);
+      height: 14px;
+      line-height: 14px;
+      margin-bottom: 10px;
+      cursor: pointer;
+
+      .color-block{
+        display: inline-block;
+        position: relative;
+        width: 14px;
+        height: 14px;
+        margin-right: 6px;
+        top: 3px;
+
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+    }
+
+    .color-option:hover{
+      color: #0099ff;
+    }
+  }
+}
+
+/**preview***/
+.preview-bg{
+  position: absolute;
+  top:0; left:0;
+  width: 100%; height: 100%;
+
+  .preview-box{
+    position: relative;
+    width: 320px; height: 352px;
+    margin-left: auto; margin-right: auto;
+    background-color: #000000;  
+
+    .preview-x{
+      position: absolute;
+      top:10px; left: 294px;
+      width: 16px; height: 16px;
+      background-image: url(../img/preview-x.png);
+      cursor: pointer;
+    }
+
+    .preview-img{
+      position: absolute;
+      width: 300px; height: 300px;
+      top: 42px; left:10px;
+
+      background-color: #ffffff;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+  }
+}
+
+/**price-quantity**/
+.price-quantity{
+  position: relative;
+  width: calc(100% - 28px);
+  height: 56px;
+  margin-left: 28px;
+
+  .pq-meta{
+    position: relative;
+    border: solid 1px #c9c9c9;
+    border-left: none;
+    height: 56px;
+
+    .title{
+      position: relative;
+      border-bottom: solid 1px #c9c9c9;
+      height: 27px;
+      width: 100%;
+      background-color: #f2f2f2;
+      text-align: center;
+      line-height: 27px;
+    }
+  }
+
+  .pq-meta:nth-child(1){
+    border-left: solid 1px #c9c9c9;
+  }
+}
+
+// 物流
+.deliver{
+  position: relative;
+  margin-left: 28px;
+  width: calc(100% - 28px);
+  background-color: #f6f6f6;
+
+  .field-option-box{
+    position: relative;
+    height: 20px;
+
+    .apply-etc{
+      margin-top: 2px;
+      margin-left: 6px;
+      color: #71acd4;
+      cursor: pointer;
+    }
+  }
+
+  .field-option{
+    position: relative;
+    margin-left: 8px;
+
+    input{
+      display: inline-block;
+      position: relative;
+      vertical-align: middle;
+    }
+
+    span{
+      display: inline-block;
+      position: relative;
+    }
+  }
+
+  .deliverTemplate{
+    position: relative;
+    padding-left: 10px;
+    padding-right: 16px;
+    padding-top: 10px;
+    padding-bottom: 12px;
+  }
+
+  .etc{
+    position: relative;
+    padding-left: 10px;
+    padding-right: 16px;
+    padding-top: 10px;
+    padding-bottom: 12px;
+  }
+
+  .deliver-template-button{
+    margin-left: 6px;
+    color: #767676;
+    font-size: 12px;
+    text-align: right;
+    top: 8px;
+    cursor: pointer;
+  }
+}
+
+.sample{
+  color: #71ACD4;
+  top: 9px;
+  margin-left: 4px;
+  cursor: pointer;
+}
+
+.singletext{
+  display: inline-block;
+  width: calc(100% - 28px);
+  height: 28px;
+  line-height: 28px;
+  margin-left: 28px;
+  color: #767676;
+
+  a{
+    color: #71ACD4;
+    cursor: pointer;
+    text-decoration: none;
+  }
+}
+
+.text-panel{
+  position: relative;
+  width: calc(100% - 28px);
+  margin-left: 28px;
+  color: #767676;
+
+  a{
+    color: #71ACD4;
+    cursor: pointer;
+    text-decoration: none;
+  }
+
+  p{
+    margin: 0;
+  }
+}
+
+.single-checkbox{
+  position: relative;
+  width: calc(100% - 28px);
+  height: 28px;
+  line-height: 28px;
+  margin-left: 28px;
+  color: #767676;
+  background-color: #f6f6f6;
+
+  input[type="checkbox"]{
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 0px;
+  }
+
+  .span{
+    display: inline-block;
+    vertical-align: middle;
+  }
+}

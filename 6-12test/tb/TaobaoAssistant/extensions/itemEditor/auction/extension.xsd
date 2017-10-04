@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2006 U (http://www.altova.com) by wl_95421 (gwideal) -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:element name="extension">
+		<xs:annotation>
+			<xs:documentation>根结点，表示这是一个扩展。</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:choice>
+				<xs:element name="menu" type="menu"/>
+				<xs:element name="toolbar" type="toolbar"/>
+				<xs:element name="widget" type="widget"/>
+				<xs:element name="list" type="list"/>
+				<xs:element name="batch"/>
+				<xs:element name="itemEditor"/>
+				<xs:element name="version" type="version"/>
+			</xs:choice>
+			<xs:attribute name="provider" type="xs:string" use="required"/>
+			<xs:attribute name="company" type="xs:string" use="required"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:complexType name="baseElement">
+		<xs:annotation>
+			<xs:documentation>扩展内容的基础元素，相当于基类。</xs:documentation>
+		</xs:annotation>
+		<xs:choice maxOccurs="unbounded">
+			<xs:element ref="service" minOccurs="0"/>
+			<xs:element ref="privilege" minOccurs="0"/>
+			<xs:element ref="resource" minOccurs="0"/>
+			<xs:element ref="enablement"/>
+			<xs:element ref="featureAccess"/>
+			<xs:element ref="propertyAccess"/>
+			<xs:element ref="parameterAccess"/>
+			<xs:element ref="scripts" minOccurs="0"/>
+		</xs:choice>
+		<xs:attribute name="file" type="xs:string" use="optional"/>
+		<xs:attribute name="identity" type="xs:string" use="required"/>
+		<xs:attribute name="extensionPoint" type="xs:string" use="required"/>
+		<xs:attribute name="title" type="xs:string" use="required"/>
+		<xs:attribute name="description" type="xs:string" use="required"/>
+		<xs:attribute name="group" type="xs:string"/>
+	</xs:complexType>
+	<xs:complexType name="widget">
+		<xs:annotation>
+			<xs:documentation>表示这个结点是用来为界面提供扩展的，它会显示为UI，允许用户进行交互和输入。</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="baseElement"/>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="action">
+		<xs:annotation>
+			<xs:documentation>这个结点是用来为界面提供操作的基础元素，相当于操作的基类。</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="baseElement"/>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="menu">
+		<xs:annotation>
+			<xs:documentation>这个结点是用来为界面提供菜单元素。</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="action"/>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="batch">
+		<xs:annotation>
+			<xs:documentation>这个结点是用来为界面提供菜单元素。</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="action"/>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="itemEditor">
+		<xs:annotation>
+			<xs:documentation>这个结点是用来为界面提供菜单元素。</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="action"/>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="toolbar">
+		<xs:annotation>
+			<xs:documentation>这个结点是用来为界面提供工具栏上的操作元素。</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="action"/>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="list">
+		<xs:annotation>
+			<xs:documentation>这个结点是用来为界面提供列表元素，可以替换或者添加指定处的列表方式。</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="baseElement"/>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:element name="service">
+		<xs:annotation>
+			<xs:documentation>这个结点表示当前扩展需要系统提供哪些服务。</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<xs:element name="resource">
+		<xs:annotation>
+			<xs:documentation>这个结点表示当前扩展运行时需要包含的元素。</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<xs:element name="privilege">
+		<xs:annotation>
+			<xs:documentation>这个结点表示当前扩展的权限，如果没有合适的权限，就不能访问相应的服务。</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<xs:element name="enablement">
+		<xs:annotation>
+			<xs:documentation>这个结点表示当前扩展在何种情况下可用。</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:choice minOccurs="0" maxOccurs="unbounded">
+				<xs:element ref="adapt" minOccurs="0"/>
+				<xs:element ref="and" minOccurs="0"/>
+				<xs:element ref="instanceof" minOccurs="0"/>
+				<xs:element ref="or" minOccurs="0"/>
+				<xs:element ref="property" minOccurs="0"/>
+				<xs:element ref="system" minOccurs="0"/>
+				<xs:element ref="user" minOccurs="0"/>
+				<xs:element ref="userTag" minOccurs="0"/>
+			</xs:choice>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="and">
+		<xs:annotation>
+			<xs:documentation>这个结点表示其可用度由其子结点的结果and而来。</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:choice maxOccurs="unbounded">
+				<xs:element ref="adapt" minOccurs="0"/>
+				<xs:element ref="and"/>
+				<xs:element ref="instanceof"/>
+				<xs:element ref="or"/>
+				<xs:element ref="property"/>
+				<xs:element ref="system"/>
+				<xs:element ref="user" minOccurs="0"/>
+				<xs:element ref="userTag"/>
+			</xs:choice>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="or">
+		<xs:annotation>
+			<xs:documentation>这个结点表示其可用度由其子结点的结果or而来。</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:choice maxOccurs="unbounded">
+				<xs:element ref="adapt" minOccurs="0"/>
+				<xs:element ref="and"/>
+				<xs:element ref="instanceof"/>
+				<xs:element ref="or"/>
+				<xs:element ref="property"/>
+				<xs:element ref="system"/>
+				<xs:element ref="user"/>
+				<xs:element ref="userTag"/>
+			</xs:choice>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="adapt">
+		<xs:annotation>
+			<xs:documentation>这个结点表示其可用度由上下文adapt结果而来。</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:attribute name="type" type="xs:string" use="required"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="instanceof">
+		<xs:annotation>
+			<xs:documentation>这个结点表示其可用度由上下文选中对象的实例类名而来。</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:attribute name="type" type="xs:string" use="required"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="property">
+		<xs:annotation>
+			<xs:documentation>这个结点表示其可用度由上下文选中对象的属性值而来。</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:attribute name="name" type="xs:string" use="required"/>
+			<xs:attribute name="value" type="xs:string" use="required"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="user">
+		<xs:annotation>
+			<xs:documentation>这个结点表示其可用度由当前用户的类型来决定，如B或者C商家。</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:attribute name="supportSubAccount" type="xs:boolean" use="optional"/>
+			<xs:attribute name="privilege" type="xs:string" use="optional"/>
+			<xs:attribute name="type" type="xs:string" use="optional"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="userTag">
+		<xs:annotation>
+			<xs:documentation>这个结点表示其可用度由当前用户的标签来决定的。</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:attribute name="name" type="xs:string" use="required"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="system">
+		<xs:annotation>
+			<xs:documentation>这个结点表示其可用度由系统属性而来。</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:attribute name="name" type="xs:string" use="required"/>
+			<xs:attribute name="value" type="xs:string" use="required"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:complexType name="version">
+		<xs:annotation>
+			<xs:documentation>当前扩展的版本</xs:documentation>
+		</xs:annotation>
+		<xs:attribute name="current" type="xs:double" use="required"/>
+		<xs:attribute name="appVersion" type="xs:string" use="optional"/>
+		<xs:attribute name="updateRange" type="xs:string" use="optional"/>
+		<xs:attribute name="forceUpdateRange" type="xs:string" use="optional"/>
+	</xs:complexType>
+	<xs:element name="parameterAccess">
+		<xs:annotation>
+			<xs:documentation>这个结点表示Parameter字段中，可以读写哪些Key.</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="read"/>
+				<xs:element ref="write"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="propertyAccess">
+		<xs:annotation>
+			<xs:documentation>这个结点表示基本属性中，可以读写哪些属性.</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="read"/>
+				<xs:element ref="write"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="featureAccess">
+		<xs:annotation>
+			<xs:documentation>这个结点表示Parameter字段中，可以读写哪些Key.</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="read"/>
+				<xs:element ref="write"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="read">
+		<xs:annotation>
+			<xs:documentation>表示该属性可被读取。</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<xs:element name="write">
+		<xs:annotation>
+			<xs:documentation>表示该属性可被写入，如果可被写入，那么必可被读取。</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<xs:element name="scripts">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="function" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="function"/>
+</xs:schema>

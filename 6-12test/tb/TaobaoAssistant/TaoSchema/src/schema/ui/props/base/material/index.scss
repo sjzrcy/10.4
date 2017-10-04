@@ -1,0 +1,146 @@
+
+.com-material{
+	.empty-value{
+		cursor: pointer;
+		height: 27px;
+	}
+
+	.value-panel{
+		position: relative;
+		width: 100%;
+
+		.tip-text{
+			position: absolute;
+			width: 80px;
+			height: 27px;
+			top: 0px;
+			left: 10px;
+			line-height: 27px;
+			color: #767676;
+			font-size: 13px;
+			font-family: "宋体";
+		}
+
+		.tip-icon{
+			position: absolute;
+			width: 16px;
+			height: 16px;
+			top: 5px;
+			right: 6px;
+			background-image: url(../img/select-button.png);
+		}
+
+		.selected-text{
+			position: relative;
+			left: 10px;
+			line-height: 18px;
+			font-size: 13px;
+			color: #333333;
+			cursor: arrow;
+		}
+
+		.edit-button{
+			cursor: pointer;
+			color: #4994c7;
+			margin-top: 3px;
+		}
+	}
+	
+}
+
+.prop-material-panel{
+	padding: 12px 20px 8px 20px;
+	background-color: #ffffff;
+	max-height: 300px;
+
+	.material-tip{
+		color: #767676;
+		padding-bottom: 8px;
+	}
+
+	.material-errors{
+		padding-bottom: 8px;
+
+		.material-error{
+			color: #ff3300;
+			padding-bottom: 4px;
+
+			img{
+				vertical-align: middle;
+			}
+		}
+	}
+
+	.table-wrap{
+		max-height: 225px;
+		overflow: auto;
+	}
+
+	.material-options-table{
+		border-spacing: 0;
+		tr{
+			th{
+				width: 109px;
+				height: 29px;
+
+				font-weight: normal;
+				text-align: center;
+				color: #767676;
+
+				border-top: solid 1px #c9c9c9;
+				border-left: solid 1px #c9c9c9;
+
+				background-color: #f6f6f6;
+
+				&:nth-child(3){
+					border-left: solid 3px #c9c9c9;
+				}
+
+				&:last-child{
+					border-right: solid 1px #c9c9c9;
+				}
+			}
+
+			td{
+				width: 109px;
+				height: 29px;
+				border-top: solid 1px #c9c9c9;
+				border-left: solid 1px #c9c9c9;
+
+				input[type="checkbox"]{
+					margin-left: 16px;
+					vertical-align: middle;
+				}
+
+				input[type="text"]{
+					border: none;
+					outline: none;
+					text-indent: 3px;
+					width: 109px;
+					height: 18px;
+					text-align: center;
+				}
+
+				&:nth-child(3){
+					border-left: solid 3px #c9c9c9;
+				}
+
+				&:last-child{
+					border-right: solid 1px #c9c9c9;
+				}
+			}
+
+			td.no-input{
+				font-weight: normal;
+				text-align: center;
+				color: #767676;
+			}
+
+			&:last-child{
+				td{
+					border-bottom: solid 1px #c9c9c9;
+				}
+			}
+		}
+	}
+}

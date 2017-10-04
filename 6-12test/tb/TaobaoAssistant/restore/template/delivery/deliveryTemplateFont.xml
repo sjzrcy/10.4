@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Fonts>
+    <Font name="normalText" pointSize="8" family="华文新魏" wordspace="100"/>
+    <Font name="tableText" pointSize="8" family="华文新魏" wordspace="100"/>
+    <Font name="titleText" pointSize="12" family="华文新魏" wordspace="100"/>
+</Fonts>

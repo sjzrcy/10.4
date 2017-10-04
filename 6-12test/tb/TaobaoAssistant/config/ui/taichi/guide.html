@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>安全验证</title>
+    <style>
+    body,
+    p {
+        padding: 0;
+        margin: 0;
+        font: 16px/1.5 SimHei, Tahoma, Helvetica, Arial, '\5b8b\4f53', sans-serif;
+    }
+    
+    body {
+        background-color: #D5D5D5;
+    }
+    
+    .close-window{
+    	text-decoration: none;
+    	color: #fff;
+    	display: inline-block;
+    	float:right; 
+    }
+    .guide {
+        width: 500px;
+        height: 350px;
+        background: #fff;
+        position: absolute;
+        top: 50%;
+        margin-top: -178px;
+        left: 50%;
+        margin-left: -250px;
+    }
+    
+    .guide > p:first-child {
+        background: #4794C7;
+        color: white;
+        padding: 10px;
+        margin: 0;
+    }
+       
+    .guide div {
+        padding: 20px 30px;
+    }
+    
+    img {
+        width: 100px;
+        float: right;
+        margin-right: 20px;
+        margin-top: 20px;
+    }
+    
+    #time-count {
+        color: #4794C7;
+    }
+    .taichi-operate{
+    	color: #999;
+    }
+    </style>
+    <script>
+    // (function timeCounter(last, elId, fn) {
+    //     var mounts = last,
+    //         m = 0,
+    //         s = 0;
+    //     var timer = setInterval(function() {
+    //         m = Math.floor(mounts / 60);
+    //         s = mounts % 60;
+    //         document.getElementById(elId).innerHTML = m + '分' + s + '秒';
+    //         mounts--;
+    //         if (!m && !s) {
+    //             clearInterval(timer);
+    //             fn && fn();
+    //         }
+    //     }, 1000);
+    // })(2, 'time-count');
+    // </script>
+</head>
+
+<body>
+    <div class='guide'>
+        <p>安全验证<a href='#' class="close-window">×</a></p>
+
+        <div>
+            <p>为保障您的账号安全，</p>
+            <p>请您使用“验证中心”完成安全验证</p>
+        </div>
+        <div>
+            <img src="http://gtms02.alicdn.com/tps/i2/TB1HNKjJXXXXXbuaXXXvf1kYVXX-178-203.jpg" />
+            <p class="taichi-operate">操作方式：</p>
+            <p>1.下载并安装阿里钱盾</p>
+            <p>2.主账户开启一键验证，通过验证</p>
+            <p>3.子账户向主账户申请开启验证中心</p>
+            <p>功能后可使用（通过验证）</p>
+            <p>4.重新登录，通过阿里钱盾完成安全验证 </p>
+        </div>
+    </div>
+</body>
+
+</html>

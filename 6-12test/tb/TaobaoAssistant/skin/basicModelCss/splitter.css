@@ -1,0 +1,43 @@
+QSplitter#clickableSplitterVerticalShrink::handle:vertical
+, QSplitter#clickableVerticalSplitterExpand::handle:vertical
+{
+	background-image: url(images/basicModelImages/splitter/spliter-vertical-expand.png);
+	background-position: center center;
+	background-repeat: no-repeat;
+	border-bottom: 1px solid #BBBBBB;
+	border-right: 0px;
+}
+
+QSplitter#clickableSplitterExpand::handle:horizontal
+{
+	background-image: url(images/basicModelImages/splitter/splitter-expand.png);
+	background-position: center center;
+	background-repeat: no-repeat;
+	border-right: 1px solid #BBBBBB;
+}
+
+QSplitter#clickableVerticalSplitterExpand::handle:vertical
+{
+	background-image: url(images/basicModelImages/splitter/spliter-vertical-expand.png);
+	background-position: center center;
+	background-repeat: no-repeat;
+	border-right: 1px solid #BBBBBB;
+}
+
+
+QSplitter#clickableSplitterShrink::handle:horizontal
+{
+	background-image: url(images/basicModelImages/splitter/splitter-shrink.png);
+	background-position: center center;
+	background-repeat: no-repeat;
+	border-right: 1px solid #BBBBBB;
+}
+
+
+QSplitter#clickableSplitterVerticalShrink::handle:vertical
+{
+	background-image: url(images/basicModelImages/splitter/spliter-vertical-shrink.png);
+	background-position: center center;
+	background-repeat: no-repeat;
+	border-right: 1px solid #BBBBBB;
+}

@@ -1,0 +1,64 @@
+QComboBox{
+	border:1px solid #ccc;
+	max-height: 20px;
+	min-height: 20px;
+	color:#333;
+}
+
+QComboBox::down-arrow {/*向下箭头*/
+	image: url(images/basicModelImages/comboBox/comboBox-drop-down.png);
+	/*image: url(D:/tbassistant/client/bin/win32/Debug/images/basicModelImages/comboBox/comboBox-drop-down.png);*/
+}
+QComboBox::down-arrow:on{/* 向下箭头打开的样式*/ 
+    	image: url(images/basicModelImages/comboBox/comboBox-drop-down.png);
+	/*image: url(D:/tbassistant/client/bin/win32/Debug/images/basicModelImages/comboBox/comboBox-drop-down.png);*/
+}
+QComboBox::drop-down{/* 下拉 既是最右边存小三角的块 */
+	subcontrol-origin: padding;
+	subcontrol-position: top right;
+	width: 20px;
+	border-left-width: 0px;
+	border-bottom-right-radius: 0px;
+}
+QComboBox QAbstractItemView{ /*下拉框打开的时候option列表的整体样式 */
+/*	padding:3px;*//*background-color:red; selection-color:#fff;*/
+	selection-background-color: #237FCE;
+	border:1px solid #bbb;
+}
+
+QComboBox QAbstractItemView::item{
+	padding-top: 3px;
+	padding-bottom: 3px;
+}
+
+
+QComboBox QScrollBar:vertical{
+     border: 1px solid #E7F1FF;
+     background: #E7F1FF;
+     width: 16px;
+     margin: 13px 0px 13px 0px;
+ }
+
+QComboBox QScrollBar::handle:vertical{
+     background: #D4E7FF;
+     min-height: 20px;
+ 	 border: 1px solid #B4D0F4;
+ }
+
+QComboBox QScrollBar::add-line:vertical{
+     border: 1px solid #B8D3F5;
+     background: #D4E7FF;
+     width: 12px;
+	 height: 12px;
+     subcontrol-position: bottom;
+     subcontrol-origin: margin; 
+ }
+
+QComboBox QScrollBar::sub-line:vertical{
+     border: 1px solid #B8D3F5;
+     background: #D4E7FF;
+     width: 12px;
+     height: 12px;
+     subcontrol-position: top;
+     subcontrol-origin: margin;
+ }

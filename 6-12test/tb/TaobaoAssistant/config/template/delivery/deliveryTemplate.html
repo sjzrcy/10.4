@@ -1,0 +1,92 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+ <meta content="text/html; charset=Windows-1251" http-equiv="content-type">
+ <title>DeliveryTemplate</title>
+ <style type="text/css" media ="screen,print">
+ td 
+ {
+     border: 1px solid #000000;
+     word-break: break-all;
+     padding: 2 2 2 2;
+ }
+ #title td
+ {
+     font-size: %textBeforeTableFont;
+     font-family: %textBeforeTableFamily;
+ }
+ #buyerInfo td
+ {
+     font-size: %textBeforeTableFont;
+     font-family: %textBeforeTableFamily;
+ }
+ #sellerInfo td
+ {
+     font-size: %textBeforeTableFont;
+     font-family: %tableTextPointFamily;
+ }
+ #tableInfo
+ {
+     font-size: %tableTextPointSize;
+     font-family: %textBeforeTableFamily;
+ }
+ table
+ {
+     border: 1px;
+     margin-left: %leftMarginpx;
+     margin-right: %rightMarginpx;
+ }    
+ </style> 
+</head>
+<body>
+<div id = "background" style="position: relative;">
+<table id="title" border="1" width="%printWidth">
+  <tr>
+    <td width=%logImageTdWidthpx>
+    <img src='%logoImagePath' height="%logoImageHeightpx" width="%logoImageWidthpx"/>
+    </td>
+    <td align="center"><font size="%titleTextSize" face="%titleTextFamily">%deliveryName</font></td>
+    <td width=%ordTdWidthpx align="right"><font size="12">%orderNo</font></td>
+  </tr>
+</table>
+
+<table id="buyerInfo" border="1" width="%printWidth">
+	<tr>
+		<td>%buyerName&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp%buyer_nick&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp%buyerPhone&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp%buyerAddress</td>
+	</tr>
+	<tr>
+		<td>%buyerMemo</td>
+	</tr>
+</table>
+<table id="tableInfo" border="1" width="%printWidth">
+%tableWidget
+</table>
+<table id="sellerInfo" border="1" width="%printWidth">
+	<tr>
+		<td>%sellerName&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp%sellerPhone&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp%sellerAddress</td>
+	</tr>
+	<tr>
+		<td>%sellerMemo</td>
+	</tr>
+	<tr>
+		<td>%printTime&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp%deliveryTime&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp%invoiceTitle</td>
+	</tr>
+	<tr>
+	    <td>%userInfo1</td>
+	</tr>	
+	<tr>
+	    <td>%userInfo2</td>
+	</tr>
+	<tr>
+	    <td>%userInfo3</td>
+	</tr>
+	<tr>
+	    <td>%userInfo4</td>
+	</tr>
+	<tr>
+	    <td>%customText</td>
+	</tr>
+</table>
+</div>
+</body>
+</html>

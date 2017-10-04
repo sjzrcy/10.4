@@ -1,0 +1,21 @@
+QProgressBar
+{
+	border: 1px solid #CECECE;
+	padding-bottom: -1px;
+	background-image: url(images/basicModelImages/progressBar/background.png);
+	background-position: center center;
+	background-repeat: repeat-x;
+	border-radius: 4px;
+	min-height: 11px;
+	max-height: 11px;
+	font-size: 8px;
+	font-family:"宋体";
+	text-align: center;
+}
+
+QProgressBar::chunk
+{
+	background-image: url(images/basicModelImages/progressBar/chunck.png);
+	border: 1px solid #68ad27;
+	border-radius: 4px;
+}

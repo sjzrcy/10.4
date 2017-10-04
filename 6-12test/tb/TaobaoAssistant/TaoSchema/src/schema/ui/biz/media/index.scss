@@ -1,0 +1,279 @@
+.com-media{
+	position: relative;
+	width: 246px;
+	margin-left: 28px;
+
+	.preview-box{
+		position: relative;
+		width: 100%;
+		height: 246px;
+
+		.remove-icon{
+			position: absolute;
+			right: 8px;
+			top:8px;
+
+			width: 28px;
+			height: 28px;
+			cursor: pointer;
+
+			background-image: url(../img/delete.png);
+			background-position: center;
+			background-repeat: no-repeat;
+		}
+
+		.preview-image{
+			position:relative;
+			width: 100%;
+			height: 100%;
+
+			background-color: #f6f6f6;
+			background-position: center;
+			background-size: contain;
+			background-repeat: no-repeat;
+
+			.major{
+				position: absolute;
+				width: 29px;
+				height: 14px;
+				top: 116px;
+				left: 108px;
+				text-align: cneter;
+
+				.text{
+					color: #999999;
+				}
+			}
+
+			.first-one{
+				width: 80px;
+				left: 84px;
+			}
+
+			.image-reminder{
+				position: absolute;
+				color: #767676;
+
+				width: calc(100% - 24px);
+				height: 34px;
+				top: 203px;
+				left: 12px;
+				line-height: 17px;
+
+				word-break: break-all;
+
+			}
+
+			.vertical-tip{
+				position: absolute;
+				color: #999999;
+
+				&:nth-child(1){
+					width: 60px;
+					height: 14px;
+					top: 76px;
+					left: 52px;
+				}
+
+				&:nth-child(2){
+					width: 60px;
+					height: 14px;
+					top: 96px;
+					left: 73px;
+				}
+			}
+
+			.vertical-reminder{
+				position: absolute;
+				color: #767676;
+
+				width: calc(100% - 24px);
+				height: 51px;
+				top: 156px;
+				left: 12px;
+				line-height: 17px;
+
+				word-break: break-all;
+
+				a{
+					color: #6CA9D1;
+					text-decoration: none;
+				}
+			}
+		}
+
+		.preview-vedio{
+			position:relative;
+			width: 100%;
+			height: 100%;
+
+			background-color: #f6f6f6;
+			background-position: center;
+			background-size: contain;
+			background-repeat: no-repeat;
+
+			.tip{
+				position: absolute;
+				width: 86px;
+				height: 16px;
+				top: calc((100% - 16px)/2);
+				left: calc((100% - 86px)/2);
+				color: #999999;
+			}
+
+			.play{
+				position: absolute;
+				width: 64px; height: 64px;
+				left: calc((100% - 64px)/2);
+				top: calc((100% - 64px)/2);
+
+				background-image: url(../img/play.png);
+				background-position: center;
+			}
+		}
+	}
+
+	.arrow{
+		position:relative;
+		width: 100%;
+		height: 5px;
+
+		background-image: url(../img/media-arrow.png);
+		background-position: center;
+		background-repeat: no-repeat;
+	}
+
+	.bar5{
+		position:relative;
+		margin-top:8px;
+		width: 100%;
+		height: 60px;
+
+		.sub{
+			display: block;
+			position: relative;
+			float: left;
+			width: 44px;
+			height: 53px;
+			margin-right: 5px;
+
+			.thumbnail5{
+				position: relative;
+				top: 0;
+				width: 40px;
+				height: 40px;
+
+				border: solid 2px #f6f6f6;
+				background-color: #f6f6f6;
+				background-position: center;
+				background-size: cover;
+				background-repeat: no-repeat;
+
+				font-family: "ArialMT", "Arial";
+				font-weight: 400;
+				text-align:center;
+
+				font-size: 20px;
+				line-height: 36px;
+				color: #999999;
+
+				cursor:pointer;
+			}
+
+			.active{
+				border-color: #4994c7;
+			}
+		}
+	}
+
+	.bar6{
+		position:relative;
+		margin-top:8px;
+		width: 100%;
+		height: 52px;
+
+		.sub{
+			display: block;
+			position: relative;
+			float: left;
+			width: 36px;
+			height: 45px;
+			margin-right: 5px;
+
+			.thumbnail6{
+				position: relative;
+				top: 0px;
+				width: 32px;
+				height: 32px;
+
+				border: solid 2px #f6f6f6;
+				background-color: #f6f6f6;
+				background-position: center;
+				background-size: cover;
+				background-repeat: no-repeat;
+
+				font-family: "ArialMT", "Arial";
+				font-weight: 400;
+				text-align:center;
+
+				font-size: 18px;
+				line-height: 30px;
+				color: #999999;
+
+				cursor:pointer;
+			}
+
+			.add-video{
+				background-size: 16px 16px;
+				background-image: url(../img/video.png);
+			}
+
+			.active{
+				border-color: #4994c7;
+			}
+		}
+	}
+}
+
+.tab-media{
+	.media-bar{
+		height: 28px;
+		line-height: 28px;
+		margin-left: 28px;
+		max-width: calc(100% - 28px);
+
+		.media-tab{
+			position: relative;
+			float: left;
+			color: #333333;
+			cursor: pointer;
+			margin-left: 16px;
+			height: 23px;
+
+			&:nth-child(1){
+				margin-left: 0px;
+			}
+		}
+
+		.media-tab-active{
+			color: #6CA9D1;
+			border-bottom: solid 1px #6CA9D1;
+		}
+	}
+
+	.media-panel{
+		.media-content{
+			.vertical-preview{
+				position: absolute;
+				left: 41px;
+				height: 246px;
+				width: 164px;
+				
+				background-color: #f6f6f6;
+				background-position: center;
+				background-size: contain;
+				background-repeat: no-repeat;
+			}
+		}
+	}
+}

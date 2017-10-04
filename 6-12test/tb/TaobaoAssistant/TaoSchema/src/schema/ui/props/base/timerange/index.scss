@@ -1,0 +1,48 @@
+// 时间区间
+.prop-timerange{
+	.range-start{
+		border-bottom: solid 1px #c9c9c9;
+		padding-left: 10px;
+
+		input{
+			width: calc(100% - 30px);
+		}
+
+		label{
+			top: 5px;
+		}
+	}
+
+	.range-end{
+		span{
+			display: inline-block;
+			margin-left: 1px;
+			margin-right: -3px;
+			color: #333333;
+		}
+
+		input{
+			width: calc(100% - 47px);
+		}
+
+		label{
+			top: 33px;
+		}
+	}
+
+	input{
+		position: relative;
+		display:inline-block;
+		border:none;
+		outline:none;
+		padding-right: 30px;
+		height: 24px;
+	}
+
+	label{
+		position: absolute;
+		right: 0px;
+		width: 25px; height:16px;
+		background-image: url(../img/date-icon.png);
+	}
+}

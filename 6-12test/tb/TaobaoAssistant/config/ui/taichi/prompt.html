@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>安全验证</title>
+    <style>
+    body,
+    p {
+        padding: 0;
+        margin: 0;
+        font: 16px/1.5 SimHei, Tahoma, Helvetica, Arial, '\5b8b\4f53', sans-serif;
+    }
+    
+    body {
+        background-color: #D5D5D5;
+    }
+    
+    a {
+        text-decoration: none;
+        color: #fff;
+        display: inline-block;
+    }
+    
+    .close-window {
+        float: right;
+    }
+    
+    .guide {
+        width: 500px;
+        height: 350px;
+        background: #fff;
+        position: absolute;
+        top: 50%;
+        margin-top: -178px;
+        left: 50%;
+        margin-left: -250px;
+    }
+    
+    .guide > p:first-child {
+        background: #4794C7;
+        color: white;
+        padding: 10px;
+        margin: 0;
+    }
+    .overtime{
+        padding: 50px;
+        text-align: center;
+    }
+    .resent{
+        background: #4794C7;
+        width: 150px;
+        padding: 5px 10px;
+        display: block;
+        text-align: center;
+        margin: 0px auto;
+    }
+    img{
+        width: 24px;
+        height: 3.2ex;
+        padding-right: 5px;
+        vertical-align: bottom;
+    }
+    
+    </style>
+    <script>
+    // (function timeCounter(last, elId, fn) {
+    //     var mounts = last,
+    //         m = 0,
+    //         s = 0;
+    //     var timer = setInterval(function() {
+    //         m = Math.floor(mounts / 60);
+    //         s = mounts % 60;
+    //         document.getElementById(elId).innerHTML = m + '分' + s + '秒';
+    //         mounts--;
+    //         if (!m && !s) {
+    //             clearInterval(timer);
+    //             fn && fn();
+    //         }
+    //     }, 1000);
+    // })(2, 'time-count');
+    //
+    </script>
+</head>
+
+<body>
+    <div class='guide'>
+        <p>安全验证<a href='#' class="close-window">×</a></p>
+        <p class="overtime"><span><img src="http://gtms04.alicdn.com/tps/i4/TB1UiWpJXXXXXbQXVXXcxpPGpXX-35-35.jpg" alt="overtime"></span>验证超时！</p>
+        <a href="verify.html" target="_self" class="resent">重新发送验证消息</a>
+    </div>
+</body>
+
+</html>

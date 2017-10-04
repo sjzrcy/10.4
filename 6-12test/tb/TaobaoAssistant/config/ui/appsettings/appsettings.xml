@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!--category/alias 作为toolbox tab标题
+    group/alias 作为相应toolbox tab页中list widget中的一行
+    modelView/modelClass 对应数据结构
+    modelView/viewClass对应数据显示-->
+<appsettings>
+	<category name="basic settings" alias="基本设置">
+		<group name="proxy" alias="网络">
+			<modelView modelClass="ProxySettings" viewClass="ProxySettingsView"/>
+		</group>
+	</category>
+</appsettings>

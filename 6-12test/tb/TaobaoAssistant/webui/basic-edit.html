@@ -1,0 +1,236 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Tmall商品基本信息</title>
+<link href="plugins/jquery-ui/jquery-ui.css" rel="stylesheet"/>
+<link href="plugins/jquery-ui/jquery-ui.theme.css" rel="stylesheet"/>
+<link href="plugins/jquery-ui/jquery-ui.structure.css" rel="stylesheet"/>
+<link href="plugins/jquery.mCustomScrollbar.min.css" rel="stylesheet"/>
+
+<link href="css/item.css" rel="stylesheet"/>
+<link href="css/media.css" rel="stylesheet"/>
+<!------------------------>
+<script type="text/javascript" src="plugins/jquery.js"></script>
+<script type="text/javascript" src="plugins/jquery-ui/jquery-ui.js"></script>
+<script type="text/javascript" src="plugins/timepicker-addon.js"></script>
+<script type="text/javascript" src="plugins/jquery.mousewheel.min.js"></script>
+<script type="text/javascript" src="plugins/jquery.mCustomScrollbar.concat.min.js"></script>
+<script type="text/javascript" src="plugins/backbone/underscore.js"></script>
+<script type="text/javascript" src="plugins/backbone/backbone.js"></script>
+
+<script type="text/javascript" src="plugins/textchange.js"></script>
+<script type="text/javascript" src="js/queryselect.js"></script>
+<script type="text/javascript" src="js/util.js"></script>
+<script type="text/javascript" src="js/plugins.js"></script>
+<script type="text/javascript" src="js/config.js"></script>
+<script type="text/javascript" src="js/process.js"></script>
+<script type="text/javascript" src="js/common.js"></script>
+<script type="text/javascript" src="js/shell.js"></script>
+<script type="text/javascript" src="js/rule.js"></script>
+<script type="text/javascript" src="js/field.js"></script>
+<script type="text/javascript" src="js/edit-factory.js"></script>
+<script type="text/javascript" src="js/item.js"></script>
+<script type="text/javascript" src="js/media.js"></script>
+<script type="text/javascript" src="js/frame.js"></script>
+<script type="text/javascript" src="js/Channal.js"></script>
+<script type="text/javascript" src="js/biz/spu.js"></script>
+<script type="text/javascript" src="js/biz/basic-edit.js"></script>
+<!---->
+<style>		  
+#category_section{ position:relative; width:100%; overflow:hidden; top:3px;}
+#category_content{ position:relative; left:18px; width: 286px; height: 28px;}
+#category_select{ display:inline-block; position:relative; left:3px; min-width:90px; max-width:60%; min-height:20px;}
+#choose_category{ display:inline-block; position:relative; left:260px;}
+
+body{min-width: 1167px;}
+.custom_scroll{
+    position:relative;
+    float:left;
+    width:400px;
+    overflow: visible;
+}
+
+.custom_scroll:nth-child(3){ width:312px; left:4px;}
+.custom_scroll:nth-child(4){ width:545px; left:24px;}
+.custom_scroll:nth-child(5){ width:266px; left:44px;}
+
+#product_list{
+    /*border:solid 1px #a0a0a0;*/
+    border-style: none;
+}
+.spu_item{
+    position: relative;
+    border-style: none;
+   /* border-bottom: solid 1px #a0a0a0;*/
+    cursor: default;
+}
+.spu_item_holder{}
+.spu_item_holder:hover{background-color: #f0f8fe;}
+.spu_item_selected{background-color: #f0f8fe;}
+.spu_item_disabled{color:#CCCCCC}
+.spu_item:last-child{border-bottom: none;}
+
+.spu_item_title{
+    position: relative;
+    float: left; left:2px; top: 4px;
+    height:20px; line-height: 20px;
+    width: calc(100% - 66px);
+
+    overflow: hidden;
+    white-space:nowrap;
+    text-overflow:ellipsis;
+    
+    cursor: default;
+}
+
+.title-clac{
+    font-family:宋体; 
+    font-size:12px;
+}
+
+.spu_item_edit{
+    position: relative;
+    float: right; right: 7px; top: 4px;;
+    width: 26px;
+    height: 20px; line-height: 20px;
+    color: #648bb2;
+    cursor: pointer;
+}
+.spu_item_radio{
+    position: relative;
+    float: left; left: 2px;
+    height: 20px; line-height: 20px;
+    cursor: pointer;
+}
+.spu_item_line{
+    position: relative;
+    height: 4px; line-height: 4px;
+}
+
+.spu_content_top{
+    position: relative;
+    top:0; left:0;
+    width: 100%;
+    height: 6px;
+    background-color: transparent;
+}
+
+#add_spu_section{
+    position: relative;
+    height: 22px;
+    width: 70%;
+    left:60px;
+}
+#no_product_tip{
+    position: relative;
+    float: left;
+    width: 82px;
+    height: 22px;
+    line-height: 22px;
+}
+#create_product_button{
+    position: relative;
+    float: right;
+    width: 55px;
+    height: 22px;
+    line-height: 22px;
+    cursor: pointer;
+    color: #648bb2;
+}
+
+#spu_section{
+    position: relative;
+    width: 290px;
+    left:20px;
+}
+
+.section_title{
+    position:relative;
+    margin-bottom: 8px;
+}
+
+.item-tips{
+    position: relative;
+    top:0; left:0;
+    width: 1127px;
+    border: solid 1px #FCE2BB;
+    background-color: #FEF1DD;
+    font-family: 宋体;
+    color: #333333;
+    padding: 10px 10px 12px 10px;
+    margin: 2px 0 10px 20px;
+    line-height: 140%;
+}
+
+.item-tips ul{
+    position: relative;
+    left:-14px;
+    margin: 0;
+    margin-top: 6px;
+    list-style-type:decimal;
+    font-family: 宋体;
+}
+</style>
+</head>
+
+<body>
+<div class="top_holder"></div>
+<div class="item-tips" style="display:none;">
+    <div><img src="pic/schema-tip.png" align="top"/>&nbsp;<span>错误与警告：</span></div>
+    <div><ul></ul></div>
+</div>
+<!-- 左区域：选类目，新建产品(列表)，更新产品(列表) -->
+<div class="custom_scroll">
+    <div id="category_section">
+        <div id="category_content">
+            <div class="float_left" style="width:232px; left:-2px;">
+                <select id="category_select"></select>
+            </div>
+            <div id="choose_category" class="float_left button" style="left:236px; top:-19px;">选类目</div>
+        </div>
+    </div>
+    <div id="brand_section" style="display:none;"><!--区域：关键属性-->  
+        <hr/>
+        <div class="section_title" style="text-indent:60px;">关键属性：</div>
+        <div id="product"></div>
+    </div>
+    <div id="spu_section" style="display:none;"><!--区域：SPU列表-->
+        <hr/>
+        <div class="section_title">产品信息</div>
+        <div id="product_list" class="clearfix" ></div>
+    </div>
+    <div id="add_spu_section" class="clearfix" style="display:none;"><!--区域：引导创建产品-->
+        <hr/>
+        <div id="no_product_tip">产品还不存在</div>
+        <div id="create_product_button">马上创建</div>
+    </div>
+</div>
+
+<!-- 区域2 -->
+<div id="basic_info_1" class="custom_scroll"></div>
+<!-- 区域3 -->
+<div id="basic_info_2" class="custom_scroll"></div>
+<div class="m-custom-scrollbar-fix" style="width:112px; left:80px;"></div>
+</div>
+
+<!--SPU编辑-->
+<div class="spu_bg0" style="display:none;">
+<div class="spu_bg1">
+    <div class="spu_widget">
+        <div class="spu_top">
+            <div class="spu_logo"></div>
+            <div class="spu_title">创建SPU</div>
+            <div class="spu_close">&times;</div>
+        </div>
+        <div class="spu_content clearfix">
+            <div class="spu_content_top"></div>
+            <div class="spu_content_left"></div>
+            <div class="spu_content_right"></div>
+        </div>
+        <div class="spu_buttom">
+        </div>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,65 @@
+.sku-measure{
+	position: relative;
+	margin-left: 28px;
+	width: calc(100% - 28px);
+	background-color: #f6f6f6;
+	padding: 8px 0px 10px 10px;
+
+
+	.exp-sample{
+		position: relative;
+		color: #767676;
+		margin: 0px 0px 4px 0px;
+	}
+
+	.same-unit{
+		position: absolute;
+		right: 12px;
+		top: 8px;
+
+		input[type="checkbox"]{
+			vertical-align: middle;
+		}
+	}
+
+	.measure-item{
+		position: relative;
+		width: 100%;
+		margin-bottom: 11px;
+
+		input[type="checkbox"]{
+			display: inline-block;
+			margin-right: 10px;
+		}
+
+		input[type="text"]{
+			display: inline-block;
+			border: solid 1px #c9c9c9;
+			width: 48px;
+			height: 24px;
+			margin-top: 6px;
+			text-align: center;
+			text-indent: 3px;
+		}
+
+		.operator{
+			display: inline-block;
+			margin-left: 8px;
+			margin-right: 8px;
+		}
+
+		select{
+			display: inline-block;
+			width: 60px;
+			height: 20px;
+			margin-left: 14px;
+			margin-top: 6px;
+		}
+
+		.unit{
+			display: inline-block;
+			margin-top: 6px;
+			margin-left: 14px;
+		}
+	}
+}

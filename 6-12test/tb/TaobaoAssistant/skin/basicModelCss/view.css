@@ -1,0 +1,19 @@
+QHeaderView::down-arrow 
+{
+	width: 20px; 
+	height:24px; 
+	subcontrol-position: middle left;
+}
+
+QHeaderView::up-arrow 
+{
+	width: 20px; 
+	height:24px; 
+	subcontrol-position: middle left;
+}
+
+QListView#autoFitView
+{
+	height: 20px;
+	width: 60px;
+}

@@ -1,0 +1,58 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<itemSqls>
+	<sqls clientNavigationType="1">
+		<listColumnName>
+		title, sync_status,outer_id, price, num, cid, seller_cids, client_id, client_id as primaryKey
+		</listColumnName>
+		<sql name="所有宝贝">			
+		</sql>
+		<sql name="上传失败的宝贝">
+			<condition> sync_status=4 </condition>
+		</sql>
+	</sqls>
+	<sqls clientNavigationType="2">
+		<listColumnName>
+		title, sync_status,outer_id, price, num, cid, seller_cids, client_id, ems_fee , client_id as primaryKey
+		</listColumnName>
+		<sql name="所有宝贝">			
+		</sql>
+		<sql name="更改过的宝贝">
+			<condition> sync_status=2 </condition>
+		</sql>
+		<sql name="上传失败的宝贝">
+			<condition> sync_status=4 </condition>
+		</sql>
+		<sql name="橱窗推荐的宝贝">
+			<condition> has_showcase=1 </condition>
+		</sql>
+	</sqls>
+	<sqls clientNavigationType="3">
+		<listColumnName>
+		title, sync_status,outer_id, price, num, cid, seller_cids, client_id,express_fee , client_id as primaryKey
+		</listColumnName>
+		<sql name="所有宝贝">			
+		</sql>
+		<sql name="等待上传的宝贝">
+			<condition> ( banner=1 OR banner=2 OR banner=4  )</condition>
+		</sql>
+		<sql name="全部卖完的宝贝">
+			<condition> banner=3 </condition>
+		</sql>
+		<sql name="违规的宝贝">
+			<condition> banner=6 </condition>
+		</sql>
+		<sql name="更改过的宝贝">
+			<condition> sync_status=2 </condition>
+		</sql>
+		<sql name="上传失败的宝贝">
+			<condition> sync_status=4 </condition>
+		</sql>		
+	</sqls>
+	<sqls clientNavigationType="6">
+		<listColumnName>
+		title, sync_status,outer_id, price, num, cid, seller_cids, client_id, client_id as primaryKey
+		</listColumnName>
+		<sql name="所有宝贝模板">
+		</sql>
+	</sqls>
+</itemSqls>

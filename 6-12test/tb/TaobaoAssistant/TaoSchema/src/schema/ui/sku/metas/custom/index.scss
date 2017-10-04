@@ -1,0 +1,66 @@
+.custom-sale{
+  position: relative;
+  width: calc(100% - 28px);
+  margin-left: 28px;
+
+  .custom-sale-prop{
+    position: relative;
+    margin-top: 10px;
+
+    .title-input{
+      width: 98px;
+      height: 18px;
+      outline: none;
+      border: solid 1px #d7d7d7;
+      text-indent: 3px;
+    }
+
+    .delete-btn{
+      position: relative;
+      float:right;
+      width: 32px;
+      height: 28px;
+      line-height: 20px;
+      color: #666666;
+      cursor: pointer;
+    }
+
+    .options-panel{
+      position: relative;
+      width: 100%;
+      background-color: #f6f6f6;
+      margin-top: 8px;
+      padding-bottom: 8px;
+
+      .option{
+        display: inline-block;
+        position: relative;
+        margin-top: 8px;
+
+        input[type="checkbox"]{
+          width: 12px;
+          height: 12px;
+          margin-left: 16px;
+        }
+
+        input[type="text"]{
+          width: 128px;
+          height: 20px;
+          outline: none;
+          border: solid 1px #d7d7d7;
+          text-indent: 3px;
+          margin-right: 12px;
+        }
+      }
+    }
+
+  }
+
+  .add-sale-prop-btn{
+    position: relative;
+    color: #71acd4;
+    margin-top: 8px;
+    cursor: pointer;
+  }
+
+}

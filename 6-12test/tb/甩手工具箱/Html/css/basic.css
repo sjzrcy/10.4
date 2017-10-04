@@ -1,0 +1,155 @@
+﻿/* css reset */
+body, table, tr, td, ul, li, dl, dd, dt, input { margin: 0; padding: 0; font-size: 12px; background: #fff;}
+body { position: relative; padding-bottom: 20px;}
+ul, li { list-style-type: none;}
+dd { margin: 10px 0;}
+img { border: 0;}
+input { float: left;}
+select { float: left; margin-left: 5px;}
+label { cursor: pointer; vertical-align: top;}
+p { padding: 5px 0; clear: both;}
+td { vertical-align: middle;}
+
+a, a:visited { color: blue; text-decoration: none;}
+/* common classes */
+input[type='checkbox'] { margin-top: -2px; margin-right: 3px;}
+input.price, input.quantity, input.shopCode, input.infor,input.remark,input.skuBarCode{ height: 12px; text-align: right; padding: 2px;}
+input.price { width: 60px;}
+input.quantity { width: 60px; }
+input.shopCode { width: 110px;}
+input.infor { width: 75px;}
+input.skuBarCode { width: 110px;}
+h4.noSellProperty { margin: 20px 0 0 20px; font-size: 14px; font-weight: normal;}
+
+span.orange { color: #F33; padding: 0 6px 0 0;}
+span.empty { color: #fff;}
+span.errorNotNull { display:block; float:left; white-space:  nowrap; overflow: hidden; color:#000; padding:2px; margin:2px; margin-left:10px; border:1px solid #FF8080; background:#FFF2F2;}
+
+div.tips { position: absolute; top: -40px; left: 184px; float: left; clear: both; margin: 10px 0 10px 5px; height: 25px; line-height: 20px; background-color: #ffc; border: 1px solid #efb900; padding: 0 4px; color: #404040;}
+div.tips a { font-size: 20px; _font-size: 12px; font-weight: bold; padding: 0 0 0 8px; margin-top: 2px; color: #404040;}
+div.tips span { display: block; position: absolute; width: 17px; height: 10px; left: 45%; bottom: -10px; background: url(../images/arrow_top.gif) no-repeat;}
+
+tr.chkBoxGroup { clear: both;}
+div.chkBoxWrap { float: left; padding: 2px; white-space: nowrap;}
+div.spanWrap {  padding: 2px; clear: both; overflow: hidden;}
+div.chkBoxWrap input { float: none;}
+div.chkBoxWrap input.tb_cus_size { width: 50px; margin-left: 2px;}
+
+.checkBox { background: none transparent scroll repeat 0% 0%;}
+.textBox { margin-left: 5px; border: 1px solid #A7A6AA; height: 16px;}
+.textBoxCustom { width: 110px; vertical-align: top;}
+.textBoxNoBorder { border: 1px solid #FFF; margin-left: 0;}
+.noChineseTextBox { ime-mode: disabled;}
+.digitOnlyTextBox { }
+.digitAndDotOnlyTextBox { }
+
+.gray { color: #666;}
+.clear { clear: both; overflow: hidden;}
+.hidden { display: none;}
+.loadding img { vertical-align: baseline; margin-right: 5px;}
+.alert { display: none; position: fixed; top: 0; right: 5px; background: #FFF2F2 url(../images/alert_icons.png) no-repeat 3px center; 
+border: 1px solid #FF8080; padding: 4px 6px 4px 22px;}
+
+#submit{ width: 80px;}
+#TaobaoPropArea td, #tb_PaiPaiPropArea td { padding-right:20px;}
+#tbBaisc, #tbSellProperty, #tbPaipaiSellProperty,#tbPaipaiSellPropertyDetail  { width: 96%; margin:5px; background:#f8f8f8; border-collapse:collapse;}
+#tbSellProperty, #tbPaipaiSellProperty,#tbPaipaiSellPropertyDetail { width: 98%;}
+#tbBaisc th, #tbBaisc .tdTitle, #tbSellProperty th, #tbSellProperty .tdTitle, #tbPaipaiSellProperty th, #tbPaipaiSellProperty .tdTitle,#tbPaipaiSellPropertyDetail th,#tbPaipaiSellPropertyDetail tdTitle { padding:6px 0; text-align: left; background: #f0f0f0; text-indent: 10px; font-size: 12px; font-weight: normal; border: 1px solid #dfdfdf;}
+#tbBaisc th span, #tbBaisc .tdTitle span, #tbSellProperty th span, #tbSellProperty .tdTitle span, #tbPaipaiSellProperty th span, #tbPaipaiSellProperty .tdTitle span , #tbPaipaiSellPropertyDetail th span, #tbPaipaiSellPropertyDetail.tdTitle span{ font-weight: normal; font-size: 12px;}
+#tbBaisc td, #tbSellProperty td, #tbPaipaiSellProperty td , #tbPaipaiSellPropertyDetail td  { padding:6px; border:1px solid #dfdfdf;}
+
+/* 淘宝 */
+#J_tbSellProWrap { position: relative; padding-bottom: 10px;}
+#J_tbSellProperty { width: 500px;}
+#J_tbSellProperty, #tbPaipaiSellProperty, #J_tbCustomColor { border-collapse: collapse; margin: 20px 5px; clear: both;}
+#J_tbSellProperty th, #tbPaipaiSellProperty th, #J_tbCustomColor th { padding: 5px 8px; font-weight: normal; border: 1px solid #e1e1e1; background-color: #f0f0f0;}
+#J_tbSellProperty .trSellProp td, #tbPaipaiSellProperty .trSellProp td, #J_tbCustomColor td, #J_tbCustomColor th { border: 1px solid #e1e1e1; padding: 5px 8px; text-align: center;}
+#J_tbCustomColor th { font-weight: normal; background-color: #f0f0f0;}
+.textBoxSetSameValue { float: none;}
+
+/* 淘宝自定义颜色 */
+#J_tbCustomColor { width: 500px; margin: 20px 0 40px 5px;}
+#J_tbCustomColor .customColorFile { width: 250px; margin-right: 1px;}
+#J_tbCustomColor .customPic { display: none;}
+#J_tbCustomColor tr { display: none;}
+
+/* 拍拍 */
+dd.paipaiEnableButton { padding: 5px 0 0 2px;}
+#J_PaipaiStockArea, #J_PaipaiEditProp { display: none;}
+#J_PaipaiStockArea { margin: 5px 0 0 5px; width: 98%; padding: 10px 0 0 5px; background-color: #F8F8F8; border: 2px solid #ECECEC;}
+#J_PaipaiStockArea ul, #J_PaipaiStockArea li { background-color:Transparent;}
+#J_PaipaiStockArea li { padding: 5px 0 5px 5px;}
+#J_PaipaiStockArea li input { float: none;}
+#J_PaipaiStockArea li span { display: block; float: left; height: 20px; line-height: 24px; padding: 2px 6px; margin: 3px 5px 3px 0;}
+#J_PaipaiStockArea li img.del { display: block; float: left; margin-top: 11px;}
+#J_PaipaiStockArea li span.propTitle { text-align: center; }
+#J_PaipaiStockArea li span.propValue { border: 1px solid #FDC689; background: #FFFAF2; margin-right: 5px;}
+#J_PaipaiStockArea input.newTitle, #J_PaipaiStockArea input.newValue, #J_PaipaiStockArea input.editPropTitle, #J_PaipaiStockArea input.editPropValue { width: 40px; background: #FFFCB3; text-align: center; margin: 3px 5px 3px 0; border: 1px solid #ccc;}
+#J_PaipaiStockArea input.errorInput { background-color: #fcc; border: 1px solid #f00;}
+
+#J_PaipaiStockArea .moreRow { width: 40px; text-align: center;}
+#li_NewRow dt, #li_NewRow dd, #J_PaipaiProperty dt, #J_PaipaiProperty dd { float: left; margin: 0;}
+#li_AddRowBtns { clear: both;}
+#li_AddRowBtns button { margin: 0 5px 0 0;}
+
+#J_PaipaiAddProp, #J_PaipaiProperty, .li_PropRows, .li_PropEditRows { clear: both; overflow: hidden; }
+#J_PaipaiProperty .li_editBtn { clear: both; margin-top: 5px;}
+
+#J_PaipaiStockArea #ok, #J_PaipaiStockArea #cancel { padding: 0; margin: 0; line-height: 1.0;}
+#tb_PaiPaiPropArea { border-collapse: collapse; margin: 0 0 0 5px; clear: both;}
+#tb_PaiPaiPropArea th { padding: 5px 8px; font-weight: normal; border: 1px solid #e1e1e1; background-color: #FFFAF2;}
+#tb_PaiPaiPropArea td { border: 1px solid #e1e1e1; padding: 5px 8px; text-align: center;}
+
+/* 亚马逊 */
+#AmazonSellPropTable { margin:10px 0 0 5px; border-collapse:collapse; margin:15px 0 20px 5px; clear:both;}
+#AmazonSellPropTable th { padding:5px 8px; font-weight:normal; border:1px solid #e1e1e1; background-color:#FFFAF2;}
+#AmazonSellPropTable td { border:1px solid #e1e1e1; padding:5px 8px; text-align:center;}
+#AmazonChildItemArea .AmazonSubItem { padding: 10px 0 0 0;}
+#AmazonChildItemArea .AmazonSubItem select { float: none;}
+#AmazonChildItemArea label { padding: 0 3px 0 0;}
+#AmazonChildItemArea fieldset { width: 95%; margin: 10px; padding: 6px 8px 6px 8px;}
+#AmazonChildItemArea legend { color: #005eac;}
+#AmazonChildItemArea #AmazonSubjectProperty { overflow: hidden; margin-top: 3px; padding: 10px 0 0 0;}
+	#AmazonSubjectProperty dl { clear: both;}
+	#AmazonSubjectProperty dt, #AmazonSubjectProperty dd { float: left; margin: 0;}
+
+#AmazonChildItemArea .AmazonPropTitle { display: block; float: left; width: 120px; height: 18px; line-height: 20px; padding: 0 3px 0 0; text-align: right;}
+#AmazonChildItemArea input.AmazonTextBox { float: left; width: 100px; height: 16px; margin: 0 8px 0 0;}
+#AmazonSellPropTable { margin-left: 10px;}
+#AmazonSellPropTable th { background-color:#E3EEFB;}
+.txtBoxGroup { vertical-align: top;}
+.txtBoxGroup input { margin: 0 8px 10px 4px;}
+.txtBoxGroup a { margin: 0 0 0 5px;}
+.amazonTxtBox { height: 16px; margin: 2px 5px; border: 1px solid #a7a6aa; float: none;}
+.itemCode { cursor: not-allowed;}
+.qtipStyle{font-size:14px;}
+/* 品聚 */
+#J_tbSellProWrap { position: relative; padding-bottom: 10px;}
+#J_tbPinjuSellProperty { width: 500px;}
+#J_tbPinjuSellProperty, #tbPaipaiSellProperty, #J_tbCustomColor { border-collapse: collapse; margin: 20px 5px; clear: both;}
+#J_tbPinjuSellProperty th, #tbPaipaiSellProperty th, #J_tbCustomColor th { padding: 5px 8px; font-weight: normal; border: 1px solid #e1e1e1; background-color: #f0f0f0;}
+#J_tbPinjuSellProperty .trSellProp td, #tbPaipaiSellProperty .trSellProp td, #J_tbCustomColor td, #J_tbCustomColor th { border: 1px solid #e1e1e1; padding: 5px 8px; text-align: center;}
+#J_tbCustomColor th { font-weight: normal; background-color: #f0f0f0;}
+.textBoxSetSameValue { float: none;}
+#submit{ width: 80px;}
+#TaobaoPropArea td, #tb_PaiPaiPropArea td { padding-right:20px;}
+#tbBaisc, #tbPinjuSellProperty, #tbPaipaiSellProperty { width: 96%; margin:5px; background:#f8f8f8; border-collapse:collapse;}
+#tbPinjuSellProperty, #tbPaipaiSellProperty { width: 98%;}
+#tbBaisc th, #tbBaisc .tdTitle, #tbPinjuSellProperty th, #tbPinjuSellProperty .tdTitle, #tbPaipaiSellProperty th, #tbPaipaiSellProperty .tdTitle { padding:6px 0; text-align: left; background: #f0f0f0; text-indent: 10px; font-size: 12px; font-weight: normal; border: 1px solid #dfdfdf;}
+#tbBaisc th span, #tbBaisc .tdTitle span, #tbPinjuSellProperty th span, #tbPinjuSellProperty .tdTitle span, #tbPaipaiSellProperty th span, #tbPaipaiSellProperty .tdTitle span { font-weight: normal; font-size: 12px;}
+#tbBaisc td, #tbPinjuSellProperty td, #tbPaipaiSellProperty td { padding:6px; border:1px solid #dfdfdf;}
+
+/*************************拍拍新版**************************/
+#colortable {width:800px;}
+#colortable tr td {border:1px solid gray;vertical-align:top;width:20%}
+#colortable tr td ul {clear:both;}
+#colortable tr td ul li {clear:both;}
+#colortable tr td a {clear:both;}
+#colortable tr td ul input {width:60px;}
+
+#J_ppCustomColor { border-collapse: collapse; margin: 20px 5px; clear: both;}
+#J_ppCustomColor thead tr {display:block;}
+#J_ppCustomColor tbody tr {display:none;}
+
+#J_ppSellProWrap { position: relative; padding-bottom: 10px;}
+.Other {display: inline;padding: 5px 10px;}

@@ -1,0 +1,18 @@
+QTableView#batchEditTableView
+{
+	height: 240px;
+}
+
+QTableView#fixedColumnSqlTableView
+, QTableView#fixedTableFirstView
+{
+	background-color: #FFFFFF;
+	alternate-background-color: #ECF3F8;
+	border: 0px;
+}
+
+QTableView
+{
+	selection-background-color:#a7cdf0;
+	selection-color: black;
+}

@@ -1,0 +1,105 @@
+QTabWidget::pane 
+{ /* The tab widget frame */
+	border-top: 1px solid #BBBBBB;
+	top: -0.1em;
+	background-color: #F8F8F8;
+}
+
+QTabWidget::tab-bar 
+{
+	left: 0px; /* move to the right by 5px */
+}
+
+
+ /* Style the tab using the tab sub-control. Note that
+     it reads QTabBar _not_ QTabWidget */
+QTabBar::tab
+{
+	background: #F8F8F8;
+	border-bottom: 1px solid #F8F8F8;
+	border-left: 1px solid #BBBBBB;
+	padding: 5px;
+	height: 14px;
+	padding-left: 5px;
+	padding-right: 5px;
+}
+
+
+
+QTabBar::tab:selected 
+{  
+	background: #F8F8F8;
+	border-right: 0px;
+}
+
+QTabBar::tab:first:selected 
+{
+  	background: #F8F8F8;
+	border-right: 0px;
+	border-left: 0px;
+}
+
+QTabBar::tab:!selected 
+{
+	border-bottom-color: #BBBBBB;     
+	background: #EEEEEE;
+}
+
+QTabBar::tab:last
+{
+	border-right-color:qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                stop: 0.0 #F8F8F8, stop: 0.95 #F8F8F8,
+				stop: 0.96 #BBBBBB, stop: 1 #BBBBBB);
+
+}
+
+QTabBar#closeableBar
+{
+	border: 0px;
+}
+
+QTabBar#closeableBar::tab
+{
+	border:1px solid #5197C1;
+	margin-bottom:2px;
+	margin-top:2px;
+	margin-right:8px;
+	margin-left: 0px;
+	color:#333333;
+	height:12px;
+	padding-left:4px;
+	padding-right: -6px;
+	font: 12px;
+}
+
+
+QTabBar#closeableBar::close-button {
+	background-image: url(images/basicModelImages/tabWidget/closeableTabCloseBtn.png);
+	background-repeat:no-repeat;
+	background-position: left center;
+	width: 13px;
+	margin-right: 0px;
+	padding-right: 0px;
+}
+
+
+QTabBar#closeableBar::close-button:hover {
+	background-image: url(images/basicModelImages/tabWidget/closeableTabCloseBtn-hover.png);
+	background-repeat:no-repeat;
+	width: 13px;
+	margin-right: 0px;
+	padding-right: 0px;
+}
+
+QTabBar#ItemMultimediaTabBar::pane
+{
+	margin-left: 0px;
+	margin-right: 0px;
+}
+
+QTabBar#ItemMultimediaTabBar::tab
+{
+	width:98px;
+	padding-left:5px;
+	padding-right: 5px;
+}

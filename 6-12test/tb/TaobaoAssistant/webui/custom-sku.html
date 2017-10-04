@@ -1,0 +1,869 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Tmall商品SKU信息</title>
+<link href="plugins/jquery-ui/jquery-ui.css" rel="stylesheet"/>
+<link href="plugins/jquery-ui/jquery-ui.theme.css" rel="stylesheet"/>
+<link href="plugins/jquery-ui/jquery-ui.structure.css" rel="stylesheet"/>
+<link href="plugins/jquery.mCustomScrollbar.min.css" rel="stylesheet"/>
+<!------------------------>
+<link href="css/item.css" rel="stylesheet"/>
+<link href="css/media.css" rel="stylesheet"/>
+<link href="css/sku.css" rel="stylesheet"/>
+<!------------------------>
+<script type="text/javascript" src="plugins/jquery.js"></script>
+<script type="text/javascript" src="plugins/textchange.js"></script>
+<script type="text/javascript" src="plugins/jquery-ui/jquery-ui.js"></script>
+<script type="text/javascript" src="plugins/timepicker-addon.js"></script>
+<script type="text/javascript" src="plugins/backbone/underscore.js"></script>
+<script type="text/javascript" src="plugins/backbone/backbone.js"></script>
+<!------------------------>
+<script type="text/javascript" src="js/util.js"></script>
+<script type="text/javascript" src="js/queryselect.js"></script>
+<script type="text/javascript" src="js/plugins.js"></script>
+<script type="text/javascript" src="js/config.js"></script>
+<script type="text/javascript" src="js/process.js"></script>
+<script type="text/javascript" src="js/common.js"></script>
+<script type="text/javascript" src="js/shell.js"></script>
+<script type="text/javascript" src="js/media.js"></script>
+<script type="text/javascript" src="js/frame.js"></script>
+<script type="text/javascript" src="js/rule.js"></script>
+<script type="text/javascript" src="js/field.js"></script>
+<script type="text/javascript" src="js/edit-factory.js"></script>
+<script type="text/javascript" src="js/item.js"></script>
+
+<!----------sku config util-------------->
+<script type="text/javascript" src="js/sku/config.js"></script>
+<script type="text/javascript" src="js/sku/util.js"></script>
+<!----------color-------------->
+<script type="text/javascript" src="js/sku/color/util.js"></script>
+<script type="text/javascript" src="js/sku/color/model.js"></script>
+<script type="text/javascript" src="js/sku/color/view-v1.js"></script>
+<script type="text/javascript" src="js/sku/color/view-v2.js"></script>
+<script type="text/javascript" src="js/sku/color/view-v3.js"></script>
+<!----------size-------------->
+<script type="text/javascript" src="js/sku/size/size-table-convertor.js"></script>
+<script type="text/javascript" src="js/sku/size/util.js"></script>
+<script type="text/javascript" src="js/sku/size/model.js"></script>
+<script type="text/javascript" src="js/sku/size/view-v1.js"></script>
+<script type="text/javascript" src="js/sku/size/view-v2.js"></script>
+<script type="text/javascript" src="js/sku/size/view-v3.js"></script>
+<!--custom-->
+<script type="text/javascript" src="js/sku/custom/util.js"></script>
+<script type="text/javascript" src="js/sku/custom/model.js"></script>
+<script type="text/javascript" src="js/sku/custom/view.js"></script>
+<!--normal-->
+<script type="text/javascript" src="js/sku/normal/model.js"></script>
+<script type="text/javascript" src="js/sku/normal/view.js"></script>
+<!--table-->
+<script type="text/javascript" src="js/sku/table/util.js"></script>
+<script type="text/javascript" src="js/sku/table/model.js"></script>
+<script type="text/javascript" src="js/sku/table/view.js"></script>
+<!--model-try-->
+<script type="text/javascript" src="js/sku/model-try/model.js"></script>
+<script type="text/javascript" src="js/sku/model-try/view.js"></script>
+<!----------sku-------------->
+<script type="text/javascript" src="js/sku/sku-edit.js"></script>
+<script type="text/javascript" src="js/sku/sku.js"></script>
+
+<!--template-->
+<!--color begin-->
+<script type="text/template" id="sku-color-1" remark="第一套颜色方案-外部输入名字为color">
+<% var CountPerRaw = 7; %>
+<div class="sku-item-title">
+	<% if(color.isRequired()) {%>
+		<span class="sku-required" style="padding-left:5px;">*</span>
+	<% }else{ %>
+		<span class="sku-required" style="padding-left:5px;">&nbsp;</span>
+	<% } %>
+	<span>颜色</span>
+	<% var imageTip = color.isImageRequired()? "(必须上传图片，点击色块可直接上传图片)": "(点击色块可直接上传图片)"; %>
+	<span class="sku-red color-title-tip"><%= imageTip %></span>
+</div>
+<div class="sku-color-tip" style="height: 20px; padding-top:9px; left:16px; margin-bottom:2px;">
+	<img src="pic/sku-warn.png" align="top"/>
+	<span>请尽量选择已有的颜色，或修改为与已提供的颜色值相近的颜色，否则会被搜索降权</span>
+</div>
+<div class="sku-color1-options clearfix">
+<% var options = color.get("options"); %>
+<% if(color.isPack()){ %>
+	<% var renderOptionSize = CountPerRaw; %>
+<% }else{ %>
+	<% var renderOptionSize = options.length; %>
+<% } %>
+<% for(var i = 0; i < renderOptionSize; ++i){ %>
+	<% var option = options[i]; %>
+	<div class="sku-color1-option clearfix float_left" vid="<%= option.value %>" complexid="<%= option.complexid %>">
+		<% var iconClass = "check-icon";if(option.checked){iconClass = "check-icon checked";} %>
+		<% var inputBorderClass = option.checked? "sku-checked": ""; %>
+		<% if(option.checked){ %>
+			<input type="checkbox" class="sku-color1-checkbox" checked="checked"/>
+		<% }else{ %>
+			<input type="checkbox" class="sku-color1-checkbox"/>	
+		<% } %>
+		
+		<% var border = (mapping.color.isEmpty(option.text)? "border:solid 1px #d7d7d7;": ""); %>
+		<% if(option.url){ %>
+			<div class="sku-color1-block" style="background-image:url('<%= encodeURI(option.url) %>'); <%= border %>" url="<%= option.url %>" rgb="<%= option.rgb %>"></div>
+		<% }else{ %>
+			<div class="sku-color1-block" style="background-color:<%= option.rgb %>; <%= border %>" rgb="<%= option.rgb %>" url=""></div>
+		<% } %>
+		
+		<% if(option.alias){ %>
+			<input class="sku-color1-text <%= inputBorderClass %>" value="<%= escape(option.alias) %>" lastValue="<%= escape(option.alias) %>" encode="1" meta="<%= option.text %>"/>
+		<% }else{ %>
+			<input class="sku-color1-text <%= inputBorderClass %>" value="<%= option.text %>" lastValue="<%= option.text %>" meta="<%= option.text %>"/>
+		<% } %>
+	</div>
+<% } %>
+</div>
+<% if(color.isPack()){ %>
+	<div class="sku-pack"><span>展开更多</span><img src="pic/sku-color-unpack.png" align="top"/></div>
+<% }else{ %>
+	<div class="sku-unpack"><span>收起</span><img src="pic/sku-color-pack.png" align="top"/></div>
+<% } %>
+</script>
+<!-- ************************************************************************************************** -->
+<script type="text/template" id="sku-color-2" remark="第二套颜色-外部输入名字为color">
+<div class="sku-item-title">
+	<% if(color.isRequired()) {%>
+		<span class="sku-required" style="padding-left:5px;">*</span>
+	<% }else{ %>
+		<span class="sku-required" style="padding-left:5px;">&nbsp;</span>
+	<% } %>
+	<span>颜色</span>
+</div>
+<div class="sku-placeholder" style="height:10px;"></div>
+<% var imageRequiredHtml = color.isImageRequired() ? "<span class='sku-required'>*</span>":""; %>
+<div class="sku-color2-options clearfix">
+	<% var options = color.get("options"); %>
+	<% var unsetOption = null; %>
+	<% for(var i = 0; i < options.length; ++i){ %>
+		<% var option = options[i];%>
+		<% if(!option.checked){ %>
+			<% if(!unsetOption){unsetOption = option;} %>
+			<% continue; %>
+		<% } %>
+		<div class="sku-color2-option clearfix" value="<%= option.value %>" complexid="<%= option.complexid %>">
+			<!--选中状态-->
+			<% if(option.checked){ %>
+				<input type="checkbox" class="sku-color2-checkbox" checked="checked"/>
+			<% }else{ %>
+				<input type="checkbox" class="sku-color2-checkbox"/>	
+			<% } %>
+
+			<!--基础色-->
+			<div class="sku-color2-basecolor">
+				<% var colors = option.basecolor; %>
+				<% if(colors && colors.length > 0){ %>
+					<% for(var j = 0; j < colors.length; ++j){ %>
+						<% var colorItem = colors[j]; %>
+						<div class="basecolor-item" value="<%= colorItem.value %>" text="<%= colorItem.text %>">
+							<% var border_css = ""; if(mapping.basecolor.isEmpty(colorItem.text)){border_css = "border:solid 1px #d7d7d7;"} %>
+							<div class="basecolor-block" style="background-color:<%= mapping.basecolor.rgb(colorItem.text) %>;<%= border_css %>"></div>
+							<div class="basecolor-text"><%= colorItem.text %></div>
+						</div>
+					<% } %>
+				<% }else{ %>
+					<div class="choose-basecolor-tip">选择主色系</div>
+				<% } %>
+			</div>
+
+			<!--别名-->
+			<% if(option.alias){ %>
+				<input class="sku-color2-alias" value="<%= escape(option.alias) %>" lastValue="<%= escape(option.alias) %>" encode="1"/>
+			<% }else{ %>
+				<input class="sku-color2-alias input-tip-color" value="自定义颜色名" lastValue=""/>
+			<% } %>
+
+			<!--图片-->
+			<div class="sku-color2-image" url="<%= option.url %>">
+				<% if(option.url){ %>
+					<div class="showRemoveImageBox" style="display:block;">
+						<img src="<%= option.url %>" align="top" />
+						<span class="removeImageButton">删除图片</span>
+					</div>
+					<div class="showSetImageBox setImageButton" style="display:none;"><%= imageRequiredHtml %>上传图片</div>
+				<% }else{ %>
+					<div class="showRemoveImageBox" style="display:none;">
+						<img src="<%= option.url %>" align="top" />
+						<span class="removeImageButton">删除图片</span>
+					</div>
+					<div class="showSetImageBox setImageButton" style="display:block;"><%= imageRequiredHtml %>上传图片</div>
+				<% } %>
+			</div>
+			<!---->
+		</div>
+	<% } %>
+	<!-- 最后一项 -->
+	<% if(unsetOption){ %>
+		<% var option = unsetOption; %>
+		<div class="sku-color2-option clearfix" value="<%= option.value %>" complexid="<%= option.complexid %>">
+			<!--选中状态-->
+			<% if(option.checked){ %>
+				<input type="checkbox" class="sku-color2-checkbox" checked="checked"/>
+			<% }else{ %>
+				<input type="checkbox" class="sku-color2-checkbox"/>	
+			<% } %>
+
+			<!--基础色-->
+			<div class="sku-color2-basecolor">
+				<% var colors = option.basecolor; %>
+				<% if(colors && colors.length > 0){ %>
+					<% for(var j = 0; j < colors.length; ++j){ %>
+						<% var colorItem = colors[j]; %>
+						<div class="basecolor-item" value="<%= colorItem.value %>" text="<%= colorItem.text %>">
+							<% var border_css = ""; if(mapping.basecolor.isEmpty(colorItem.text)){border_css = "border:solid 1px #d7d7d7;"} %>
+							<div class="basecolor-block" style="background-color:<%= mapping.basecolor.rgb(colorItem.text) %>;<%= border_css %>"></div>
+							<div class="basecolor-text"><%= colorItem.text %></div>
+						</div>
+					<% } %>
+				<% }else{ %>
+					<div class="choose-basecolor-tip">选择主色系</div>
+				<% } %>
+			</div>
+
+			<!--别名-->
+			<% if(option.alias){ %>
+				<input class="sku-color2-alias" value="<%= escape(option.alias) %>" lastValue="<%= escape(option.alias) %>" encode="1"/>
+			<% }else{ %>
+				<input class="sku-color2-alias input-tip-color" value="自定义颜色名" lastValue=""/>
+			<% } %>
+
+			<!--图片-->
+			<div class="sku-color2-image" url="<%= option.url %>">
+				<% if(option.url){ %>
+					<div class="showRemoveImageBox" style="display:block;">
+						<img src="<%= option.url %>" align="top" />
+						<span class="removeImageButton">删除图片</span>
+					</div>
+					<div class="showSetImageBox setImageButton" style="display:none;"><%= imageRequiredHtml %>上传图片</div>
+				<% }else{ %>
+					<div class="showRemoveImageBox" style="display:none;">
+						<img src="<%= option.url %>" align="top" />
+						<span class="removeImageButton">删除图片</span>
+					</div>
+					<div class="showSetImageBox setImageButton" style="display:block;"><%= imageRequiredHtml %>上传图片</div>
+				<% } %>
+			</div>
+			<!---->
+		</div>
+	<% } %>
+	<!---->
+</div>
+<div class="sku-placeholder" style="height:8px;"></div>
+</script>
+<!---->
+<script type="text/template" id="sku-color-3" remark="第三套颜色-外部输入名字为color">
+<div class="sku-item-title">
+	<% if(color.isRequired()) {%>
+		<span class="sku-required" style="padding-left:5px;">*</span>
+	<% }else{ %>
+		<span class="sku-required" style="padding-left:5px;">&nbsp;</span>
+	<% } %>
+	<span>颜色</span>
+</div>
+<div class="sku-placeholder" style="height:10px;"></div>
+<% var imageRequiredHtml = color.isImageRequired() ? "<span class='sku-required'>*</span>":""; %>
+<div class="sku-color3-options clearfix">
+	<% var options = color.get("options"); %>
+	<% for(var i = 0; i < options.length; ++i){ %>
+		<% var option = options[i]; %>
+		<% if(!option.checked){continue;} %>
+		<div class="sku-color3-option clearfix" complexid="<%= option.complexid %>">
+			<!--选中状态-->
+			<% if(option.checked){ %>
+				<input type="checkbox" class="sku-color3-checkbox" checked="checked"/>
+			<% }else{ %>
+				<input type="checkbox" class="sku-color3-checkbox"/>	
+			<% } %>
+
+			<!--基础色-->
+			<div class="sku-color3-basecolor">
+				<% var colors = option.basecolor; %>
+				<% if(colors && colors.length > 0){ %>
+					<% for(var j = 0; j < colors.length; ++j){ %>
+						<% var colorItem = colors[j]; %>
+						<div class="basecolor-item" value="<%= colorItem.value %>" text="<%= colorItem.text %>">
+							<% var border_css = ""; if(mapping.basecolor.isEmpty(colorItem.text)){border_css = "border:solid 1px #d7d7d7;"} %>
+							<div class="basecolor-block" style="background-color:<%= mapping.basecolor.rgb(colorItem.text) %>;<%= border_css %>"></div>
+							<div class="basecolor-text"><%= colorItem.text %></div>
+						</div>
+					<% } %>
+				<% }else{ %>
+					<div class="choose-basecolor-tip">选择主色系</div>
+				<% } %>
+			</div>
+
+			<!--自定义颜色名称-->
+			<% if(option.value){ %>
+				<input class="sku-color3-value" value="<%= escape(option.value) %>" lastValue="<%= escape(option.value) %>" encode="1"/>
+			<% }else{ %>
+				<input class="sku-color3-value input-tip-color" value="自定义颜色名" lastValue=""/>
+			<% } %>
+
+			<!--图片-->
+			<div class="sku-color3-image" url="<%= option.url %>">
+				<% if(option.url){ %>
+					<div class="showRemoveImageBox" style="display:block;">
+						<img src="<%= option.url %>" align="top" />
+						<span class="removeImageButton">删除图片</span>
+					</div>
+					<div class="showSetImageBox setImageButton" style="display:none;"><%= imageRequiredHtml %>上传图片</div>
+				<% }else{ %>
+					<div class="showRemoveImageBox" style="display:none;">
+						<img src="<%= option.url %>" align="top" />
+						<span class="removeImageButton">删除图片</span>
+					</div>
+					<div class="showSetImageBox setImageButton" style="display:block;"><%= imageRequiredHtml %>上传图片</div>
+				<% } %>
+			</div>
+			<!---->
+		</div>
+	<% } %>
+	<!-- 最后一项 -->
+	<% var option = {value:"", basecolor:[], url:"", checked:false,}; %>
+	<div class="sku-color3-option clearfix" complexid="<%= option.complexid %>">
+		<!--选中状态-->
+		<% if(option.checked){ %>
+			<input type="checkbox" class="sku-color3-checkbox" checked="checked"/>
+		<% }else{ %>
+			<input type="checkbox" class="sku-color3-checkbox"/>	
+		<% } %>
+
+		<!--基础色-->
+		<div class="sku-color3-basecolor">
+			<% var colors = option.basecolor; %>
+			<% if(colors && colors.length > 0){ %>
+				<% for(var j = 0; j < colors.length; ++j){ %>
+					<% var colorItem = colors[j]; %>
+					<div class="basecolor-item" value="<%= colorItem.value %>" text="<%= colorItem.text %>">
+						<% var border_css = ""; if(mapping.basecolor.isEmpty(colorItem.text)){border_css = "border:solid 1px #d7d7d7;"} %>
+						<div class="basecolor-block" style="background-color:<%= mapping.basecolor.rgb(colorItem.text) %>;<%= border_css %>"></div>
+						<div class="basecolor-text"><%= colorItem.text %></div>
+					</div>
+				<% } %>
+			<% }else{ %>
+				<div class="choose-basecolor-tip">选择主色系</div>
+			<% } %>
+		</div>
+
+		<!--自定义颜色名称-->
+		<% if(option.value){ %>
+			<input class="sku-color3-value" value="<%= escape(option.value) %>" lastValue="<%= escape(option.value) %>" encode="1"/>
+		<% }else{ %>
+			<input class="sku-color3-value input-tip-color" value="自定义颜色名" lastValue=""/>
+		<% } %>
+
+		<!--图片-->
+		<div class="sku-color3-image" url="<%= option.url %>">
+			<% if(option.url){ %>
+				<div class="showRemoveImageBox" style="display:block;">
+					<img src="<%= option.url %>" align="top" />
+					<span class="removeImageButton">删除图片</span>
+				</div>
+				<div class="showSetImageBox setImageButton" style="display:none;"><%= imageRequiredHtml %>上传图片</div>
+			<% }else{ %>
+				<div class="showRemoveImageBox" style="display:none;">
+					<img src="<%= option.url %>" align="top" />
+					<span class="removeImageButton">删除图片</span>
+				</div>
+				<div class="showSetImageBox setImageButton" style="display:block;"><%= imageRequiredHtml %>上传图片</div>
+			<% } %>
+		</div>
+		<!---->
+	</div>
+	<!---->
+</div>
+<div class="sku-placeholder" style="height:8px;"></div>
+</script>
+<!--color end-->
+
+<!--size begin-->
+<!--第一套尺码-->
+<script type="text/template" id="sku-size-1" remark="第一套尺码方案-外部输入名字为size">
+<div class="sku-item-title">
+	<% if(size.isRequired()) { %>
+		<span class="sku-required" style="padding-left:5px;">*</span>
+	<% }else{ %>
+		<span class="sku-required" style="padding-left:5px;">&nbsp;</span>
+	<% } %>
+	<span>尺码</span>
+</div>
+<div class="sku-size1-options clearfix">
+<% var options = size.get("options"); %>
+<% for(var i = 0; i < options.length; ++i){ %>
+	<% var option = options[i]; %>
+	<div class="sku-size1-option clearfix float_left" value="<%= option.value %>" complexid="<%= option.complexid %>">
+		<% var inputBorderClass = option.checked? "sku-checked": ""; %>
+		<% if(option.checked){ %>
+			<input type="checkbox" class="sku-size1-checkbox" checked="checked"/>
+		<% }else{ %>
+			<input type="checkbox" class="sku-size1-checkbox"/>	
+		<% } %>
+		
+		<% if(option.alias === false){ %>
+			<input class="sku-size1-text" disabled="disabled" value="<%= option.text %>" meta="<%= option.text %>"/>
+		<% }else{ %>
+			<% if(!option.alias){ %>
+				<input class="sku-size1-text <%= inputBorderClass %>" value="<%= option.text %>" lastValue="<%= option.text %>" meta="<%= option.text %>"/>
+			<% }else{ %>
+				<input class="sku-size1-text <%= inputBorderClass %>" value="<%= escape(option.alias) %>" lastValue="<%= escape(option.alias) %>" encode="1" meta="<%= option.text %>"/>
+			<% } %>
+		<% } %>
+	</div>
+<% } %>
+</div>
+<% var stdSizeExtends = size.stdSizeExtends(); %>
+<% if(stdSizeExtends){ %>
+	<div class="sku-size2-extend">
+		<span class="sku-required" style="padding-left:5px;">*</span>
+		<span style="color:#0099ff;" class="size_extend"><%= util.size.extendText(stdSizeExtends) %></span>
+	</div>
+<% } %>
+<% var measure = size.sizeMeasureImage(); %>
+<% if(measure){ %>
+	<% if(util.size.isUrlValue(measure)){ %>
+		<div class="sku-size1-measure">
+			<span class="sku-required" style="padding-left:5px;">*</span>
+			<span style="color:#0099ff;" class="size_measure">尺码测量示意图</span>
+			<% if(measure.value()){ %>
+				<span class="change-size-measure-image" style="color:#0099ff;">
+					<%= util.size.text(measure.value(), measure.options()) %>
+				</span>
+				<span class="remove-measure-value">删除</span>
+			<% }else{ %>
+				<span class="choose-size-measure-image">请选择</span>
+			<% } %>
+		</div>
+	<% }else{ %>
+		<div class="sku-size1-measure">
+			<span class="sku-required" style="padding-left:5px;">*</span>
+			<span style="color:#0099ff;" class="size_measure">尺码测量示意图</span>
+			<% var options = measure.options(); %>
+			<select>
+				<option value="">请选择</option>
+				<% for(var i = 0; i < options.length; ++i){ %>
+					<% var option = options[i]; %>
+					<option value="<%= option.value() %>"><%= option.text() %></option>
+				<% } %>
+			</select>
+		</div>
+	<% } %>
+<% } %>
+</script>
+
+<!--第二套尺码-->
+<script type="text/template" id="sku-size-2" remark="第二套尺码方案-外部输入名字为size">
+<% var CountPerRaw = 7; %>
+<div class="sku-item-title">
+	<% if(size.isRequired()) { %>
+		<span class="sku-required" style="padding-left:5px;">*</span>
+	<% }else{ %>
+		<span class="sku-required" style="padding-left:5px;">&nbsp;</span>
+	<% } %>
+	<span>尺码</span>
+	<select>
+	<option value="">请选择</option>
+	<% var groupOptions = size.get("groupOptions"); %>
+	<% for(var i = 0; i < groupOptions.length; ++i){ %>
+		<% var groupOption = groupOptions[i]; %>
+		<option value="<%= groupOption.value %>"><%= groupOption.text %></option>
+	<% } %>
+	</select>
+</div>
+<% if(size.tip()){ %>
+	<div class="sku-size-tip">
+		<img src="pic/sku-warn.png" align="top"/>
+		<span class="size-tip">查看自定义尺码填写规范</span>
+	</div>
+<% } %>
+<div class="sku-size2-options clearfix">
+<% var options = size.get("options"); %>
+<% var isSizeEnabled = size.isSizeTipEnabled(); %>
+<% var sizeTipClass = (isSizeEnabled ? "size-tip" : ""); %>
+<% var normalOptions = util.size.normalOptions(options); %>
+<% var tempSizeTipClass = sizeTipClass; %>
+<% for(var i = 0; i < normalOptions.length; ++i){ %>
+	<% var option = normalOptions[i]; %>
+	<% if(isSizeEnabled && (i % CountPerRaw) == 0){
+		if(util.size.hasCheckedOption(normalOptions, i, CountPerRaw)){
+			tempSizeTipClass = sizeTipClass;
+		}else{
+			tempSizeTipClass = "";
+		}
+	} %>
+	<div class="sku-size2-option clearfix float_left <%= tempSizeTipClass %>" value="<%= escape(option.value) %>" complexid="<%= option.complexid %>">
+		<% if(option.checked){ %>
+			<input type="checkbox" class="sku-size2-checkbox" checked="checked"/>
+		<% }else{ %>
+			<input type="checkbox" class="sku-size2-checkbox"/>	
+		<% } %>
+
+		<% if(option.isCustom){ %>
+			<input class="sku-size2-text" value="<%= escape(option.value) %>" lastValue="<%= escape(option.value) %>" encode="1" isCustom="true"/>
+		<% }else{ %>
+			<input class="sku-size2-text" value="<%= option.text %>" lastValue="<%= option.text %>" isCustom="false" disabled="disabled"/>
+		<% } %>
+
+		<% if(isSizeEnabled  && option.checked){ %>
+			<% var sizeTipEmptyClass = ((option.sizeTip.length == 0) ? "sku-size2-tip-empty": ""); %>
+			<% var sizeTipValue = ((option.sizeTip.length == 0) ? "备注" : option.sizeTip); %>
+			<input class="sku-size2-tip <%= sizeTipEmptyClass %>" value="<%= escape(sizeTipValue) %>" lastValue="<%= escape(option.sizeTip) %>" encode="1"/>
+		<% } %>
+	</div>
+<% } %>
+<!--custom option 若不支持自定义，则不需要渲染-->
+<% if(size.isSupportInput()){ %>
+	<% var leftCount = (CountPerRaw - (normalOptions.length % CountPerRaw)); %>
+	<% if(normalOptions.length && leftCount != CountPerRaw){ %>
+		<div style="width:<%= leftCount * 126 %>px; height:<%= (tempSizeTipClass.length > 0? 56: 36) %>px;" class="float_left"></div>
+	<% } %>
+	<% var customOptions = util.size.customOptions(options); %>
+	<% tempSizeTipClass = ""; %>
+	<% for(var i = 0; i < customOptions.length; ++i){ %>
+		<% var option = customOptions[i]; %>
+		<% if(isSizeEnabled && (i % CountPerRaw) == 0){
+			if(util.size.hasCheckedOption(customOptions, i, CountPerRaw)){
+				tempSizeTipClass = sizeTipClass;
+			}else{
+				tempSizeTipClass = "";
+			}
+		} %>
+		
+		<div class="sku-size2-option clearfix float_left <%= tempSizeTipClass %>" value="<%= escape(option.value) %>" complexid="<%= option.complexid %>">
+			<% if(option.checked){ %>
+				<input type="checkbox" class="sku-size2-checkbox" checked="checked"/>
+			<% }else{ %>
+				<input type="checkbox" class="sku-size2-checkbox"/>	
+			<% } %>
+
+			<% if(option.isCustom){ %>
+				<% if(option.value){ %>
+					<input class="sku-size2-text sku-checked" value="<%= escape(option.value) %>" lastValue="<%= escape(option.value) %>" encode="1" isCustom="true"/>
+				<% }else{ %>
+					<input class="sku-size2-text sku-checked size-input-tip" value="自定义尺码" lastValue="" isCustom="true"/>
+				<% } %>
+			<% }else{ %>
+				<input class="sku-size2-text sku-checked" value="<%= option.text %>" lastValue="<%= option.text %>" isCustom="false" disabled="disabled"/>
+			<% } %>
+
+			<% if(isSizeEnabled && option.checked){ %>
+				<% var sizeTipEmptyClass = ((option.sizeTip.length == 0) ? "sku-size2-tip-empty": ""); %>
+				<% var sizeTipValue = ((option.sizeTip.length == 0) ? "备注" : option.sizeTip); %>
+				<input class="sku-size2-tip <%= sizeTipEmptyClass %>" value="<%= escape(sizeTipValue) %>" lastValue="<%= escape(option.sizeTip) %>" encode="1"/>
+			<% } %>
+		</div>
+	<% } %>
+	<!--最后一空项-->
+	<div class="sku-size2-option clearfix float_left <%= tempSizeTipClass %>">
+		<input type="checkbox" class="sku-size2-checkbox"/>	
+		<input class="sku-size2-text size-input-tip" value="自定义尺码" lastValue="" isCustom="true"/>
+	</div>
+<% } %>
+</div>
+<% var stdSizeExtends = size.stdSizeExtends(); %>
+<% if(stdSizeExtends){ %>
+	<div class="sku-size2-extend">
+		<span class="sku-required" style="padding-left:5px;">*</span>
+		<span style="color:#0099ff;" class="size_extend"><%= util.size.extendText(stdSizeExtends) %></span>
+	</div>
+<% } %>
+<% var measure = size.sizeMeasureImage(); %>
+<% if(measure){ %>
+	<% if(util.size.isUrlValue(measure)){ %>
+		<div class="sku-size2-measure">
+			<span class="sku-required" style="padding-left:5px;">*</span>
+			<span style="color:#0099ff;" class="size_measure">尺码测量示意图</span>
+			<% if(measure.value()){ %>
+				<span class="change-size-measure-image" style="color:#0099ff;">
+					<%= util.size.text(measure.value(), measure.options()) %>
+				</span>
+				<span class="remove-measure-value">删除</span>
+			<% }else{ %>
+				<span class="choose-size-measure-image">请选择</span>
+			<% } %>
+		</div>
+	<% }else{ %>
+		<div class="sku-size2-measure">
+			<span class="sku-required" style="padding-left:5px;">*</span>
+			<span style="color:#0099ff;" class="size_measure">尺码测量示意图</span>
+			<% var options = measure.options(); %>
+			<select>
+				<option value="">请选择</option>
+				<% for(var i = 0; i < options.length; ++i){ %>
+					<% var option = options[i]; %>
+					<option value="<%= option.value() %>"><%= option.text() %></option>
+				<% } %>
+			</select>
+		</div>
+	<% } %>
+<% } %>
+</script>
+
+<!--第三套尺码-->
+<script type="text/template" id="sku-size-3" remark="第三套尺码方案-外部输入名字为size">
+<div class="sku-item-title">
+	<% if(size.isRequired()) {%>
+		<span class="sku-required" style="padding-left:5px;">*</span>
+	<% }else{ %>
+		<span class="sku-required" style="padding-left:5px;">&nbsp;</span>
+	<% } %>
+	<span>尺码</span>
+</div>
+<% if(size.tip()){ %>
+	<div class="sku-size-tip">
+		<img src="pic/sku-warn.png" align="top"/>
+		<span class="size-tip">查看自定义尺码填写规范</span>
+	</div>
+<% } %>
+<div class="sku-size3-options clearfix">
+<% var options = size.get("options"); %>
+<% for(var i = 0; i < options.length; ++i){ %>
+	<% var option = options[i]; %>
+	<% if(option.checked){ %>
+		<div class="sku-size3-option clearfix float_left" complexid="<%= option.complexid %>">
+			<input type="checkbox" class="sku-size3-checkbox" checked="checked"/>
+			<input class="sku-size3-text" value="<%= option.value %>" last="<%= option.value %>"/>
+		</div>
+	<% } %>
+<% } %>
+	<div class="sku-size3-option clearfix float_left">
+		<input type="checkbox" class="sku-size3-checkbox" custom="true"/>
+		<input class="sku-size3-text size-input-tip" value="自定义尺码" last=""/>
+	</div>
+</div>
+<% var stdSizeExtends = size.stdSizeExtends(); %>
+<% if(stdSizeExtends){ %>
+	<div class="sku-size2-extend">
+		<span class="sku-required" style="padding-left:5px;">*</span>
+		<span style="color:#0099ff;" class="size_extend"><%= util.size.extendText(stdSizeExtends) %></span>
+	</div>
+<% } %>
+<% var measure = size.sizeMeasureImage(); %>
+<% if(measure){ %>
+	<% if(util.size.isUrlValue(measure)){ %>
+		<div class="sku-size3-measure">
+			<span class="sku-required" style="padding-left:5px;">*</span>
+			<span style="color:#0099ff;" class="size_measure">尺码测量示意图</span>
+			<% if(measure.value()){ %>
+				<span class="change-size-measure-image" style="color:#0099ff;">
+					<%= util.size.text(measure.value(), measure.options()) %>
+				</span>
+				<span class="remove-measure-value">删除</span>
+			<% }else{ %>
+				<span class="choose-size-measure-image">请选择</span>
+			<% } %>
+		</div>
+	<% }else{ %>
+		<div class="sku-size3-measure">
+			<span class="sku-required" style="padding-left:5px;">*</span>
+			<span style="color:#0099ff;" class="size_measure">尺码测量示意图</span>
+			<% var options = measure.options(); %>
+			<select>
+				<option value="">请选择</option>
+				<% for(var i = 0; i < options.length; ++i){ %>
+					<% var option = options[i]; %>
+					<option value="<%= option.value() %>"><%= option.text() %></option>
+				<% } %>
+			</select>
+		</div>
+	<% } %>
+<% } %>
+</script>
+<!--size end-->
+<!--custom begin-->
+<!--自定义销售属性方案-->
+<script type="text/template" id="sku-custom" remark="自定义销售属性方案-外部输入名字为custom">
+<div class="sku-item-title">
+	<% if(custom.isRequired()) { %>
+		<span class="sku-required" style="padding-left:5px;">*</span>
+	<% }else{ %>
+		<span class="sku-required" style="padding-left:5px;">&nbsp;</span>
+	<% } %>
+	<span>自定义销售属性</span>
+	<select>
+	<option value="">请选择</option>
+	<% var groupOptions = custom.get("groupOptions"); %>
+	<% debug.log(groupOptions); %>
+	<% for(var i = 0; i < groupOptions.length; ++i){ %>
+		<% var groupOption = groupOptions[i]; %>
+		<option value="<%= groupOption.value %>"><%= groupOption.text %></option>
+	<% } %>
+	</select>
+</div>
+
+<% var group = custom.currentGroup(); %>
+<% if(group){ %>
+	<div class="sku-custom-options clearfix">
+	<% var options = custom.get("options"); %>
+	<% for(var i = 0; i < options.length; ++i){ %>
+		<% var option = options[i]; %>
+		<div class="sku-custom-option clearfix float_left" value="<%= option.value %>" complexid="<%= option.complexid %>">
+			<% if(option.checked){ %>
+				<input type="checkbox" class="sku-custom-checkbox" checked="checked"/>
+			<% }else{ %>
+				<input type="checkbox" class="sku-custom-checkbox"/>	
+			<% } %>
+			<input class="sku-custom-text" disabled="disabled" value="<%= option.text %>"/>
+		</div>
+	<% } %>
+	<% if(group.input){ %>
+		<!--如果包含input字段，则需要支持自定义-->
+		<div class="sku-custom-option clearfix float_left">
+			<input type="checkbox" class="sku-custom-checkbox"/>	
+			<input class="sku-custom-text size-input-tip" value="自定义值" last="" isCustom="true"/>
+		</div>
+	<% } %>
+	</div>
+<% } %>
+</script>
+<!--custom end-->
+<!--table begin-->
+<script type="text/template" id="sku-table" remark="sku数据展示组件，输入名称为：sku">
+<% if(!sku.isSkuMetasReady()){ %>
+	<div class="sku-item-title">
+		<span class="sku-required" style="padding-left:5px;">*</span>
+		<span>价格和数量</span>
+	</div>
+	<div class="sku-uncomplete-tip"><%= sku.uncompleteTip() %></div>
+<% }else{ %>
+	<div class="sku-head clearfix">
+		<div class="sku-item-title float_left clearfix" style="width:100px;">
+			<span class="sku-required" style="padding-left:5px;">*</span>
+			<span>价格和数量</span>
+		</div>
+		<div class="sku-fill-inputs float_right clearfix">
+			<div class="fill-button float_right">确定</div>
+			<% var inputs = sku.inputs(); %>
+			<% _.each(inputs, function(input, index, list){ %>
+				<% input = list[list.length - 1 - index]; %>
+				<input id="<%= input.rawId() %>" value="<%= input.name() %>" name="<%= input.name() %>" class="fill-input fill-input-tip float_right"/>
+			<% }); %>
+			<div class="fill-tip float_right">批量填充:</div>
+		</div>
+	</div>
+	<table class="custom-sku-table">
+	<% var skuMetas = sku.skuMetas(); %>
+	<tr>
+		<% _.each(skuMetas, function(skuMeta){ %>
+			<% if(skuMeta.isRequired){ %>
+				<th class="sku-head"><span class="sku-required">*</span><%= skuMeta.name %></th>
+			<% }else{ %>
+				<th class="sku-head"><%= skuMeta.name %></th>
+			<% } %>
+		<% }); %>
+		<% _.each(inputs, function(input){ %>
+			<% if(util.sku.isRequired(input)){ %>
+				<th class="sku-head"><span class="sku-required">*</span><%= input.name() %></th>
+			<% }else{ %>
+				<th class="sku-head"><%= input.name() %></th>
+			<% } %>
+		<% }) %>
+	</tr>
+	<% var skuItems = sku.skuItems(); %>
+	<% var inputs = sku.inputs(); %>
+	<%  _.each(skuItems, function(skuItem, index, array){ %>
+			<% var key = util.sku.key(skuItem); %>
+			<% util.sku.updateSkuModel(key, skuItem, sku.model(), sku); %>
+	   		<tr class="sku-item-tr" key="<%= escape(key) %>">
+			<%  _.each(skuItem, function(option){ %>
+				<td value="<%= escape(option.value) %>" for="<%= option.id %>"><%= escape(util.sku.text(option)) %></td>
+			<% }); %>
+			<%  _.each(inputs, function(input){ %>
+				<% var value = util.sku.value(sku.model(), key, input); %>
+				<td lastValue="<%= escape(value) %>" value="<%= escape(value) %>" for="<%= input.rawId() %>">
+					<input value="<%= escape(value) %>" />
+				</td>
+			<% }); %>
+			</tr>
+	   <%});%>
+	</table>
+<% } %>
+</script>
+<!--table end-->
+<!--sku normal begin-->
+<script type="text/template" id="sku-normal" remark="普通属性方案-外部输入名字为normal">
+<div class="sku-item-title">
+	<% if(normal.isRequired()) {%>
+		<span class="sku-required" style="padding-left:5px;">*</span>
+	<% }else{ %>
+		<span class="sku-required" style="padding-left:5px;">&nbsp;</span>
+	<% } %>
+	<span><%= normal.name() %></span>
+</div>
+<div class="sku-normal-options clearfix">
+<% var options = normal.get("options"); %>
+<% for(var i = 0; i < options.length; ++i){ %>
+	<% var option = options[i]; %>
+	<div class="sku-normal-option clearfix float_left" value="<%= option.value %>">
+		<% if(option.checked){ %>
+			<input type="checkbox" class="sku-normal-checkbox" checked="checked"/>
+		<% }else{ %>
+			<input type="checkbox" class="sku-normal-checkbox"/>	
+		<% } %>
+		<input class="sku-normal-text" value="<%= option.text %>" disabled="disabled"/>
+	</div>
+<% } %>
+</div>
+</script>
+<!--sku normal end-->
+<!--model try begin-->
+<script type="text/template" id="sku-model-try" remark="尺码模特试穿信息，输入名称为：modelTry">
+<% if(modelTry.isEmpty()){ %>
+	<div class="sku-item-title">
+		<input type="checkbox"/>
+		<span>添加模特试穿信息</span>
+	</div>
+	<div style="position:relative; width:100%; height:18px;"></div>
+<% }else{ %>
+	<div class="sku-item-title">
+		<input type="checkbox" checked="checked"/>
+		<span>添加模特试穿信息</span>
+	</div>
+	<div style="position:relative; width:100%; height:18px;"></div>
+	<table class="model-try-table">
+	<% var inputs = modelTry.inputs(); %>
+	<tr>
+		<% _.each(inputs, function(input){ %>
+			<% if(util.sku.isRequired(input)){ %>
+				<th class="sku-head"><span class="sku-required">*</span><%= input.name() %></th>
+			<% }else{ %>
+				<th class="sku-head"><%= input.name() %></th>
+			<% } %>
+		<% }) %>
+		<th class="sku-head"></th>
+	</tr>
+	<% var items = modelTry.model(); %>
+	<% var ids = modelTry.ids(); %>
+	<%  _.each(items, function(item, index, array){ %>
+	   		<tr class="model-try-item" complexid="<%= item.complexid %>">
+	   		<% var complex = item["data"]; %>
+			<%  _.each(ids, function(id){ %>
+				<td lastValue="<%= complex[id] %>" value="<%= complex[id] %>" for="<%= id %>">
+					<input value="<%= complex[id] %>" />
+				</td>
+			<% }); %>
+				<td><span class="model-try-remove-item">删除</span></td>
+			</tr>
+	   <%});%>
+	</table>
+	<div class="model-try-add-more">+添加更多</div>
+<% } %>
+</script>
+<!--model try end-->
+</head>
+<style>
+.sku-box{ 
+	position: relative;
+	top:3px;
+	border:solid 1px #d7d7d7;
+	width: 953px;
+	background-color: #FFFFFF;
+}
+</style>
+<body>
+<div class="sku-box"></div>
+</body>
+</html>

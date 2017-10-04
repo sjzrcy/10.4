@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <element_pageset x="2" y="2" paperWidth="104" pageWidth="100" company="德邦快递" paperHeight="184" companykey="DBKD" pageHeight="180" linetype="0">
+        <!--布局树形结构-->
+        <element width="100" x="0" y="0" height="9" key="buyer_memo" type="0" comment="线框1" lebeltext="">
+            <element width="30" x="65" y="0" height="10" key="buyer_memo" type="3" comment="德邦快递" lebeltext="德邦快递">
+                <font family="微软雅黑" pointSize="20" bold="false" underline="false" italic="false"/>
+            </element>
+        </element>
+        <element width="100" x="0" y="9" height="15" key="buyer_memo" type="0" comment="线框2" lebeltext="">
+            <element width="100" x="1" y="1" height="14" key="buyer_ShortAddress" type="7" comment="大头笔" lebeltext="">
+                <font family="微软雅黑" pointSize="30" bold="false" underline="false" italic="false"/>
+            </element>
+        </element>
+        <element width="100" x="0" y="24" height="10" key="buyer_memo" type="0" comment="线框3" lebeltext="">
+            <element width="74" x="0" y="0" height="10" key="buyer_memo" type="0" comment="线框3.1" lebeltext="">
+                <element width="74" x="0" y="0" height="10" key="package_center_name" type="7" comment="集包地" lebeltext="">
+                    <font family="微软雅黑" pointSize="30" bold="false" underline="false" italic="false"/>
+                </element>
+            </element>
+            <element width="26" x="74" y="0" height="10" key="buyer_memo" type="0" comment="线框3.2" lebeltext="">
+                <element width="24" x="1" y="0" height="6" key="package_center_code" type="6" comment="集包地" lebeltext="">
+                    <font family="微软雅黑" pointSize="30" bold="false" underline="false" italic="false"/>
+                </element>
+                <element width="24" x="1" y="6" height="4" key="package_center_code" type="7" comment="集包地" lebeltext="">
+                    <font family="微软雅黑" pointSize="30" bold="false" underline="false" italic="false"/>
+                </element>
+            </element>
+        </element>
+        <element width="100" x="0" y="34" height="30" key="buyer_memo" type="0" comment="线框4" lebeltext="">
+            <element width="5" x="0" y="0" height="18" key="buyer_memo" type="0" comment="线框4.1" lebeltext="">
+                <element width="5" x="0" y="2" height="15" key="buyer_memo" type="3" comment="收件" lebeltext="收件">
+                    <font family="微软雅黑" pointSize="10" bold="false" underline="false" italic="false"/>
+                </element>
+            </element>
+            <element width="5" x="0" y="18" height="12" key="buyer_memo" type="0" comment="线框4.2" lebeltext="">
+                <element width="5" x="0" y="2" height="15" key="buyer_memo" type="3" comment="寄件" lebeltext="寄件">
+                    <font family="微软雅黑" pointSize="10" bold="false" underline="false" italic="false"/>
+                </element>
+            </element>
+            <element width="69" x="5" y="0" height="18" key="buyer_memo" type="0" comment="线框4.3" lebeltext="">
+                <element width="33" x="2" y="1" height="5" key="buyer_Name" type="2" comment="收件人" lebeltext="">
+                    <font family="微软雅黑" pointSize="10" bold="true" underline="false" italic="false"/>
+                </element>
+                <element width="60" x="20" y="0" height="5" key="buyer_Mobile" type="2" comment="收件人手机" lebeltext="">
+                    <font family="微软雅黑" pointSize="10" bold="false" underline="false" italic="false"/>
+                </element>
+                <element width="65" x="2" y="5" height="13" key="buyer_WholeAddress" type="2" comment="收件人详细地址" lebeltext="">
+                    <font family="微软雅黑" pointSize="9" bold="false" underline="false" italic="false"/>
+                </element>
+            </element>
+            <element width="69" x="5" y="18" height="12" key="buyer_memo" type="0" comment="线框4.4" lebeltext="">
+                <element width="14" x="1" y="1" height="4" key="seller_Name" type="2" comment="寄件人" bPrint="true" lebeltext="">
+                    <font family="微软雅黑" pointSize="7" bold="false" underline="false" italic="false"/>
+                </element>
+                <element width="20" x="15" y="1" height="4" key="seller_Mobile" type="2" comment="寄件人手机" bPrint="true" lebeltext="">
+                    <font family="微软雅黑" pointSize="7" bold="false" underline="false" italic="false"/>
+                </element>
+                <element width="30" x="35" y="1" height="4" key="seller_Name" type="2" comment="寄件单位" bPrint="true" lebeltext="">
+                    <font family="微软雅黑" pointSize="7" bold="false" underline="false" italic="false"/>
+                </element>
+                <element width="68" x="1" y="5" height="7" key="seller_WholeAddress" type="2" comment="寄件人详细地址" lebeltext="">
+                    <font family="微软雅黑" pointSize="7" bold="false" underline="false" italic="false"/>
+                </element>
+            </element>
+            <element width="26" x="74" y="0" height="30" key="buyer_memo" type="0" comment="线框4.5" lebeltext=""/>
+        </element>
+        <element width="100" x="0" y="64" height="25" key="buyer_memo" type="0" comment="线框5" lebeltext="">
+            <element width="80" barcodeType="1" x="10" y="5" height="8" key="shop_WaybillBarCode" type="6" comment="快递单条形码"/>
+            <element width="80" x="10" y="13" height="6" key="shop_WaybillBarCode" type="7" comment="快递单条形码" lebeltext="">
+                <font family="微软雅黑" pointSize="9" bold="false" underline="false" italic="false"/>
+            </element>
+        </element>
+        <element width="100" x="0" y="89" height="19" key="buyer_memo" type="0" comment="线框6" lebeltext="">
+            <element width="44" x="0" y="0" height="19" key="buyer_memo" type="0" comment="线框6.1" lebeltext="">
+                <element width="44" x="0" y="0" height="19" key="buyer_memo" type="3" comment="到达" lebeltext="快件到达收件人地址，收件人或寄件人允许签收，视为描述：您的签字代表您已验收此包裹，并已确认商品完好无损、没有划痕、没有破损等质量问题。">
+                    <font family="微软雅黑" pointSize="7" bold="false" underline="false" italic="false"/>
+                </element>
+            </element>
+            <element width="35" x="44" y="0" height="19" key="buyer_memo" type="0" comment="线框6.2" lebeltext="">
+                <element width="20" x="1" y="0" height="5" key="buyer_memo" type="3" comment="签收人" lebeltext="签收人：">
+                    <font family="微软雅黑" pointSize="10" bold="false" underline="false" italic="false"/>
+                </element>
+                <element width="20" x="1" y="14" height="5" key="buyer_memo" type="3" comment="时间" lebeltext="时间：">
+                    <font family="微软雅黑" pointSize="10" bold="false" underline="false" italic="false"/>
+                </element>
+            </element>
+            <element width="21" x="79" y="0" height="19" key="buyer_memo" type="0" comment="线框6.3" lebeltext=""/>
+        </element>
+        <element width="100" x="0" y="108" height="14" key="buyer_memo" type="0" comment="线框7" lebeltext="">
+            <element width="30" x="0" y="0" height="14" key="buyer_memo" type="0" comment="线框7.1" lebeltext=""/>
+            <element width="70" x="30" y="0" height="14" key="buyer_memo" type="0" comment="线框7.2" lebeltext="">
+                <element width="60" barcodeType="1" x="5" y="2" height="8" key="shop_WaybillBarCode" type="6" comment="快递单条形码"/>
+                <element width="60" x="5" y="10" height="4" key="shop_WaybillBarCode" type="7" comment="快递单条形码" lebeltext="">
+                    <font family="微软雅黑" pointSize="9" bold="false" underline="false" italic="false"/>
+                </element>
+            </element>
+        </element>
+        <element width="100" x="0" y="122" height="24" key="buyer_memo" type="0" comment="线框8" lebeltext="">
+            <element width="5" x="0" y="0" height="12" key="buyer_memo" type="0" comment="线框8.1" lebeltext="">
+                <element width="5" x="0" y="2" height="9" key="buyer_memo" type="3" comment="收件" lebeltext="收件">
+                    <font family="微软雅黑" pointSize="10" bold="false" underline="false" italic="false"/>
+                </element>
+            </element>
+            <element width="5" x="0" y="12" height="12" key="buyer_memo" type="0" comment="线框8.2" lebeltext="">
+                <element width="5" x="0" y="2" height="9" key="buyer_memo" type="3" comment="寄件" lebeltext="寄件">
+                    <font family="微软雅黑" pointSize="10" bold="false" underline="false" italic="false"/>
+                </element>
+            </element>
+            <element width="69" x="5" y="0" height="12" key="buyer_memo" type="0" comment="线框8.3" lebeltext="">
+                <element width="33" x="2" y="1" height="5" key="buyer_Name" type="2" comment="收件人" lebeltext="">
+                    <font family="微软雅黑" pointSize="7" bold="true" underline="false" italic="false"/>
+                </element>
+                <element width="60" x="20" y="0" height="5" key="buyer_Mobile" type="2" comment="收件人手机" lebeltext="">
+                    <font family="微软雅黑" pointSize="7" bold="false" underline="false" italic="false"/>
+                </element>
+                <element width="65" x="2" y="5" height="7" key="buyer_WholeAddress" type="2" comment="收件人详细地址" lebeltext="">
+                    <font family="微软雅黑" pointSize="7" bold="false" underline="false" italic="false"/>
+                </element>
+            </element>
+            <element width="69" x="5" y="12" height="12" key="buyer_memo" type="0" comment="线框8.4" lebeltext="">
+                <element width="14" x="1" y="1" height="4" key="seller_Name" type="2" comment="寄件人" bPrint="true" lebeltext="">
+                    <font family="微软雅黑" pointSize="7" bold="false" underline="false" italic="false"/>
+                </element>
+                <element width="20" x="15" y="1" height="4" key="seller_Mobile" type="2" comment="寄件人手机" bPrint="true" lebeltext="">
+                    <font family="微软雅黑" pointSize="7" bold="false" underline="false" italic="false"/>
+                </element>
+                <element width="30" x="35" y="1" height="4" key="seller_Name" type="2" comment="寄件单位" bPrint="true" lebeltext="">
+                    <font family="微软雅黑" pointSize="7" bold="false" underline="false" italic="false"/>
+                </element>
+                <element width="68" x="1" y="5" height="7" key="seller_WholeAddress" type="2" comment="寄件人详细地址" lebeltext="">
+                    <font family="微软雅黑" pointSize="7" bold="false" underline="false" italic="false"/>
+                </element>
+            </element>
+            <element width="26" x="74" y="0" height="24" key="buyer_memo" type="0" comment="线框8.5" lebeltext="">
+                <element width="25" x="1" y="1" height="5" key="seller_Comment" type="3" comment="" bPrint="true" lebeltext="卖家备注：">
+                    <font family="微软雅黑" pointSize="8" bold="false" underline="false" italic="false"/>
+                </element>
+                <element width="25" x="1" y="4" height="10" key="seller_Comment" type="2" comment="" bPrint="true" lebeltext="卖家备注：">
+                    <font family="微软雅黑" pointSize="8" bold="false" underline="false" italic="false"/>
+                </element>
+                <element width="25" x="1" y="14" height="5" key="seller_Comment" type="3" comment="" bPrint="true" lebeltext="买家留言：">
+                    <font family="微软雅黑" pointSize="8" bold="false" underline="false" italic="false"/>
+                </element>
+                <element width="25" x="1" y="18" height="6" key="buyer_Comment" type="2" comment="" bPrint="true" lebeltext="买家留言：">
+                    <font family="微软雅黑" pointSize="8" bold="false" underline="false" italic="false"/>
+                </element>
+            </element>
+        </element>
+        <element width="100" x="0" y="146" height="34" key="buyer_memo" type="0" comment="线框9" lebeltext="">
+            <element width="15" x="1" y="1" height="5" key="buyer_memo" type="3" comment="配货信息：" lebeltext="配货信息：">
+                <font family="微软雅黑" pointSize="8" bold="false" underline="false" italic="false"/>
+            </element>
+            <element width="82" x="17" y="1" height="32" key="order_Infos" type="8" comment="配货信息：" lebeltext="配货信息：">
+                <font family="微软雅黑" pointSize="8" bold="false" underline="false" italic="false"/>
+                <content key="itemName" bPrint="true"/>
+                <content key="itemAlias" bPrint="true"/>
+                <content key="sellAttri" bPrint="true"/>
+                <content key="sellerNumber" bPrint="true"/>
+            </element>
+        </element>
+    </element_pageset>
+</root>

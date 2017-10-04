@@ -1,0 +1,6 @@
+﻿<DIV class="dm-placeholder" dm_id="%3" contenteditable=false>
+<DIV class=dm-syncbar contenteditable=true>
+<DIV class=dm-module-anchor contenteditable=false>
+<DIV class=dm-anchor-caption>%2</DIV>
+<DIV class=dm-anchor-actions><A title=删除内容 class="dm-module-del" ontentEditable="false">×</A></DIV></DIV>%1</DIV>
+</DIV>
